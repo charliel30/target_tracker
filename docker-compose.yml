@@ -1,0 +1,11 @@
+services:
+  target-tracker:
+    build: .
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./config.yaml:/app/config.yaml
+      - /tmp/news_articles:/tmp/news_articles

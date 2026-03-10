@@ -1,0 +1,17 @@
+llm:
+  provider: "openai"          # "openai" or "ollama"
+  model: "gpt-4o"             # For Ollama, use e.g. "llama3"
+  base_url: null              # For Ollama: "http://localhost:11434/v1"
+
+monitor:
+  watch_folder: "/tmp/news_articles"
+  poll_interval_seconds: 30
+
+db:
+  sqlite_path: "data/target_tracker.db"
+  vector_store_path: "data/vector_store.json"
+  document_store_path: "data/document_store.json"
+
+server:
+  host: "0.0.0.0"
+  port: 5000

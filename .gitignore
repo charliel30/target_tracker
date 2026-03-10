@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+data/target_tracker.db
+data/vector_store.json
+data/document_store.json
+.DS_Store
