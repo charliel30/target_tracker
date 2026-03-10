@@ -1,0 +1,2856 @@
+{
+  "Viktor Petrov": {
+    "type": "person",
+    "current_location": {
+      "lat": 55.7558,
+      "lon": 37.6173
+    },
+    "birthday": "1971-03-14",
+    "associations": [
+      "Nadia Volkov",
+      "The Black Sedan",
+      "Kremlin Safe House"
+    ],
+    "identifying_characteristics": [
+      "Deep scar running from left ear to jaw line",
+      "Silver hair combed back with widow's peak",
+      "Missing tip of right index finger",
+      "Walks with slight limp from old knee wound",
+      "Favors heavy wool overcoats regardless of weather"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-11-03T22:15:00Z",
+        "description": "Met with unknown male at Gorky Park bench for 40 minutes, exchanged briefcases."
+      },
+      {
+        "timestamp": "2025-02-18T03:40:00Z",
+        "description": "Entered the Belarusian embassy through a side entrance at 3 AM and departed two hours later."
+      },
+      {
+        "timestamp": "2025-08-22T14:00:00Z",
+        "description": "Photographed making a dead drop behind a loose brick wall at Novodevichy Convent."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-12-25T11:00:00Z",
+        "description": "Attended Christmas Orthodox mass at the Cathedral of Christ the Saviour."
+      },
+      {
+        "timestamp": "2025-01-10T09:30:00Z",
+        "description": "Visited state pharmacy on Tverskaya Street to fill prescription for blood pressure medication."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Moscow, Russia",
+        "start_date": "2023-01-01",
+        "end_date": "2025-09-01"
+      },
+      {
+        "city": "Minsk, Belarus",
+        "start_date": "2022-06-10",
+        "end_date": "2022-06-14"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2003-07-19",
+        "description": "Arrested by FSB on suspicion of selling classified radar schematics to a third party; charges dropped after 48 hours."
+      },
+      {
+        "date": "2011-04-02",
+        "description": "Implicated in the poisoning of a Ukrainian journalist in Kyiv; never formally charged."
+      }
+    ]
+  },
+  "Nadia Volkov": {
+    "type": "person",
+    "current_location": {
+      "lat": 48.8566,
+      "lon": 2.3522
+    },
+    "birthday": "1984-07-29",
+    "associations": [
+      "Viktor Petrov",
+      "\u00c9mile Charpentier",
+      "Rue de Rivoli Safehouse"
+    ],
+    "identifying_characteristics": [
+      "Platinum blonde hair, often worn in a low bun",
+      "Speaks French with almost no accent",
+      "Small anchor tattoo on inner right wrist",
+      "Favors oversized sunglasses year-round",
+      "Right eye is blue, left eye is green (heterochromia)"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2025-03-14T20:00:00Z",
+        "description": "Observed passing a USB drive to an unidentified man outside the Louvre Carrousel shopping mall."
+      },
+      {
+        "timestamp": "2025-07-09T17:30:00Z",
+        "description": "Used a burner phone to make three calls to a number registered to a defunct shipping company in Cyprus."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-09-01T10:00:00Z",
+        "description": "Enrolled in a French language evening class at the Alliance Fran\u00e7aise Paris."
+      },
+      {
+        "timestamp": "2025-05-20T13:00:00Z",
+        "description": "Attended an art exhibition at the Palais de Tokyo, photographing several modern sculptures."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Paris, France",
+        "start_date": "2024-01-15",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Vienna, Austria",
+        "start_date": "2023-09-05",
+        "end_date": "2023-09-12"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2019-11-30",
+        "description": "Detained by French DGSI for 18 hours on suspicion of industrial espionage targeting an aerospace firm; released without charge."
+      }
+    ]
+  },
+  "\u00c9mile Charpentier": {
+    "type": "person",
+    "current_location": {
+      "lat": 48.8566,
+      "lon": 2.3522
+    },
+    "birthday": "1965-01-22",
+    "associations": [
+      "Nadia Volkov",
+      "Rue de Rivoli Safehouse",
+      "Chen Wei"
+    ],
+    "identifying_characteristics": [
+      "Heavyset, approximately 190 cm tall",
+      "Grey goatee, always neatly trimmed",
+      "Wears a distinctive vintage Patek Philippe chronograph on his left wrist",
+      "Carries a black leather attach\u00e9 case at all times",
+      "Speaks in a low, measured baritone"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-10-10T18:45:00Z",
+        "description": "Met with two individuals of Eastern European appearance at a private dining club near Place Vend\u00f4me; meeting lasted three hours."
+      },
+      {
+        "timestamp": "2025-01-28T09:00:00Z",
+        "description": "Transferred \u20ac400,000 from an account in Luxembourg to an account in the Cayman Islands."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-08-14T15:00:00Z",
+        "description": "Attended a seminar on 'Global Supply Chain Resilience' at Sciences Po Paris."
+      },
+      {
+        "timestamp": "2025-04-05T20:30:00Z",
+        "description": "Had dinner with his wife and daughter at Brasserie Lipp on Boulevard Saint-Germain."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Paris, France",
+        "start_date": "2022-03-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Luxembourg City, Luxembourg",
+        "start_date": "2025-01-25",
+        "end_date": "2025-01-27"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2008-03-15",
+        "description": "Convicted in absentia by a Belgian court for arms brokerage without a license; sentence never served."
+      },
+      {
+        "date": "2015-06-20",
+        "description": "Investigated by Interpol for alleged facilitation of dual-use technology transfers to sanctioned entities."
+      }
+    ]
+  },
+  "Chen Wei": {
+    "type": "person",
+    "current_location": {
+      "lat": 31.2304,
+      "lon": 121.4737
+    },
+    "birthday": "1979-11-05",
+    "associations": [
+      "\u00c9mile Charpentier",
+      "Shanghai Data Center",
+      "The White Van"
+    ],
+    "identifying_characteristics": [
+      "Slim build, approximately 175 cm tall",
+      "Circular wire-framed glasses",
+      "Always carries at least two mobile phones",
+      "Sports a small dragon tattoo on the back of his left hand",
+      "Wears only monochrome clothing"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-05-20T02:30:00Z",
+        "description": "Remotely accessed servers belonging to a European defense contractor from a caf\u00e9 in the French Concession district."
+      },
+      {
+        "timestamp": "2025-02-03T11:00:00Z",
+        "description": "Received a courier package with no return address from a flight originating in Prague."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-11-11T09:00:00Z",
+        "description": "Gave a lecture on cryptographic protocols at Fudan University."
+      },
+      {
+        "timestamp": "2025-03-01T14:00:00Z",
+        "description": "Visited the Shanghai Museum of Science and Technology with his nephew."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Shanghai, China",
+        "start_date": "2023-06-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Prague, Czech Republic",
+        "start_date": "2024-11-18",
+        "end_date": "2024-11-22"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2021-09-14",
+        "description": "Indicted by a US federal grand jury on 12 counts of computer fraud and economic espionage; remains at large."
+      }
+    ]
+  },
+  "Mireille Fontaine": {
+    "type": "person",
+    "current_location": {
+      "lat": 50.8503,
+      "lon": 4.3517
+    },
+    "birthday": "1988-05-03",
+    "associations": [
+      "\u00c9mile Charpentier",
+      "NATO Annex Building B"
+    ],
+    "identifying_characteristics": [
+      "Red hair, naturally curly, worn shoulder-length",
+      "Holds dual Belgian-Canadian citizenship",
+      "Deep vertical scar on the back of her right hand",
+      "Fluent in six languages including Arabic and Mandarin",
+      "Typically dressed in business formal attire"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2025-04-22T07:15:00Z",
+        "description": "Photographed accessing a classified NATO document room using a badge not registered in her name."
+      },
+      {
+        "timestamp": "2025-06-30T23:00:00Z",
+        "description": "Observed in a parking garage speaking to a known SVR officer for approximately 20 minutes."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-10-01T08:00:00Z",
+        "description": "Attended a briefing at NATO headquarters on Eastern European border security."
+      },
+      {
+        "timestamp": "2025-02-14T19:00:00Z",
+        "description": "Had dinner at a restaurant in Ixelles with three colleagues from her policy division."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Brussels, Belgium",
+        "start_date": "2021-09-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Ottawa, Canada",
+        "start_date": "2021-05-10",
+        "end_date": "2021-08-20"
+      }
+    ],
+    "priors": []
+  },
+  "Dmitri Alekseyev": {
+    "type": "person",
+    "current_location": {
+      "lat": 59.9343,
+      "lon": 30.3351
+    },
+    "birthday": "1968-09-30",
+    "associations": [
+      "Viktor Petrov",
+      "Oleg Baranovsky",
+      "The Black Sedan"
+    ],
+    "identifying_characteristics": [
+      "Broad-shouldered, former heavyweight wrestler's build",
+      "Shaved head with a large birthmark behind his left ear",
+      "Missing two front teeth, replaced with gold crowns",
+      "Always wears a ruby signet ring on his right pinky",
+      "Deep, gravelly voice with a Siberian regional accent"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-07-04T21:00:00Z",
+        "description": "Transported an unmarked crate from Saint Petersburg harbor to a private warehouse on the outskirts of Vsevolozhsk."
+      },
+      {
+        "timestamp": "2025-01-15T04:00:00Z",
+        "description": "Crossed into Finland via a minor border post outside Lappeenranta using a false Estonian passport."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-06-15T10:00:00Z",
+        "description": "Attended his daughter's graduation ceremony at Saint Petersburg State University."
+      },
+      {
+        "timestamp": "2024-09-20T16:00:00Z",
+        "description": "Purchased fishing equipment at a sports shop on Nevsky Prospekt."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Saint Petersburg, Russia",
+        "start_date": "2022-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Helsinki, Finland",
+        "start_date": "2025-01-15",
+        "end_date": "2025-01-16"
+      }
+    ],
+    "priors": [
+      {
+        "date": "1998-03-10",
+        "description": "Convicted of aggravated assault in Saint Petersburg; served 18 months."
+      },
+      {
+        "date": "2007-08-22",
+        "description": "Suspected of coordinating a weapons shipment to a militant group in the North Caucasus; never charged."
+      },
+      {
+        "date": "2016-05-05",
+        "description": "Placed on an EU sanctions list for alleged involvement in destabilization operations in Ukraine."
+      }
+    ]
+  },
+  "Oleg Baranovsky": {
+    "type": "person",
+    "current_location": {
+      "lat": 46.948,
+      "lon": 7.4474
+    },
+    "birthday": "1975-12-01",
+    "associations": [
+      "Dmitri Alekseyev",
+      "Kremlin Safe House"
+    ],
+    "identifying_characteristics": [
+      "Average height, lean build",
+      "Wears a full beard, peppered with grey",
+      "Known to use at least four different aliases",
+      "Has a habit of tapping his left knee when nervous",
+      "Prefers outdoor caf\u00e9 seating and always sits facing the exit"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2025-01-20T11:30:00Z",
+        "description": "Met with an Iranian diplomat accredited to the UN at a private villa outside Bern."
+      },
+      {
+        "timestamp": "2025-03-08T17:00:00Z",
+        "description": "Observed carrying a diplomatic pouch without any official credentials at Geneva Airport."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-10-05T09:00:00Z",
+        "description": "Registered at the Hotel Bellevue Palace under the alias 'Stepan Grudin' for a three-night stay."
+      },
+      {
+        "timestamp": "2024-12-30T14:00:00Z",
+        "description": "Took a guided tour of the Federal Palace of Switzerland as part of a tourist group."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Bern, Switzerland",
+        "start_date": "2024-09-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Geneva, Switzerland",
+        "start_date": "2025-03-07",
+        "end_date": "2025-03-09"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2013-11-19",
+        "description": "Identified by Swiss federal intelligence as an unregistered foreign agent operating in the country."
+      }
+    ]
+  },
+  "Isabella Ortega": {
+    "type": "person",
+    "current_location": {
+      "lat": 40.4168,
+      "lon": -3.7038
+    },
+    "birthday": "1991-02-17",
+    "associations": [
+      "Tariq Al-Mansouri",
+      "Costa del Sol Storage Facility"
+    ],
+    "identifying_characteristics": [
+      "Tall, approximately 178 cm, athletic build",
+      "Long dark hair, often braided",
+      "Birthmark resembling a crescent moon on her left collarbone",
+      "Speaks with a slight Andalusian accent despite living in Madrid",
+      "Frequently changes hair color and style"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-08-17T22:45:00Z",
+        "description": "Collected a package from a locker at Madrid Barajas Airport that was later found to contain encrypted hard drives."
+      },
+      {
+        "timestamp": "2025-02-28T16:00:00Z",
+        "description": "Rented a speedboat near Algeciras and made an unscheduled trip toward the Moroccan coast."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-07-20T11:00:00Z",
+        "description": "Attended a salsa dance class at a studio in Malasa\u00f1a neighborhood."
+      },
+      {
+        "timestamp": "2025-01-05T09:30:00Z",
+        "description": "Visited the Thyssen-Bornemisza Museum and spent two hours in the Impressionist gallery."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Madrid, Spain",
+        "start_date": "2022-06-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Tangier, Morocco",
+        "start_date": "2025-03-01",
+        "end_date": "2025-03-03"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2020-04-14",
+        "description": "Arrested by Spanish CNI for suspected document forgery; charges dropped after a witness recanted."
+      }
+    ]
+  },
+  "Tariq Al-Mansouri": {
+    "type": "person",
+    "current_location": {
+      "lat": 25.2048,
+      "lon": 55.2708
+    },
+    "birthday": "1976-08-12",
+    "associations": [
+      "Isabella Ortega",
+      "Costa del Sol Storage Facility",
+      "The Sand-Colored SUV"
+    ],
+    "identifying_characteristics": [
+      "Medium build, dark complexion with deep-set brown eyes",
+      "Always wears a gold-and-onyx cufflink set",
+      "Has a habit of carrying worry beads (misbaha) in his coat pocket",
+      "Speaks Gulf Arabic, English, and Farsi fluently",
+      "Has a prominent aquiline nose"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-09-25T21:00:00Z",
+        "description": "Hosted a meeting at a private beach club in Dubai Marina that included individuals on OFAC watchlists."
+      },
+      {
+        "timestamp": "2025-01-12T14:30:00Z",
+        "description": "Wired $1.2 million to a shell company registered in Ras Al Khaimah with no known business activity."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-11-01T10:00:00Z",
+        "description": "Attended a business conference on renewable energy at the Dubai World Trade Centre."
+      },
+      {
+        "timestamp": "2025-02-10T18:00:00Z",
+        "description": "Watched a polo match at the Dubai Polo & Equestrian Club with family members."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Dubai, UAE",
+        "start_date": "2023-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Madrid, Spain",
+        "start_date": "2024-08-14",
+        "end_date": "2024-08-19"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2017-02-28",
+        "description": "Listed in leaked Pandora Papers as beneficial owner of 14 offshore companies used to obscure arms transactions."
+      },
+      {
+        "date": "2022-10-10",
+        "description": "Investigated by UAE financial authorities for alleged money laundering; investigation closed without charges after political intervention."
+      }
+    ]
+  },
+  "Priya Anand": {
+    "type": "person",
+    "current_location": {
+      "lat": 28.6139,
+      "lon": 77.209
+    },
+    "birthday": "1986-04-07",
+    "associations": [
+      "Chen Wei",
+      "Mumbai Signals Post"
+    ],
+    "identifying_characteristics": [
+      "Petite, approximately 158 cm, with long black hair",
+      "Software engineer by cover, specializes in zero-day exploits",
+      "Has a thin horizontal scar across her chin from a childhood accident",
+      "Often wears a small blue topaz pendant",
+      "Tends to avoid eye contact when lying"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-06-10T00:15:00Z",
+        "description": "Breached a government satellite communications network from her apartment in South Delhi."
+      },
+      {
+        "timestamp": "2025-01-30T13:00:00Z",
+        "description": "Met with a foreign intelligence contractor at the Taj Mahal Hotel in Mumbai, exchanging a laptop bag."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-08-15T11:00:00Z",
+        "description": "Attended India's Independence Day parade at Kartavya Path as part of a corporate guest delegation."
+      },
+      {
+        "timestamp": "2024-12-28T16:00:00Z",
+        "description": "Visited the National Science Centre in Delhi with her younger brother."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "New Delhi, India",
+        "start_date": "2023-03-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Mumbai, India",
+        "start_date": "2025-01-28",
+        "end_date": "2025-02-01"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2023-07-07",
+        "description": "Named in a classified RAW internal report as a suspected double agent passing signals intelligence to a foreign service."
+      }
+    ]
+  },
+  "Klaus Brenner": {
+    "type": "person",
+    "current_location": {
+      "lat": 52.52,
+      "lon": 13.405
+    },
+    "birthday": "1959-06-18",
+    "associations": [
+      "\u00c9mile Charpentier",
+      "Berlin Logistics Hub"
+    ],
+    "identifying_characteristics": [
+      "Stocky, with a white crew cut",
+      "Deep baritone voice with a Bavarian accent",
+      "Wears thick-framed reading glasses on a chain around his neck",
+      "Always has a handkerchief in his breast pocket",
+      "Has a BND (German intelligence) service tattoo on his upper left arm, now partially lasered off"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-04-19T08:00:00Z",
+        "description": "Was observed hand-delivering a folder of documents to the Turkish military attach\u00e9's residence in Grunewald."
+      },
+      {
+        "timestamp": "2025-03-01T17:30:00Z",
+        "description": "Rented a private conference room under a pseudonym and held a three-hour meeting with four individuals whose faces were obscured on surveillance cameras."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-09-03T10:00:00Z",
+        "description": "Attended a security policy forum at the German Council on Foreign Relations (DGAP)."
+      },
+      {
+        "timestamp": "2025-01-18T12:00:00Z",
+        "description": "Lunched at Caf\u00e9 Einstein Stammhaus on Unter den Linden with a journalist from Die Zeit."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Berlin, Germany",
+        "start_date": "2020-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Ankara, Turkey",
+        "start_date": "2024-02-10",
+        "end_date": "2024-02-14"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2001-05-30",
+        "description": "Dismissed from the BND after an internal investigation concluded he leaked field agent identities to a third party."
+      },
+      {
+        "date": "2010-11-02",
+        "description": "Suspected of selling German company acquisition plans to a state-backed competitor; investigation dropped for lack of admissible evidence."
+      }
+    ]
+  },
+  "Fatima Okafor": {
+    "type": "person",
+    "current_location": {
+      "lat": 6.5244,
+      "lon": 3.3792
+    },
+    "birthday": "1993-08-24",
+    "associations": [
+      "Tariq Al-Mansouri",
+      "Lagos Harbor Depot"
+    ],
+    "identifying_characteristics": [
+      "Tall and slender, with closely cropped natural hair",
+      "Has tribal scarification marks on both cheeks, a sign of her heritage",
+      "Speaks Yoruba, Hausa, French, and English fluently",
+      "Typically wears traditional Ankara-print attire in public",
+      "Has a slight tremor in her left hand from a past injury"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-12-05T04:00:00Z",
+        "description": "Coordinated the overnight loading of unmarked shipping containers onto a cargo vessel headed to Djibouti."
+      },
+      {
+        "timestamp": "2025-02-22T15:00:00Z",
+        "description": "Received a cash payment of $80,000 from a courier at a hotel in Victoria Island."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-10-28T11:00:00Z",
+        "description": "Attended the Lagos Book and Art Festival at Terra Kulture on Victoria Island."
+      },
+      {
+        "timestamp": "2025-01-01T12:00:00Z",
+        "description": "Celebrated New Year at a family gathering in the Ikeja district."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Lagos, Nigeria",
+        "start_date": "2022-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Djibouti City, Djibouti",
+        "start_date": "2024-12-08",
+        "end_date": "2024-12-10"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2021-03-18",
+        "description": "Flagged by Nigerian Economic and Financial Crimes Commission (EFCC) for suspicious cross-border transactions totaling $2.3 million; file later sealed."
+      }
+    ]
+  },
+  "Jean-Luc Moreau": {
+    "type": "person",
+    "current_location": {
+      "lat": 46.2044,
+      "lon": 6.1432
+    },
+    "birthday": "1955-11-11",
+    "associations": [
+      "Oleg Baranovsky",
+      "Geneva Finance Tower"
+    ],
+    "identifying_characteristics": [
+      "Tall, elegantly dressed, silver-haired",
+      "Carries an ivory-handled walking cane he doesn't actually need",
+      "Graduate of \u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne",
+      "Has a glass right eye from a hunting accident in 1989",
+      "Known to use a personal encryption device disguised as a wristwatch"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-03-07T15:00:00Z",
+        "description": "Opened three anonymous numbered accounts at a private bank in Geneva on behalf of undisclosed clients."
+      },
+      {
+        "timestamp": "2025-02-01T10:00:00Z",
+        "description": "Transferred ownership of a shell company holding $47 million in assets to an unidentified third party in Liechtenstein."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-07-01T14:00:00Z",
+        "description": "Attended the Montreux Jazz Festival with his longtime partner."
+      },
+      {
+        "timestamp": "2024-11-20T09:00:00Z",
+        "description": "Chaired a panel on 'Sovereign Wealth Management' at the World Economic Forum annual conference."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Geneva, Switzerland",
+        "start_date": "2020-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Vaduz, Liechtenstein",
+        "start_date": "2025-01-30",
+        "end_date": "2025-02-01"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2012-09-25",
+        "description": "Fined by Swiss FINMA for facilitating transactions that circumvented international sanctions targeting an Iranian entity."
+      }
+    ]
+  },
+  "Sung-Jin Park": {
+    "type": "person",
+    "current_location": {
+      "lat": 37.5665,
+      "lon": 126.978
+    },
+    "birthday": "1981-03-22",
+    "associations": [
+      "Priya Anand",
+      "Chen Wei"
+    ],
+    "identifying_characteristics": [
+      "Medium height, extremely fit, former ROK Army Ranger",
+      "Has a geometric tattoo sleeve on his right arm",
+      "Wears colored contact lenses to disguise his eye color",
+      "Known to tail surveillance teams without being detected",
+      "Scar running across his left eyebrow from a combat deployment"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-09-14T03:00:00Z",
+        "description": "Broke into the communication systems room of a foreign diplomatic mission in Seoul using a counterfeit access card."
+      },
+      {
+        "timestamp": "2025-01-07T22:00:00Z",
+        "description": "Delivered a sealed diplomatic bag to the Russian consulate after hours; not a registered diplomatic courier."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-05-05T08:00:00Z",
+        "description": "Ran in the Seoul International Marathon, finishing in 73rd place in the open category."
+      },
+      {
+        "timestamp": "2024-10-03T16:00:00Z",
+        "description": "Attended a public lecture on cybersecurity at KAIST Seoul campus."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Seoul, South Korea",
+        "start_date": "2023-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Tokyo, Japan",
+        "start_date": "2024-04-10",
+        "end_date": "2024-04-14"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2019-06-30",
+        "description": "Dishonorably discharged from Korean Army Intelligence after classified mission files were found in his personal possession."
+      }
+    ]
+  },
+  "Valentina Cruz": {
+    "type": "person",
+    "current_location": {
+      "lat": -34.6037,
+      "lon": -58.3816
+    },
+    "birthday": "1990-12-09",
+    "associations": [
+      "Isabella Ortega",
+      "Tariq Al-Mansouri"
+    ],
+    "identifying_characteristics": [
+      "Short, approximately 160 cm, with dark olive skin",
+      "Bright green eyes that are likely contact lenses",
+      "Has a rose tattoo on the inside of her right forearm",
+      "Known to use the alias 'Mar\u00eda del Sol'",
+      "Carries a custom-built radio frequency jammer in a modified crossbody bag"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-11-20T19:00:00Z",
+        "description": "Was seen accepting a briefcase from a man matching the description of an INTERPOL red notice subject at a Buenos Aires waterfront restaurant."
+      },
+      {
+        "timestamp": "2025-02-14T08:30:00Z",
+        "description": "Accessed the Argentine Ministry of Foreign Affairs archive without authorization, photographing documents related to trade agreements."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-06-25T21:00:00Z",
+        "description": "Attended a tango show at El Viejo Almac\u00e9n in San Telmo."
+      },
+      {
+        "timestamp": "2025-01-20T11:00:00Z",
+        "description": "Visited the MALBA art museum in Palermo with a group of friends."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Buenos Aires, Argentina",
+        "start_date": "2023-07-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "S\u00e3o Paulo, Brazil",
+        "start_date": "2024-08-01",
+        "end_date": "2024-08-05"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2022-05-11",
+        "description": "Suspected of forging maritime shipping manifests for cargo moving through the Port of Buenos Aires; case closed without prosecution."
+      }
+    ]
+  },
+  "Alexei Drozdov": {
+    "type": "person",
+    "current_location": {
+      "lat": 47.0105,
+      "lon": 28.8638
+    },
+    "birthday": "1943-04-01",
+    "associations": [
+      "Viktor Petrov",
+      "Oleg Baranovsky"
+    ],
+    "identifying_characteristics": [
+      "Frail, elderly man with a deeply lined face",
+      "Uses a Soviet-era military cane with a hidden compartment in the handle",
+      "Known to communicate exclusively through hand-written notes",
+      "Has cataracts in both eyes but refuses surgery",
+      "Wears the same three suits in rotation, all dark charcoal"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2021-10-15T14:00:00Z",
+        "description": "Passed a handwritten codebook to an intermediary at a Chi\u0219in\u0103u market, later linked to an active Russian intelligence cell."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2021-09-01T10:00:00Z",
+        "description": "Attended Sunday mass at the Nativity Cathedral in Chi\u0219in\u0103u as he has done every week for 30 years."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Chi\u0219in\u0103u, Moldova",
+        "start_date": "2010-01-01",
+        "end_date": "2022-03-14"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2022-03-14",
+        "description": "Confirmed deceased by Moldovan authorities; cause of death listed as cardiac arrest, though circumstances remain suspicious given timing of active investigations."
+      },
+      {
+        "date": "1987-07-19",
+        "description": "Arrested by West German BfV on espionage charges; exchanged in a prisoner swap at Glienicke Bridge in 1988."
+      }
+    ]
+  },
+  "Reza Shirazi": {
+    "type": "person",
+    "current_location": {
+      "lat": 35.6892,
+      "lon": 51.389
+    },
+    "birthday": "1972-06-14",
+    "associations": [
+      "Oleg Baranovsky",
+      "Tariq Al-Mansouri"
+    ],
+    "identifying_characteristics": [
+      "Medium height with a dense black beard going grey at the chin",
+      "Has a burn scar covering his left forearm, reportedly from a lab accident",
+      "Carries a Quran and a quantum physics textbook wherever he goes",
+      "Uses a secondary set of biometrics (prosthetic fingerprint covers) documented in an MI6 report",
+      "Wears locally sourced traditional dress in Iran but western clothes abroad"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-07-19T22:00:00Z",
+        "description": "Transported centrifuge component schematics from Tehran to a courier in Vienna using a diplomatic pouch."
+      },
+      {
+        "timestamp": "2025-01-04T16:00:00Z",
+        "description": "Met with two IRGC officers at a safe house in Karaj to discuss acquisition of uranium enrichment equipment."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-09-22T11:00:00Z",
+        "description": "Presented a paper on nuclear energy policy at Sharif University of Technology in Tehran."
+      },
+      {
+        "timestamp": "2025-02-28T15:00:00Z",
+        "description": "Visited the National Museum of Iran with a delegation of foreign scholars."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Tehran, Iran",
+        "start_date": "2022-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Vienna, Austria",
+        "start_date": "2024-07-17",
+        "end_date": "2024-07-20"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2018-04-12",
+        "description": "Placed on EU and US sanctions lists for alleged involvement in Iran's clandestine nuclear weapons program."
+      },
+      {
+        "date": "2020-11-30",
+        "description": "Survived an assassination attempt by motorcycle gunmen in Tehran; one bodyguard was killed."
+      }
+    ]
+  },
+  "Agnes Lindqvist": {
+    "type": "person",
+    "current_location": {
+      "lat": 59.3293,
+      "lon": 18.0686
+    },
+    "birthday": "1983-02-28",
+    "associations": [
+      "Klaus Brenner",
+      "Sung-Jin Park"
+    ],
+    "identifying_characteristics": [
+      "Slim, with close-cropped silver hair despite being in her early forties",
+      "Has a subtle Swedish Military Intelligence (MUST) service pin kept in her inside jacket pocket",
+      "Fluent in Russian, Estonian, and Finnish in addition to Swedish and English",
+      "Known to run 10 km every morning at exactly 6 AM",
+      "Wears no jewelry except a single titanium ear cuff on her left ear"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-10-08T20:00:00Z",
+        "description": "Passed a digital encryption key to a known GRU asset at the Stockholm Central train station."
+      },
+      {
+        "timestamp": "2025-02-05T11:00:00Z",
+        "description": "Rented a car under a false name and drove to the Gotland ferry terminal, then abandoned the car and returned via taxi."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-06-21T09:00:00Z",
+        "description": "Participated in the Midsommar celebration at Skansen Open-Air Museum in Stockholm."
+      },
+      {
+        "timestamp": "2025-01-15T14:00:00Z",
+        "description": "Attended a lecture on Baltic security dynamics at the Swedish Institute of International Affairs (UI)."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Stockholm, Sweden",
+        "start_date": "2021-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Tallinn, Estonia",
+        "start_date": "2024-04-05",
+        "end_date": "2024-04-08"
+      }
+    ],
+    "priors": []
+  },
+  "Marco Benedetti": {
+    "type": "person",
+    "current_location": {
+      "lat": 41.9028,
+      "lon": 12.4964
+    },
+    "birthday": "1969-09-15",
+    "associations": [
+      "Jean-Luc Moreau",
+      "\u00c9mile Charpentier",
+      "Geneva Finance Tower"
+    ],
+    "identifying_characteristics": [
+      "Portly, with a large silver mustache",
+      "Wears a Papal diplomatic ID that has been reported stolen",
+      "Carries business cards from a non-existent Vatican economic affairs office",
+      "Has a distinctive rolling gait from a hip replacement",
+      "Never travels without a bodyguard who poses as his personal assistant"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-05-15T09:30:00Z",
+        "description": "Held a private audience with a sanctioned Libyan oil minister inside Vatican City, bypassing normal diplomatic channels."
+      },
+      {
+        "timestamp": "2025-03-02T17:00:00Z",
+        "description": "Transferred title of three Roman properties to an offshore trust minutes before an Italian financial authority audit."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-04-20T10:00:00Z",
+        "description": "Attended Easter Sunday Mass in St. Peter's Square as part of a diplomatic guest group."
+      },
+      {
+        "timestamp": "2024-11-10T16:00:00Z",
+        "description": "Dined at Ristorante Il Sorpasso in Prati with two Italian senators."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Rome, Italy",
+        "start_date": "2020-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Tripoli, Libya",
+        "start_date": "2023-11-05",
+        "end_date": "2023-11-07"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2005-03-20",
+        "description": "Indicted by Italian anti-corruption prosecutors for embezzling Church reconstruction funds; case dismissed after key witness retracted testimony."
+      },
+      {
+        "date": "2018-08-14",
+        "description": "Named in a Vatican financial scandal report as a conduit for laundering proceeds from organized crime through charitable organizations."
+      }
+    ]
+  },
+  "Hana Kov\u00e1\u0159": {
+    "type": "person",
+    "current_location": {
+      "lat": 50.0755,
+      "lon": 14.4378
+    },
+    "birthday": "1996-01-13",
+    "associations": [
+      "Chen Wei",
+      "Agnes Lindqvist"
+    ],
+    "identifying_characteristics": [
+      "Young-looking, often underestimated as a university student",
+      "Specializes in SIGINT and electronic warfare",
+      "Has a galaxy tattoo on her right shoulder blade",
+      "Typically wears oversized hoodies and carries a custom-built Faraday-cage backpack",
+      "Speaks with a distinctive Prague dialect lilt when nervous"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2025-01-10T01:00:00Z",
+        "description": "Deployed a GSM interception device (IMSI catcher) on the roof of an apartment block adjacent to the US embassy in Prague."
+      },
+      {
+        "timestamp": "2025-02-20T22:00:00Z",
+        "description": "Uploaded a 4GB encrypted archive to a server registered in the Seychelles from a caf\u00e9 near Wenceslas Square."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-11-17T14:00:00Z",
+        "description": "Attended a CTF (capture the flag) hacking competition at Czech Technical University in Prague."
+      },
+      {
+        "timestamp": "2025-01-28T18:00:00Z",
+        "description": "Had dinner with her flatmate at a pub in Vinohrady, staying until closing time."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Prague, Czech Republic",
+        "start_date": "2023-01-01",
+        "end_date": "2026-03-09"
+      }
+    ],
+    "priors": []
+  },
+  "Anya Lebedeva": {
+    "type": "person",
+    "current_location": {
+      "lat": 48.2082,
+      "lon": 16.3738
+    },
+    "birthday": "1987-10-31",
+    "associations": [
+      "Viktor Petrov",
+      "Dmitri Alekseyev",
+      "Vienna Station Apartment"
+    ],
+    "identifying_characteristics": [
+      "Petite, with dark auburn hair and high cheekbones",
+      "Fluent in eight languages including Hungarian and Turkish",
+      "Has a deep respect for classical music \u2014 always attends opera when in Vienna",
+      "Uses a specialized contact lens system to read microdots",
+      "Has a faint scar on her right temple from a previous exfiltration operation gone wrong"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-12-08T21:00:00Z",
+        "description": "Attended a Vienna Philharmonic concert as cover, and passed a microdot-encoded message to a fellow attendee during the interval."
+      },
+      {
+        "timestamp": "2025-03-05T10:00:00Z",
+        "description": "Established contact with the deputy chief of mission of the Bulgarian embassy under a false identity."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-10-26T19:00:00Z",
+        "description": "Attended the Vienna State Opera production of Don Giovanni with a colleague from her language school."
+      },
+      {
+        "timestamp": "2025-02-08T12:00:00Z",
+        "description": "Visited the Kunsthistorisches Museum in Vienna and spent three hours in the Egyptian collection."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Vienna, Austria",
+        "start_date": "2023-05-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Budapest, Hungary",
+        "start_date": "2024-06-15",
+        "end_date": "2024-06-18"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2016-09-03",
+        "description": "Expelled from Turkey under a diplomatic cover identity after BKA established her links to an SVR network operating in Istanbul."
+      }
+    ]
+  },
+  "Bogdan Marchuk": {
+    "type": "person",
+    "current_location": {
+      "lat": 50.4501,
+      "lon": 30.5234
+    },
+    "birthday": "1980-07-07",
+    "associations": [
+      "Dmitri Alekseyev",
+      "Anya Lebedeva"
+    ],
+    "identifying_characteristics": [
+      "Stocky build with a shaved head and a dense black beard",
+      "Has a Ukrainian trident tattoo on his left forearm",
+      "Former SBU (Ukrainian Security Service) operative who defected",
+      "Walks with military bearing and rarely smiles",
+      "Known to carry a concealed Glock 19 at all times"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2025-01-25T18:00:00Z",
+        "description": "Met with a Russian FSB officer at a pre-arranged location on the outskirts of Kyiv, possibly a double-cross operation."
+      },
+      {
+        "timestamp": "2025-03-01T06:00:00Z",
+        "description": "Crossed the Ukrainian-Polish border at a minor checkpoint using falsified transit documents."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-08-24T11:00:00Z",
+        "description": "Attended Ukrainian Independence Day commemorations on the Maidan Nezalezhnosti."
+      },
+      {
+        "timestamp": "2024-12-20T15:00:00Z",
+        "description": "Visited a weapons rehabilitation and decommissioning expo at the Kyiv Expo Centre."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Kyiv, Ukraine",
+        "start_date": "2023-09-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Warsaw, Poland",
+        "start_date": "2025-03-01",
+        "end_date": "2025-03-03"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2014-09-08",
+        "description": "Investigated by SBU for unauthorized sharing of battlefield intelligence with a foreign journalist; cleared after internal review."
+      },
+      {
+        "date": "2020-02-15",
+        "description": "Suspected of providing targeting data to a non-state actor during a Donbas ceasefire period."
+      }
+    ]
+  },
+  "Gabrielle Desjardins": {
+    "type": "person",
+    "current_location": {
+      "lat": 45.5017,
+      "lon": -73.5673
+    },
+    "birthday": "1977-03-19",
+    "associations": [
+      "Mireille Fontaine",
+      "Jean-Luc Moreau"
+    ],
+    "identifying_characteristics": [
+      "Medium build, with shoulder-length chestnut hair",
+      "Carries a diplomatic passport issued by Canada's Foreign Affairs Ministry",
+      "Has a habit of sketching maps and diagrams compulsively when listening",
+      "Speaks Qu\u00e9b\u00e9cois French and English with no discernible accent in either",
+      "Has a distinctive mole above her upper lip on the left side"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-09-18T14:00:00Z",
+        "description": "Photographed the layout of the CSIS Montreal field office from a building across the street."
+      },
+      {
+        "timestamp": "2025-02-11T17:30:00Z",
+        "description": "Transmitted an encrypted signal burst from a rooftop in the Rosemont-La Petite-Patrie borough to an unknown receiver."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-07-04T20:00:00Z",
+        "description": "Attended the International Jazz Festival at Place des Festivals in downtown Montreal."
+      },
+      {
+        "timestamp": "2025-01-10T09:00:00Z",
+        "description": "Visited the Montreal Museum of Fine Arts for a private tour of the Impressionism collection."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Montreal, Canada",
+        "start_date": "2022-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Paris, France",
+        "start_date": "2023-10-01",
+        "end_date": "2023-10-08"
+      }
+    ],
+    "priors": []
+  },
+  "Sven Haakonsen": {
+    "type": "person",
+    "current_location": {
+      "lat": 59.9139,
+      "lon": 10.7522
+    },
+    "birthday": "1974-05-17",
+    "associations": [
+      "Agnes Lindqvist",
+      "Klaus Brenner"
+    ],
+    "identifying_characteristics": [
+      "Tall, approximately 195 cm, with a Viking-like blond beard now streaked with grey",
+      "Retired Norwegian PST (Security Service) inspector turned private intelligence consultant",
+      "Has a deep horizontal scar across the back of his left hand from a wire snare",
+      "Frequents Oslo's Aker Brygge marina, keeps a sailboat there",
+      "Uses a custom Scandinavian cipher system known only to a small network"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-08-30T22:00:00Z",
+        "description": "Sailed his yacht to an uncharted drop point in the Oslofjord and retrieved a watertight canister, contents unknown."
+      },
+      {
+        "timestamp": "2025-01-22T11:00:00Z",
+        "description": "Met with a Russian maritime attach\u00e9 at the Grand Hotel Oslo under the guise of a private business consultation."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-05-17T12:00:00Z",
+        "description": "Celebrated Constitution Day (17 mai) with family along the Slottsparken parade route in Oslo."
+      },
+      {
+        "timestamp": "2024-11-30T16:00:00Z",
+        "description": "Attended a maritime security conference at the Oslo Milit\u00e6re Samfund."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Oslo, Norway",
+        "start_date": "2021-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Murmansk, Russia",
+        "start_date": "2023-07-15",
+        "end_date": "2023-07-18"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2019-04-04",
+        "description": "Investigated by Norwegian PST for unauthorized contact with a foreign intelligence service; investigation resulted in his resignation from the PST."
+      }
+    ]
+  },
+  "Amara Diallo": {
+    "type": "person",
+    "current_location": {
+      "lat": 12.3645,
+      "lon": -1.5336
+    },
+    "birthday": "1985-02-02",
+    "associations": [
+      "Fatima Okafor",
+      "Tariq Al-Mansouri"
+    ],
+    "identifying_characteristics": [
+      "Tall and wiry, approximately 188 cm",
+      "Wears a distinctive hand-woven kente cloth cap",
+      "Has a gold tooth replacing his upper left canine",
+      "Speaks Dioula, French, and English; also understands Arabic",
+      "Is known to courier messages through a network of local market traders"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-06-14T08:00:00Z",
+        "description": "Transported three sealed crates across the border from Burkina Faso into Mali using a falsely registered NGO vehicle."
+      },
+      {
+        "timestamp": "2025-01-18T20:00:00Z",
+        "description": "Met with an individual known to supply forged UN peacekeeping credentials at a restaurant in Ouagadougou."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-03-18T10:00:00Z",
+        "description": "Volunteered at a local food distribution drive organized by a Sahel relief NGO."
+      },
+      {
+        "timestamp": "2024-12-25T09:00:00Z",
+        "description": "Attended Christmas mass at a church in the Kossodo district of Ouagadougou with family."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Ouagadougou, Burkina Faso",
+        "start_date": "2022-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Bamako, Mali",
+        "start_date": "2024-06-15",
+        "end_date": "2024-06-17"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2023-02-08",
+        "description": "Arrested by Burkinabe security forces for suspected links to a regional arms trafficking network; released after 72 hours without charge."
+      }
+    ]
+  },
+  "Sofia Papadimitriou": {
+    "type": "person",
+    "current_location": {
+      "lat": 37.9838,
+      "lon": 23.7275
+    },
+    "birthday": "1989-07-04",
+    "associations": [
+      "Reza Shirazi",
+      "Oleg Baranovsky"
+    ],
+    "identifying_characteristics": [
+      "Dark-haired, with almond-shaped dark brown eyes",
+      "Has a Greek shipping heiress cover identity but is actually a HUMINT operative",
+      "Wears a distinctive evil eye (mati) bracelet on her right wrist",
+      "Frequents the high-end marina bars in Piraeus and Glyfada",
+      "Has a faint birthmark shaped like a teardrop below her left eye"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-07-12T23:00:00Z",
+        "description": "Boarded a private yacht in Piraeus harbor that left port without filing a departure manifest and returned 48 hours later."
+      },
+      {
+        "timestamp": "2025-02-03T16:00:00Z",
+        "description": "Used a modified satellite phone to contact a known Iranian intelligence handler from a rooftop apartment in Monastiraki."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-08-15T11:00:00Z",
+        "description": "Attended the Greek National Day celebrations at Syntagma Square."
+      },
+      {
+        "timestamp": "2025-01-22T14:00:00Z",
+        "description": "Hosted a dinner party for eight at her Kolonaki apartment, attended by local society figures."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Athens, Greece",
+        "start_date": "2022-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Limassol, Cyprus",
+        "start_date": "2024-09-01",
+        "end_date": "2024-09-05"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2021-05-20",
+        "description": "EYP (Greek intelligence) noted her as a person of interest after her yacht was found to have transported an unregistered individual across Greek maritime territory."
+      }
+    ]
+  },
+  "Daniel Mwangi": {
+    "type": "person",
+    "current_location": {
+      "lat": -1.2921,
+      "lon": 36.8219
+    },
+    "birthday": "1982-11-30",
+    "associations": [
+      "Fatima Okafor",
+      "Amara Diallo"
+    ],
+    "identifying_characteristics": [
+      "Well-built, with close-cropped hair and a trimmed goatee",
+      "Carries a false Kenyan diplomatic ID from a defunct ministry department",
+      "Has a small scar through his right eyebrow",
+      "Wears custom-tailored suits that appear to conceal body armor",
+      "Is known to use at least three phones simultaneously, none registered in his name"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-10-14T07:00:00Z",
+        "description": "Intercepted at Jomo Kenyatta International Airport with a bag containing $500,000 in undeclared cash hidden in a false-bottom suitcase."
+      },
+      {
+        "timestamp": "2025-01-30T21:00:00Z",
+        "description": "Held a clandestine meeting in a rented villa in Karen, Nairobi with three individuals tied to a Somali militant financing network."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-09-12T10:00:00Z",
+        "description": "Attended a seminar on East African trade logistics at the Nairobi Serena Hotel."
+      },
+      {
+        "timestamp": "2024-12-31T22:00:00Z",
+        "description": "Celebrated New Year's Eve at a private club in Westlands, Nairobi."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Nairobi, Kenya",
+        "start_date": "2022-06-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Mogadishu, Somalia",
+        "start_date": "2024-03-10",
+        "end_date": "2024-03-12"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2020-07-22",
+        "description": "Arrested by Kenyan NIS for illegal possession of unregistered communications equipment; released after two days on a writ of habeas corpus."
+      },
+      {
+        "date": "2023-04-18",
+        "description": "Named in a UN Monitoring Group report on arms embargo violations in the Horn of Africa."
+      }
+    ]
+  },
+  "The Black Sedan": {
+    "type": "vehicle",
+    "current_location": {
+      "lat": 55.7558,
+      "lon": 37.6173
+    },
+    "birthday": "2018-09-15",
+    "associations": [
+      "Viktor Petrov",
+      "Dmitri Alekseyev",
+      "Kremlin Safe House"
+    ],
+    "identifying_characteristics": [
+      "2018 Mercedes-Benz S-Class S560 4Matic, matte black wrap",
+      "License plate alternates between three known sets of Moscow Oblast plates",
+      "Armored to B7 standard with ballistic glass",
+      "Has a concealed compartment beneath the rear passenger seats",
+      "Custom-installed signal dampening equipment visible under the rear parcel shelf"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-11-03T22:00:00Z",
+        "description": "Parked outside Gorky Park at 10 PM for exactly 45 minutes while Viktor Petrov conducted a meeting inside."
+      },
+      {
+        "timestamp": "2025-01-15T02:00:00Z",
+        "description": "Observed crossing the border checkpoint at Torfyanovka into Finland without stopping for inspection, waved through by a border official."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-10-10T09:00:00Z",
+        "description": "Used to transport Viktor Petrov to an officially registered business meeting at the Moscow Chamber of Commerce."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Moscow, Russia",
+        "start_date": "2020-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Helsinki, Finland",
+        "start_date": "2025-01-15",
+        "end_date": "2025-01-16"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2022-07-04",
+        "description": "Flagged by Finnish Supo after satellite imagery placed the vehicle at a known FSB front company's premises in Lappeenranta."
+      }
+    ]
+  },
+  "The White Van": {
+    "type": "vehicle",
+    "current_location": {
+      "lat": 31.2304,
+      "lon": 121.4737
+    },
+    "birthday": "2020-03-08",
+    "associations": [
+      "Chen Wei",
+      "Shanghai Data Center"
+    ],
+    "identifying_characteristics": [
+      "2020 Ford Transit Custom, white with a partial magnetic decal for 'Jiangsu IT Solutions'",
+      "Interior fitted with custom-built server rack mounts and mobile power inverters",
+      "Rear windows obscured with one-way privacy film",
+      "Has a roof-mounted cellular antenna disguised as a ventilation pipe",
+      "VIN plate is a known counterfeit"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-05-20T01:00:00Z",
+        "description": "Parked for six consecutive hours on a street adjacent to a European diplomatic compound in the Huangpu district, presumed operating a mobile surveillance suite."
+      },
+      {
+        "timestamp": "2024-11-08T23:00:00Z",
+        "description": "Intercepted at a Bund-area checkpoint; the driver fled on foot before vehicle was searched. Server equipment found onboard."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-09-15T09:00:00Z",
+        "description": "Used for a legitimate IT equipment delivery to a Pudong tech park as a cover run."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Shanghai, China",
+        "start_date": "2020-06-01",
+        "end_date": "2026-03-09"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2023-01-17",
+        "description": "Vehicle flagged by Shanghai Public Security Bureau for operating without a valid commercial transport license; owner listed is a defunct shell company."
+      }
+    ]
+  },
+  "The Sand-Colored SUV": {
+    "type": "vehicle",
+    "current_location": {
+      "lat": 25.2048,
+      "lon": 55.2708
+    },
+    "birthday": "2021-11-20",
+    "associations": [
+      "Tariq Al-Mansouri",
+      "Costa del Sol Storage Facility"
+    ],
+    "identifying_characteristics": [
+      "2021 Toyota Land Cruiser 300-series, sand beige, with light tinting on all windows",
+      "Carries diplomatic plates that have been reported stolen from a Jordanian mission",
+      "Large dent on the driver's-side rear quarter panel, spray-painted over",
+      "Has a concealed compartment in the spare tire well beneath the cargo floor",
+      "Engine has been uprated with a performance chip for high-speed getaway capability"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-09-25T20:30:00Z",
+        "description": "Transported three individuals from Dubai Marina to a private airstrip south of Jebel Ali, bypassing the main tollway."
+      },
+      {
+        "timestamp": "2025-02-15T04:00:00Z",
+        "description": "Found idling with engine running outside the Sharjah Customs Authority building for two hours during a weekend night."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-11-01T08:00:00Z",
+        "description": "Used as a courtesy vehicle to transport conference guests to the Dubai World Trade Centre."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Dubai, UAE",
+        "start_date": "2022-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Muscat, Oman",
+        "start_date": "2024-06-10",
+        "end_date": "2024-06-12"
+      }
+    ],
+    "priors": []
+  },
+  "The Rust-Red Pickup": {
+    "type": "vehicle",
+    "current_location": {
+      "lat": 12.3645,
+      "lon": -1.5336
+    },
+    "birthday": "2009-05-01",
+    "associations": [
+      "Amara Diallo",
+      "Fatima Okafor"
+    ],
+    "identifying_characteristics": [
+      "2009 Toyota Hilux double-cab, faded red paint with significant rust along the door sills",
+      "Cargo bed frequently covered with an olive-green tarpaulin secured with wire ties",
+      "Spare tire mounted on the roof with an improvised bracket",
+      "Left headlight replaced with a unit from a different model, giving a mismatched appearance",
+      "Interior stripped of all non-essential panels to reduce weight"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-06-13T03:00:00Z",
+        "description": "Crossed from Burkina Faso into Mali at an unofficial border track at 3 AM carrying unmanifested cargo."
+      },
+      {
+        "timestamp": "2025-01-10T18:00:00Z",
+        "description": "Parked outside a suspected arms storage depot in Kaya for six hours; departing occupants were seen carrying weapon cases."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-09-20T09:00:00Z",
+        "description": "Used to transport grain sacks for an NGO food distribution in the Sahel region."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Ouagadougou, Burkina Faso",
+        "start_date": "2019-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Bamako, Mali",
+        "start_date": "2024-06-14",
+        "end_date": "2024-06-16"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2022-04-20",
+        "description": "Stopped at a ECOWAS checkpoint near the Mali border; driver produced false manifests. Vehicle impounded briefly, then released after a bribe was paid."
+      }
+    ]
+  },
+  "The Blue Cigarette Boat": {
+    "type": "vehicle",
+    "current_location": {
+      "lat": 36.1408,
+      "lon": -5.3536
+    },
+    "birthday": "2016-07-14",
+    "associations": [
+      "Isabella Ortega",
+      "Tariq Al-Mansouri",
+      "Costa del Sol Storage Facility"
+    ],
+    "identifying_characteristics": [
+      "2016 Fountain Powerboats 38 Lightning, cobalt blue hull with silver racing stripes",
+      "Registered under a shell company in Malta",
+      "Twin 300 HP Mercury outboard engines capable of 75 knots",
+      "Navigation lights disabled; relies on radar only at night",
+      "Has a hidden cavity beneath the helm console, approximately 1 cubic meter capacity"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2025-02-28T01:00:00Z",
+        "description": "Left Algeciras marina at 1 AM without filing a departure notice and returned from the direction of the Moroccan coast four hours later."
+      },
+      {
+        "timestamp": "2024-10-19T23:00:00Z",
+        "description": "Intercepted by Spanish Guardia Civil patrol but outran the pursuit vessel; identity of occupants unknown."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-07-15T10:00:00Z",
+        "description": "Moored at Gibraltar Marina during a legitimate day trip to the Rock, with Isabella Ortega logged as the skipper."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Algeciras, Spain",
+        "start_date": "2023-01-01",
+        "end_date": "2026-03-09"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2023-09-14",
+        "description": "Spanish maritime police linked this vessel to a suspected drug and document smuggling operation between Spain and Morocco."
+      }
+    ]
+  },
+  "The Silver Motorcycle": {
+    "type": "vehicle",
+    "current_location": {
+      "lat": 48.8566,
+      "lon": 2.3522
+    },
+    "birthday": "2022-04-10",
+    "associations": [
+      "Nadia Volkov",
+      "Hana Kov\u00e1\u0159"
+    ],
+    "identifying_characteristics": [
+      "2022 BMW R1250 GS Adventure, silver with black panniers",
+      "Registered to a non-existent name at a Paris address that is a mail drop",
+      "Modified exhaust system for reduced sound signature",
+      "GPS tracker found and removed, replaced with a decoy unit broadcasting false location",
+      "Right pannier has a false bottom concealing a waterproof document sleeve"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2025-03-14T19:30:00Z",
+        "description": "Ridden to the Louvre Carrousel parking area and parked for precisely 12 minutes while Nadia Volkov conducted a USB handoff inside."
+      },
+      {
+        "timestamp": "2025-01-05T03:00:00Z",
+        "description": "Spotted on CCTV near the Elys\u00e9e Palace perimeter at 3 AM; rider wore a fully concealing helmet with no markings."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-08-10T11:00:00Z",
+        "description": "Registered as an entrant in the Paris Moto Tour charity rally, ridden through the city center."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Paris, France",
+        "start_date": "2022-06-01",
+        "end_date": "2026-03-09"
+      }
+    ],
+    "priors": []
+  },
+  "Kremlin Safe House": {
+    "type": "building",
+    "current_location": {
+      "lat": 55.748,
+      "lon": 37.6025
+    },
+    "birthday": "1963-01-01",
+    "associations": [
+      "Viktor Petrov",
+      "Dmitri Alekseyev",
+      "Oleg Baranovsky",
+      "The Black Sedan"
+    ],
+    "identifying_characteristics": [
+      "Five-story pre-war Soviet-era apartment block near Zamoskvorechye district",
+      "Exterior appears unremarkable with crumbling plaster facade",
+      "Third-floor apartment 12 has reinforced steel door disguised with wooden veneer",
+      "Signal-blocking wallpaper detected by TSCM sweep in 2022",
+      "Multiple dead-letter drops known to exist in the building's courtyard and basement"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-11-04T00:00:00Z",
+        "description": "Thermal imaging showed unusual heat signatures consistent with multiple occupants on the third floor at 1 AM \u2014 no residents known to be registered."
+      },
+      {
+        "timestamp": "2025-02-19T04:30:00Z",
+        "description": "High-frequency burst transmission detected from the building's rooftop lasting approximately 90 seconds."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-06-01T10:00:00Z",
+        "description": "Building management company registered in Moscow Oblast filed routine maintenance permits for plumbing work on the ground floor."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Moscow, Russia",
+        "start_date": "1963-01-01",
+        "end_date": "2026-03-09"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2019-03-11",
+        "description": "CIA technical team detected the building as a signals relay node for a Moscow-based intelligence cell; surveillance established but source burned before action taken."
+      }
+    ]
+  },
+  "Rue de Rivoli Safehouse": {
+    "type": "building",
+    "current_location": {
+      "lat": 48.8632,
+      "lon": 2.3369
+    },
+    "birthday": "1882-01-01",
+    "associations": [
+      "Nadia Volkov",
+      "\u00c9mile Charpentier"
+    ],
+    "identifying_characteristics": [
+      "Third floor of a Haussmann-era building on the northern side of Rue de Rivoli",
+      "Apartment 7, accessed via a coded intercom system with a rotating cipher",
+      "Blackout curtains always drawn regardless of time of day",
+      "A faint chemical smell \u2014 likely from a photo development lab used for document copying \u2014 detected by a DST sweep",
+      "CCTV cameras in both stairwells have been modified to loop footage"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2025-03-15T21:00:00Z",
+        "description": "An electromagnetic signal consistent with a burst-mode shortwave transmitter was detected emanating from this building."
+      },
+      {
+        "timestamp": "2024-10-12T03:00:00Z",
+        "description": "French DGSI observed three unidentified individuals entering after midnight and departing before dawn."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-09-01T12:00:00Z",
+        "description": "Landlord-filed property inspection report shows apartment as ostensibly used for 'translation and consulting services'."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Paris, France",
+        "start_date": "1882-01-01",
+        "end_date": "2026-03-09"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2017-06-28",
+        "description": "Property previously linked to a DGSE-flagged Iranian intelligence network; ownership transferred to a shell company in 2018 before investigation concluded."
+      }
+    ]
+  },
+  "Shanghai Data Center": {
+    "type": "building",
+    "current_location": {
+      "lat": 31.1956,
+      "lon": 121.5372
+    },
+    "birthday": "2017-04-22",
+    "associations": [
+      "Chen Wei",
+      "The White Van"
+    ],
+    "identifying_characteristics": [
+      "Unremarkable five-story building in the Pudong New Area, externally marked as 'Horizon Cloud Technology'",
+      "Sub-basement level not listed on public building plans, accessed via a concealed elevator behind a server rack",
+      "Exterior has RF shielding embedded in the cladding panels",
+      "Persistent hum of industrial cooling equipment audible from 50 meters",
+      "Security personnel rotate every 4 hours and carry sidearms not standard for commercial facilities"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-05-21T05:00:00Z",
+        "description": "NSA signals monitoring detected outbound data flows consistent with exfiltrated Western defense contractor files originating from this building."
+      },
+      {
+        "timestamp": "2025-02-10T22:00:00Z",
+        "description": "Three unregistered vehicles parked in the loading dock overnight; facility went to 'maintenance mode' locking out all registered employee badges."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-08-20T10:00:00Z",
+        "description": "Officially hosted a cybersecurity industry working group for PRC Ministry of Industry and Information Technology representatives."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Shanghai, China",
+        "start_date": "2017-04-22",
+        "end_date": "2026-03-09"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2021-12-01",
+        "description": "Listed in a classified NSA internal report as one of twelve buildings in Shanghai suspected of hosting PLA Unit 61398-linked cyber operations."
+      }
+    ]
+  },
+  "NATO Annex Building B": {
+    "type": "building",
+    "current_location": {
+      "lat": 50.8804,
+      "lon": 4.4277
+    },
+    "birthday": "1994-11-11",
+    "associations": [
+      "Mireille Fontaine"
+    ],
+    "identifying_characteristics": [
+      "Annex building on the NATO headquarters compound, Brussels, Belgium",
+      "Houses the Intelligence Fusion Centre's secondary archive and server room",
+      "Badge access requires two-factor biometric verification plus PIN",
+      "All interior windows covered with opaque security film",
+      "Unusual power draw detected at irregular hours suggesting covert high-bandwidth data operations"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2025-04-22T07:10:00Z",
+        "description": "Security log shows the restricted document archive was accessed using a badge belonging to an employee who was officially on leave in Cyprus."
+      },
+      {
+        "timestamp": "2025-05-18T23:50:00Z",
+        "description": "CCTV gap of 11 minutes in the second-floor corridor at a time when a classified briefing document is confirmed missing."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-10-01T08:00:00Z",
+        "description": "Routine joint intelligence briefing attended by analysts from 12 member states was held in the main conference suite."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Brussels, Belgium",
+        "start_date": "1994-11-11",
+        "end_date": "2026-03-09"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2020-02-14",
+        "description": "A prior security breach in this building led to the compromise of an allied HUMINT network in Eastern Europe; perpetrator never identified."
+      }
+    ]
+  },
+  "Vienna Station Apartment": {
+    "type": "building",
+    "current_location": {
+      "lat": 48.2,
+      "lon": 16.372
+    },
+    "birthday": "1930-06-15",
+    "associations": [
+      "Anya Lebedeva",
+      "Oleg Baranovsky",
+      "Reza Shirazi"
+    ],
+    "identifying_characteristics": [
+      "Early 20th century Viennese apartment block in the 3rd Bezirk, near the Belvedere palace",
+      "Apartment 9 on the second floor accessed via a separate courtyard entrance",
+      "Known to have a basement room fitted with a Faraday cage for secure communications",
+      "Building owner registered as an offshore entity in the British Virgin Islands",
+      "Mailbox labeled with a fictitious architectural firm name"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-12-08T20:30:00Z",
+        "description": "Austrian DSN observed three known intelligence operatives entering the building on the evening of a Vienna Philharmonic performance \u2014 likely using the concert as cover for a meeting."
+      },
+      {
+        "timestamp": "2025-03-06T02:00:00Z",
+        "description": "Thermal imaging of the basement detected signatures consistent with multiple people and active electronic equipment in the early hours."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2025-01-04T14:00:00Z",
+        "description": "A plumber registered with the city visited the building to conduct legitimate boiler maintenance, as documented in city records."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Vienna, Austria",
+        "start_date": "1930-06-15",
+        "end_date": "2026-03-09"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2008-11-22",
+        "description": "Austrian federal police flagged this address as a previous residence of a known SVR rezident during the Cold War era; records suggest it remained in the same intelligence network's possession."
+      }
+    ]
+  },
+  "Costa del Sol Storage Facility": {
+    "type": "building",
+    "current_location": {
+      "lat": 36.5271,
+      "lon": -4.8833
+    },
+    "birthday": "2001-08-30",
+    "associations": [
+      "Isabella Ortega",
+      "Tariq Al-Mansouri",
+      "The Blue Cigarette Boat",
+      "The Sand-Colored SUV"
+    ],
+    "identifying_characteristics": [
+      "Industrial storage unit complex in a business park outside Marbella, Spain",
+      "Unit 14B padlocked with three separate, non-standard high-security locks",
+      "Interior walls lined with acoustic dampening foam for unknown reasons",
+      "Exterior camera system covers all approach angles with no blind spots",
+      "Registered to a property management company based in Gibraltar"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2025-02-28T06:00:00Z",
+        "description": "Blue Cigarette Boat trailer arrived at 6 AM and departed 40 minutes later; crates were unloaded and moved inside."
+      },
+      {
+        "timestamp": "2024-10-05T22:00:00Z",
+        "description": "Spanish intelligence observed three vehicles simultaneously departing the site after a two-hour gathering; intercept showed encrypted radio communication."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-06-20T10:00:00Z",
+        "description": "Unit registered as a marine equipment storage facility; a legitimate invoice for boat engine parts was filed with the local tax authority."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Marbella, Spain",
+        "start_date": "2001-08-30",
+        "end_date": "2026-03-09"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2019-07-18",
+        "description": "Spanish Guardia Civil searched the premises on an anonymous tip but found only legally registered marine equipment; tip now believed to have been a deliberate misdirection."
+      }
+    ]
+  },
+  "Berlin Logistics Hub": {
+    "type": "building",
+    "current_location": {
+      "lat": 52.4795,
+      "lon": 13.3847
+    },
+    "birthday": "2005-03-17",
+    "associations": [
+      "Klaus Brenner"
+    ],
+    "identifying_characteristics": [
+      "Mid-sized warehouse in the Tempelhof district of Berlin, near the former airport",
+      "Exterior marked as a freight forwarding company \u2014 'BerlinTransit GmbH'",
+      "Loading dock operates outside normal business hours, typically 10 PM to 3 AM",
+      "Internal CCTV system appears to overwrite recordings every 12 hours rather than the legally required 72 hours",
+      "Two large shipping containers are permanently stationed in the rear yard and have never been moved"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-04-20T23:00:00Z",
+        "description": "BfV surveillance caught a Turkish military cargo van entering the facility at night; a pallet of electronic components was offloaded."
+      },
+      {
+        "timestamp": "2025-03-03T01:30:00Z",
+        "description": "Sealed diplomatic crates arrived by unmarked truck and were loaded into one of the permanent shipping containers, which was subsequently welded shut."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-10-10T09:00:00Z",
+        "description": "Filed routine VAT returns showing \u20ac1.2 million in legitimate freight forwarding revenue for the fiscal year."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Berlin, Germany",
+        "start_date": "2005-03-17",
+        "end_date": "2026-03-09"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2016-09-30",
+        "description": "BfV investigation linked the facility to a network that diverted dual-use electronics to a sanctioned state via a Turkish intermediary; case remains open."
+      }
+    ]
+  },
+  "Geneva Finance Tower": {
+    "type": "building",
+    "current_location": {
+      "lat": 46.2044,
+      "lon": 6.137
+    },
+    "birthday": "1998-05-20",
+    "associations": [
+      "Jean-Luc Moreau",
+      "Marco Benedetti",
+      "Oleg Baranovsky"
+    ],
+    "identifying_characteristics": [
+      "Modern 18-story glass tower in Geneva's Rive Gauche financial district",
+      "Floors 14-16 are entirely leased to a private wealth management firm with no public-facing presence",
+      "Elevator access to floors 14-16 requires a biometric keycard not issued by the building management",
+      "Registered power consumption is 40% higher than comparable floors suggest, implying extensive server infrastructure",
+      "Underground parking garage connects via a tunnel to an adjacent building \u2014 an undisclosed exit route"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-03-08T16:00:00Z",
+        "description": "Swiss FINMA investigators were denied access to floors 14-16 by security staff citing 'client confidentiality'; a court order was required before entry was granted three days later."
+      },
+      {
+        "timestamp": "2025-02-02T19:00:00Z",
+        "description": "Encrypted financial wire instructions totaling $140 million were traced to a server farm on the 15th floor before the trail went cold in a chain of shell companies."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-11-20T09:00:00Z",
+        "description": "The building's lower floors hosted a legitimate World Economic Forum affiliate meeting on sustainable investment."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Geneva, Switzerland",
+        "start_date": "1998-05-20",
+        "end_date": "2026-03-09"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2014-04-08",
+        "description": "FINMA fined the wealth management firm on floor 14 for violations of anti-money laundering regulations; the firm paid and restructured without dissolution."
+      }
+    ]
+  },
+  "Mumbai Signals Post": {
+    "type": "building",
+    "current_location": {
+      "lat": 18.922,
+      "lon": 72.8347
+    },
+    "birthday": "2011-09-01",
+    "associations": [
+      "Priya Anand",
+      "Sung-Jin Park"
+    ],
+    "identifying_characteristics": [
+      "Innocuous-looking three-story building in the Colaba district of Mumbai, behind a screen of palm trees",
+      "Ground floor occupied by a legitimate IT consultancy as a front business",
+      "Rooftop has an array of directional antennas disguised as HVAC equipment",
+      "Second and third floors have no public registration or tenants on record",
+      "Basement contains SCIF-standard soundproofing materials detected during a neighboring construction survey"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-06-11T04:00:00Z",
+        "description": "RAW electronic surveillance detected an outbound encoded transmission lasting 14 minutes toward a satellite footprint consistent with a foreign intelligence service."
+      },
+      {
+        "timestamp": "2025-01-31T22:00:00Z",
+        "description": "A laptop bag matching one retrieved from Priya Anand's possession at the Taj Mahal Hotel was observed being carried into this building."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-09-15T10:00:00Z",
+        "description": "The ground-floor IT consultancy filed routine business activity reports for the Maharashtra state business registry."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Mumbai, India",
+        "start_date": "2011-09-01",
+        "end_date": "2026-03-09"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2020-08-12",
+        "description": "RAW internal file links this building to a previous signals collection operation run by a foreign service that was discovered and quietly dismantled; the building then changed hands via a shell company."
+      }
+    ]
+  },
+  "Lagos Harbor Depot": {
+    "type": "building",
+    "current_location": {
+      "lat": 6.435,
+      "lon": 3.408
+    },
+    "birthday": "1987-02-14",
+    "associations": [
+      "Fatima Okafor",
+      "Daniel Mwangi"
+    ],
+    "identifying_characteristics": [
+      "Large corrugated steel warehouse directly adjacent to Apapa Port's secondary cargo terminal, Lagos",
+      "Holds a legitimate import/export license for 'general merchandise'",
+      "One section of the warehouse is sealed off with a false wall, creating an unregistered interior space of approximately 800 square meters",
+      "Loading dock has a dedicated CCTV blind spot that is not accidental",
+      "Several shipping containers in the secure area bear seals from three different countries' customs authorities, suggesting re-manifesting"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-12-06T02:00:00Z",
+        "description": "Night-vision surveillance captured crates marked as 'machine parts' being transferred from a truck to a vessel docked at the private jetty behind the warehouse."
+      },
+      {
+        "timestamp": "2025-02-23T13:00:00Z",
+        "description": "Nigerian Customs Intelligence detected forged transit documentation covering 22 containers that had passed through this facility in the previous six months."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-10-15T09:00:00Z",
+        "description": "Warehouse passed a routine Lagos State fire safety inspection, with all publicly accessible areas found to be compliant."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Lagos, Nigeria",
+        "start_date": "1987-02-14",
+        "end_date": "2026-03-09"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2018-06-25",
+        "description": "INTERPOL Operation Wallfish linked this facility to the transshipment of illicit small arms originating from Eastern Europe to buyers in the Sahel region."
+      }
+    ]
+  },
+  "Yuki Tanaka": {
+    "type": "person",
+    "current_location": {
+      "lat": 35.6762,
+      "lon": 139.6503
+    },
+    "birthday": "1983-04-05",
+    "associations": [
+      "Sung-Jin Park",
+      "Chen Wei"
+    ],
+    "identifying_characteristics": [
+      "Slender build, approximately 165 cm, with short black hair worn asymmetrically",
+      "Former PSIA (Public Security Intelligence Agency) analyst turned freelance intelligence broker",
+      "Has a stylized koi fish tattoo behind her right ear, typically hidden by hair",
+      "Always carries two identical-looking phones \u2014 one is a decoy with fabricated contacts",
+      "Speaks Japanese, Mandarin, Korean, and English with equal fluency"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-10-22T22:00:00Z",
+        "description": "Met with a known MSS officer in a private karaoke booth in Shinjuku for two hours; booth was booked under a false name."
+      },
+      {
+        "timestamp": "2025-02-17T09:30:00Z",
+        "description": "Photographed entering the Tokyo Metropolitan Police Department communications center using credentials she no longer possesses."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-08-13T11:00:00Z",
+        "description": "Attended the Obon festival fireworks display at Sumida River, Tokyo, with friends."
+      },
+      {
+        "timestamp": "2025-01-01T00:00:00Z",
+        "description": "Visited Meiji Shrine for hatsumode, the traditional New Year's shrine visit."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Tokyo, Japan",
+        "start_date": "2022-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Beijing, China",
+        "start_date": "2024-07-10",
+        "end_date": "2024-07-14"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2021-08-31",
+        "description": "Dismissed from PSIA after an internal investigation found she had made unauthorized contact with a foreign intelligence officer; investigation classified."
+      }
+    ]
+  },
+  "Nikolai Vasenko": {
+    "type": "person",
+    "current_location": {
+      "lat": 41.0082,
+      "lon": 28.9784
+    },
+    "birthday": "1970-02-14",
+    "associations": [
+      "Oleg Baranovsky",
+      "Reza Shirazi",
+      "Anya Lebedeva"
+    ],
+    "identifying_characteristics": [
+      "Broad-faced with heavy eyebrows and deep-set grey eyes",
+      "Carries a diplomatic passport from a former Soviet republic that is a known forgery",
+      "Has a prosthetic left hand from a field operation that went wrong in 1999",
+      "Wears a thick fur-collared coat in all seasons above 10 degrees Celsius",
+      "Fluent in Turkish and Farsi \u2014 operates primarily in the Black Sea and Caspian regions"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-11-18T21:00:00Z",
+        "description": "Observed at a meeting in Istanbul's Beyoglu district between an Iranian MOIS officer and a Turkish organized crime figure."
+      },
+      {
+        "timestamp": "2025-02-09T03:00:00Z",
+        "description": "Crossed the Bosphorus by private water taxi at 3 AM and met a courier at the Karakoy docks who handed over a sealed tube."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-09-28T14:00:00Z",
+        "description": "Attended a trade exposition at Istanbul Congress Centre on Central Asian commercial ties."
+      },
+      {
+        "timestamp": "2025-01-12T19:00:00Z",
+        "description": "Had dinner at a fish restaurant on the Bosphorus waterfront in the Arnavutkoy district."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Istanbul, Turkey",
+        "start_date": "2023-04-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Baku, Azerbaijan",
+        "start_date": "2024-05-20",
+        "end_date": "2024-05-24"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2003-12-10",
+        "description": "Arrested by Georgian authorities on the Georgian Military Highway with falsified transit documents; released after two days \u2014 circumstances never clarified."
+      },
+      {
+        "date": "2011-07-07",
+        "description": "Listed in an Interpol red notice as a suspect in the assassination of a Chechen dissident in Vienna; notice later withdrawn under diplomatic pressure."
+      }
+    ]
+  },
+  "Layla Hassan": {
+    "type": "person",
+    "current_location": {
+      "lat": 30.0444,
+      "lon": 31.2357
+    },
+    "birthday": "1992-09-19",
+    "associations": [
+      "Tariq Al-Mansouri",
+      "Reza Shirazi"
+    ],
+    "identifying_characteristics": [
+      "Tall and striking with amber eyes unusual for the region",
+      "Egyptian national operating under cover as a cultural attach\u00e9",
+      "Wears a distinctive Nefertiti cartouche pendant in gold",
+      "Known to be left-handed and uses a fountain pen at all times",
+      "Has a small burn scar on the right side of her neck from a childhood accident"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-12-14T19:30:00Z",
+        "description": "Used her diplomatic cover to smuggle a package through Cairo International Airport that customs later identified as high-capacity encrypted storage media."
+      },
+      {
+        "timestamp": "2025-02-06T23:00:00Z",
+        "description": "Held an unscheduled night meeting at the Iranian Cultural Centre in Zamalek district, departing separately from five unidentified individuals."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-10-22T11:00:00Z",
+        "description": "Gave a public lecture on Egypt-Gulf cultural exchange programs at the American University in Cairo."
+      },
+      {
+        "timestamp": "2025-01-25T15:00:00Z",
+        "description": "Visited the Egyptian Museum on Tahrir Square to view the Tutankhamun collection with a visiting delegation."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Cairo, Egypt",
+        "start_date": "2023-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Abu Dhabi, UAE",
+        "start_date": "2024-09-12",
+        "end_date": "2024-09-15"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2022-03-27",
+        "description": "Egyptian General Intelligence Directorate noted her for unauthorized contact with an Iranian intelligence officer at a diplomatic reception; file flagged but no action taken."
+      }
+    ]
+  },
+  "Piotr Zalewski": {
+    "type": "person",
+    "current_location": {
+      "lat": 52.2297,
+      "lon": 21.0122
+    },
+    "birthday": "1966-11-28",
+    "associations": [
+      "Bogdan Marchuk",
+      "Klaus Brenner",
+      "Berlin Logistics Hub"
+    ],
+    "identifying_characteristics": [
+      "Short and wiry with closely cropped grey hair and a military bearing",
+      "Former ABW (Polish Internal Security Agency) colonel, retired under murky circumstances",
+      "Has a distinctive cross-shaped scar on his left cheekbone from a knife fight",
+      "Smokes unfiltered Marlboro Reds and can be identified by the smell",
+      "Collects Eastern Bloc military memorabilia \u2014 uses these circles as cover for intelligence contacts"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-09-07T11:00:00Z",
+        "description": "Transported classified ABW archive documents in a personal vehicle to a private storage unit in Praga district; documents later found to be missing from official files."
+      },
+      {
+        "timestamp": "2025-01-14T20:00:00Z",
+        "description": "Met with Klaus Brenner at a Warsaw hotel restaurant for a dinner meeting lasting over three hours; conversation not recorded due to counter-surveillance measures."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-11-11T10:00:00Z",
+        "description": "Attended Polish Independence Day ceremony at Pilsudski Square in Warsaw."
+      },
+      {
+        "timestamp": "2025-02-22T14:00:00Z",
+        "description": "Visited the Warsaw Rising Museum with his granddaughter."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Warsaw, Poland",
+        "start_date": "2021-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Berlin, Germany",
+        "start_date": "2025-01-12",
+        "end_date": "2025-01-15"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2009-05-16",
+        "description": "Placed under internal ABW investigation for alleged unauthorized transfer of agent identities to a foreign service; retired before charges could be formalized."
+      }
+    ]
+  },
+  "Celestine Mbeki": {
+    "type": "person",
+    "current_location": {
+      "lat": -4.3225,
+      "lon": 15.3227
+    },
+    "birthday": "1978-06-30",
+    "associations": [
+      "Amara Diallo",
+      "Daniel Mwangi",
+      "Fatima Okafor"
+    ],
+    "identifying_characteristics": [
+      "Heavy-set with a shaved head and a thick neck scar from a past strangling attempt",
+      "Congolese national who operates primarily in Central and West Africa",
+      "Always travels with two bodyguards who carry AK-pattern rifles under long robes",
+      "Wears tinted aviator glasses regardless of light conditions",
+      "Speaks Lingala, French, Swahili, and basic English"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-08-22T04:00:00Z",
+        "description": "Supervised the offloading of 12 crates from a UN-marked aircraft at Kinshasa's N'djili Airport, diverting them to a private convoy instead of UN warehousing."
+      },
+      {
+        "timestamp": "2025-02-12T18:00:00Z",
+        "description": "Received a delegation of three individuals from a Libyan militia-affiliated group at his compound in the Gombe district of Kinshasa."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-06-30T12:00:00Z",
+        "description": "Attended a DRC national independence day celebration banquet hosted by the Kinshasa governor."
+      },
+      {
+        "timestamp": "2025-01-14T10:00:00Z",
+        "description": "Donated a generator to a local school in the Kintambo commune as part of a publicized charity initiative."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Kinshasa, DRC",
+        "start_date": "2021-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Brazzaville, Republic of Congo",
+        "start_date": "2024-07-05",
+        "end_date": "2024-07-07"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2015-11-04",
+        "description": "Named by a UN Group of Experts report as a primary financier of an armed group committing atrocities in eastern DRC."
+      },
+      {
+        "date": "2020-08-30",
+        "description": "Added to the EU Magnitsky sanctions list for human rights abuses and war crimes financing; assets nominally frozen."
+      }
+    ]
+  },
+  "Irina Morozova": {
+    "type": "person",
+    "current_location": {
+      "lat": 55.9333,
+      "lon": 37.5167
+    },
+    "birthday": "1995-01-17",
+    "associations": [
+      "Viktor Petrov",
+      "Anya Lebedeva",
+      "Nadia Volkov"
+    ],
+    "identifying_characteristics": [
+      "Young, striking appearance used as operational cover for honeytrap operations",
+      "Long dark hair, photogenic with a media presence as a travel blogger \u2014 cover identity",
+      "Has a tiny red star tattoo on the inside of her lower lip",
+      "Expert in social engineering and impersonation",
+      "Speaks Russian, English, and Italian; her Italian is near-native from an SVR language school"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2025-01-08T21:00:00Z",
+        "description": "Approached a senior EU defense policy official at a Moscow cocktail reception and extracted his personal phone number and schedule through social engineering."
+      },
+      {
+        "timestamp": "2025-03-02T18:00:00Z",
+        "description": "Uploaded three months of surveillance footage from a compromised device to an SVR-linked server farm in Khimki, Moscow Oblast."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-11-07T14:00:00Z",
+        "description": "Filmed a travel vlog segment at the Tretyakov Gallery in Moscow for her public YouTube channel with 180,000 subscribers."
+      },
+      {
+        "timestamp": "2025-02-14T19:00:00Z",
+        "description": "Had dinner with her mother at a restaurant near Gorky Park to celebrate her mother's birthday."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Moscow, Russia",
+        "start_date": "2023-01-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Milan, Italy",
+        "start_date": "2024-09-20",
+        "end_date": "2024-09-27"
+      }
+    ],
+    "priors": []
+  },
+  "Hamid Karimi": {
+    "type": "person",
+    "current_location": {
+      "lat": 48.1351,
+      "lon": 11.582
+    },
+    "birthday": "1967-03-03",
+    "associations": [
+      "Reza Shirazi",
+      "Oleg Baranovsky",
+      "Jean-Luc Moreau"
+    ],
+    "identifying_characteristics": [
+      "Medium build with a salt-and-pepper beard kept short and neat",
+      "Holds Iranian and German passports under different names",
+      "Works as a consultant to several Munich-based engineering firms with IRGC contracts",
+      "Drives a vintage Mercedes 300E that he maintains himself as a hobby",
+      "Known to carry a miniaturized camera disguised as a coat button"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-06-28T14:00:00Z",
+        "description": "Photographed technical blueprints for a turbine component at a Munich aerospace subcontractor's open-day exhibition using a coat-button camera."
+      },
+      {
+        "timestamp": "2025-01-19T10:30:00Z",
+        "description": "Met with Reza Shirazi's courier at Munich Hauptbahnhof and exchanged a small package described in surveillance notes as 'electronic media, shape consistent with microSD card'."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-10-06T11:00:00Z",
+        "description": "Attended the last day of Oktoberfest at Theresienwiese with engineering colleagues."
+      },
+      {
+        "timestamp": "2025-02-20T16:00:00Z",
+        "description": "Visited the Deutsches Museum to attend a lecture on the history of jet propulsion."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Munich, Germany",
+        "start_date": "2020-09-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Tehran, Iran",
+        "start_date": "2024-08-05",
+        "end_date": "2024-08-12"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2017-11-22",
+        "description": "BfV opened a case on Karimi for suspected industrial espionage on behalf of a state-linked entity; the case was administratively suspended in 2019 when a key informant was compromised."
+      }
+    ]
+  },
+  "Tatiana Belova": {
+    "type": "person",
+    "current_location": {
+      "lat": 47.4979,
+      "lon": 19.0402
+    },
+    "birthday": "1980-08-08",
+    "associations": [
+      "Anya Lebedeva",
+      "Nikolai Vasenko",
+      "Vienna Station Apartment"
+    ],
+    "identifying_characteristics": [
+      "Elegant, medium height with silver-streaked dark hair worn in a chignon",
+      "Claims to be a concert pianist \u2014 cover has held for over a decade due to genuine talent",
+      "Wears only bespoke Hungarian-made clothing, purchased from the same Budapest tailor for 15 years",
+      "Has a small Soviet-era red enamel pin (Order of Lenin miniature) worn inside her jacket lapel",
+      "Expert in reading micro-expressions; trained in psychological profiling at a GRU school"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-11-30T20:00:00Z",
+        "description": "Gave a private recital in Budapest at which two of the eight guests were subsequently identified as intelligence officers from different services \u2014 the event likely served as a covert broker meeting."
+      },
+      {
+        "timestamp": "2025-02-26T10:00:00Z",
+        "description": "Deposited a sealed package in a Budapest bank's safety deposit box using credentials that did not match her registered identity."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-03-15T19:00:00Z",
+        "description": "Performed a Chopin recital at the Franz Liszt Academy of Music in Budapest to an audience of 200."
+      },
+      {
+        "timestamp": "2024-12-24T18:00:00Z",
+        "description": "Attended Christmas Eve midnight mass at St. Stephen's Basilica in Budapest with friends from the music world."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Budapest, Hungary",
+        "start_date": "2022-06-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Vienna, Austria",
+        "start_date": "2024-12-06",
+        "end_date": "2024-12-10"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2013-05-18",
+        "description": "Hungarian AH (Alkotm\u00e1nyv\u00e9delmi Hivatal) internal note identifies her as a GRU illegal operating in Budapest under a long-term cover identity established in 2005."
+      }
+    ]
+  },
+  "The Armored Diplomatic Limousine": {
+    "type": "vehicle",
+    "current_location": {
+      "lat": 41.0082,
+      "lon": 28.9784
+    },
+    "birthday": "2019-06-03",
+    "associations": [
+      "Nikolai Vasenko",
+      "Reza Shirazi"
+    ],
+    "identifying_characteristics": [
+      "2019 BMW 7-Series 745Le xDrive, long wheelbase, midnight blue with panoramic roof",
+      "Carries CD (Corps Diplomatique) plates registered to a mission that was closed in 2021 \u2014 plates should have been surrendered",
+      "Rear cabin has a removable partition creating a hidden storage space of approximately 0.3 cubic meters",
+      "Tinted windows certified to Bspec armoring; vehicle weighs nearly 3 tonnes",
+      "Tracking device found glued under the chassis, registered to an unknown third party"
+    ],
+    "suspicious_activities": [
+      {
+        "timestamp": "2024-11-19T22:00:00Z",
+        "description": "Transported Nikolai Vasenko and two unknown passengers across the Bosphorus Bridge to the Asian side of Istanbul without any documented destination."
+      },
+      {
+        "timestamp": "2025-02-10T05:00:00Z",
+        "description": "Parked outside the Iranian consulate in Istanbul for four hours in the early morning, with engine running throughout."
+      }
+    ],
+    "nonsuspicious_activities": [
+      {
+        "timestamp": "2024-09-28T10:00:00Z",
+        "description": "Used as a press pool shuttle vehicle during a trade summit at Istanbul Congress Centre."
+      }
+    ],
+    "known_whereabouts": [
+      {
+        "city": "Istanbul, Turkey",
+        "start_date": "2022-03-01",
+        "end_date": "2026-03-09"
+      },
+      {
+        "city": "Baku, Azerbaijan",
+        "start_date": "2024-05-19",
+        "end_date": "2024-05-25"
+      }
+    ],
+    "priors": [
+      {
+        "date": "2023-03-15",
+        "description": "Turkish MIT flagged the vehicle's CD plates as invalid and issued a notice to the foreign missions registry; no response received and no further action taken."
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Target Tracker - Intelligence Network</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <header class="app-header">
+    <span class="app-title">TARGET TRACKER</span>
+    <span class="app-subtitle">Intelligence Network</span>
+  </header>
+
+  <main class="app-layout">
+
+    <!-- Chat Window (75%) -->
+    <section class="chat-panel">
+      <div class="chat-messages" id="chatMessages">
+        <!-- Messages are injected here by app.js -->
+      </div>
+
+      <div class="chat-input-bar">
+        <textarea
+          id="messageInput"
+          class="chat-input"
+          placeholder="Enter query..."
+          rows="1"
+        ></textarea>
+        <button id="sendBtn" class="send-btn" onclick="sendMessage()">Send</button>
+      </div>
+    </section>
+
+    <!-- Alerts Sidebar (25%) -->
+    <aside class="alerts-panel">
+      <div class="alerts-header">Alerts</div>
+      <div class="alerts-list" id="alertsList">
+        <!-- Alerts are injected here by app.js -->
+      </div>
+    </aside>
+
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
