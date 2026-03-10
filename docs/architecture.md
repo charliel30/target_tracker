@@ -4,47 +4,70 @@
 
 Target Tracker is a multi-agent application that manages intelligence on 1000 tracked targets (people, buildings, vehicles). A user interacts via a web chat interface, and an orchestrator agent delegates work to specialized agents.
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                      Web Browser                            │
-│  ┌──────────────────────────┐  ┌─────────────────────────┐  │
-│  │     Chat Window (75%)    │  │   Alerts Sidebar (25%)  │  │
-│  │                          │  │   ┌───────────────────┐ │  │
-│  │  User: Who is target X?  │  │   │ ⚠ Alert 1    [x] │ │  │
-│  │  Bot: Target X is...     │  │   │ ⚠ Alert 2    [x] │ │  │
-│  │                          │  │   └───────────────────┘ │  │
-│  │  [_______________][Send] │  │                         │  │
-│  └──────────────────────────┘  └─────────────────────────┘  │
-└──────────────────────┬──────────────────────────────────────┘
-                       │ HTTP (full conversation + new message)
-                       ▼
-              ┌─────────────────┐
-              │   Flask Server  │
-              │   (server.py)   │
-              └────────┬────────┘
-                       │
-                       ▼
-            ┌─────────────────────┐
-            │  Orchestrator Agent │  ← All user requests enter here
-            └──┬──┬──┬──┬──┬─────┘
-               │  │  │  │  │
-       ┌───────┘  │  │  │  └────────┐
-       ▼          ▼  ▼  ▼           ▼
-  ┌─────────┐ ┌────┐┌────────┐ ┌──────────┐
-  │ Base     │ │Calc││Longterm│ │ File     │
-  │ Target   │ │    ││ Data   │ │ Monitor  │
-  │ Info     │ │    ││ Agent  │ │ Agent    │
-  │ Agent    │ │    ││        │ │          │
-  └─────────┘ └────┘└────────┘ └────┬─────┘
-       ▲                  ▲         │
-       │                  │         │ (reads files or
-       └──────┬───────────┘         │  fetches via MCP)
-              │                     ▼
-     ┌────────────────┐    ┌──────────────┐
-     │   Anomaly      │    │  MCP Server  │
-     │   Detection    │    │  (article    │
-     │   Agent        │    │   fetcher)   │
-     └────────────────┘    └──────────────┘
+```mermaid
+graph TB
+    subgraph Browser["Web Browser"]
+        Chat["Chat Window<br/>(75% width)"]
+        Alerts["Alerts Sidebar<br/>(25% width)"]
+    end
+
+    Flask["Flask Server<br/>(server.py)"]
+    Browser -->|"HTTP POST /api/chat<br/>(full conversation + new message)"| Flask
+    Flask -->|"GET /api/alerts"| Alerts
+
+    subgraph Agents["Agent Layer (OpenAI Agents SDK)"]
+        Orch["Orchestrator Agent"]
+        BTI["Base Target Info<br/>Agent"]
+        Calc["Calculator<br/>Agent"]
+        LTD["Long-term Data<br/>Agent"]
+        FM["File Monitor<br/>Agent"]
+        AD["Anomaly Detection<br/>Agent"]
+    end
+
+    Flask --> Orch
+    Orch -->|"handoff"| BTI
+    Orch -->|"handoff"| Calc
+    Orch -->|"handoff"| LTD
+    Orch -->|"handoff"| FM
+    AD -->|"direct tool call"| BTI
+    AD -->|"direct tool call"| LTD
+    FM -->|"direct tool call"| BTI
+    FM -->|"direct tool call"| LTD
+
+    subgraph Data["Data Layer"]
+        JSON["targets.json<br/>(master data)"]
+        Dict["Python Dict<br/>(non-temporal)"]
+        SQLite["SQLite<br/>(structured queries)"]
+        Vec["Vector Store<br/>(semantic search)"]
+        Doc["Document Store<br/>(raw JSON)"]
+    end
+
+    BTI --> Dict
+    LTD --> SQLite
+    LTD --> Vec
+    LTD --> Doc
+    JSON -->|"load at startup"| Dict
+    JSON -->|"load at startup"| SQLite
+    JSON -->|"load at startup"| Vec
+    JSON -->|"load at startup"| Doc
+    Dict -->|"save on update"| JSON
+    Doc -->|"save on update"| JSON
+
+    subgraph External["External Sources"]
+        Folder["/tmp/news_articles<br/>(watched folder)"]
+        MCP["MCP Article Fetcher<br/>(HTTP GET)"]
+        URL["REST URL<br/>(article source)"]
+    end
+
+    FM --> Folder
+    FM --> MCP
+    MCP --> URL
+    AD -->|"push alerts"| Alerts
+
+    style Browser fill:#16213e,stroke:#0f3460,color:#e0e0e0
+    style Agents fill:#1a1a2e,stroke:#0f3460,color:#e0e0e0
+    style Data fill:#1a1a2e,stroke:#0f3460,color:#e0e0e0
+    style External fill:#1a1a2e,stroke:#0f3460,color:#e0e0e0
 ```
 
 ## Agents in Detail
@@ -148,46 +171,173 @@ A small, self-contained MCP server that exposes one tool: `fetch_articles(url)`.
 - The file monitor agent uses this as an alternative to reading files from disk
 - Designed to connect to a dummy localhost server that serves test articles
 
-## Data Flow
+## Data Flow Diagrams
 
-### Startup
-```
-data/targets.json
-    │
-    ├──→ Base Target Info Agent (non-temporal fields → Python dict)
-    │
-    └──→ Long-term Data Agent (temporal fields → SQLite + Vector + Document stores)
-```
+### Startup Sequence
 
-### User Query
-```
-User message
-    → Flask server
-    → Orchestrator Agent
-    → [routes to appropriate agent(s)]
-    → Response assembled
-    → Flask server
-    → Browser
-```
+```mermaid
+sequenceDiagram
+    participant Main as main.py
+    participant BTI as Base Target Info Agent
+    participant LTD as Long-term Data Agent
+    participant JSON as targets.json
+    participant SQLite
+    participant Vec as Vector Store
+    participant Doc as Document Store
 
-### Target Update
-```
-Update request
-    → Orchestrator confirms target match with user
-    → Appropriate agent applies update
-    → data/targets.json updated on disk
-    → Anomaly Detection Agent triggered
-    → If anomaly found → Alert pushed to UI
+    Main->>JSON: Read file
+    JSON-->>Main: Raw target data (52+ targets)
+    Main->>BTI: load_targets()
+    BTI->>BTI: Extract non-temporal fields → Python dict
+    Main->>LTD: init_stores()
+    LTD->>SQLite: load_targets() — bulk insert
+    LTD->>Doc: load_targets() — save as JSON
+    LTD->>Vec: load_targets() — generate embeddings (async)
+    Vec-->>LTD: Embeddings ready
+    Main->>Main: Start file monitor thread
+    Main->>Main: Start Flask server on :5000
 ```
 
-### Article Processing
+### User Query Flow
+
+```mermaid
+sequenceDiagram
+    participant User as Browser
+    participant Flask as Flask Server
+    participant Orch as Orchestrator
+    participant BTI as Base Target Info
+    participant LTD as Long-term Data
+    participant Calc as Calculator
+
+    User->>Flask: POST /api/chat {message, history}
+    Flask->>Orch: handle_user_message()
+
+    alt Simple target lookup
+        Orch->>BTI: handoff → lookup_target("Viktor Petrov")
+        BTI-->>Orch: Target data JSON
+    else Temporal query
+        Orch->>LTD: handoff → query_whereabouts("New York", ...)
+        LTD-->>Orch: Matching records
+    else Distance calculation (multi-agent)
+        Orch->>BTI: lookup_target("Target A") → get location
+        BTI-->>Orch: {lat, lon}
+        Orch->>BTI: lookup_target("Target B") → get location
+        BTI-->>Orch: {lat, lon}
+        Orch->>Calc: calculate_distance(lat1, lon1, lat2, lon2)
+        Calc-->>Orch: "1234.5 km"
+    else Semantic search
+        Orch->>LTD: handoff → semantic_search("stealing electronics")
+        LTD-->>Orch: Top 10 results with similarity scores
+    end
+
+    Orch-->>Flask: {response, new_alerts}
+    Flask-->>User: JSON response
 ```
-New file in /tmp/news_articles (or fetched via MCP)
-    → File Monitor Agent reads + extracts entities via LLM
-    → Checks against known targets (via Base Target Info Agent)
-    → Matched data → update flow (above)
-    → File moved to processed/
+
+### Target Update Flow (with Anomaly Detection)
+
+```mermaid
+sequenceDiagram
+    participant User as Browser
+    participant Orch as Orchestrator
+    participant BTI as Base Target Info
+    participant LTD as Long-term Data
+    participant AD as Anomaly Detector
+    participant JSON as targets.json
+
+    User->>Orch: "Add prior for Viktor Petrov: arrested 2025-06-15"
+    Orch->>BTI: lookup_target("Viktor Petrov")
+    BTI-->>Orch: Target found ✓
+    Orch-->>User: "Confirm: add prior to Viktor Petrov?"
+    User->>Orch: "yes"
+
+    Orch->>LTD: add_prior("Viktor Petrov", "2025-06-15", "arrested...")
+    LTD->>LTD: Write to SQLite + Vector + Document stores
+    LTD->>JSON: save_temporal_to_json()
+    LTD-->>Orch: "Prior added"
+
+    Orch->>AD: detect_anomalies("Viktor Petrov", update_description)
+    AD->>BTI: lookup_target("Viktor Petrov") — direct call
+    BTI-->>AD: Non-temporal data
+    AD->>LTD: get_target_temporal_data("Viktor Petrov") — direct call
+    LTD-->>AD: Temporal data
+    AD->>AD: LLM analyzes: does update contradict existing data?
+
+    alt Anomaly found
+        AD-->>Orch: Alert: "Viktor Petrov was reported deceased but now has new prior"
+        Orch-->>User: Response + new_alerts[]
+        User->>User: Alert appears in sidebar
+    else No anomaly
+        AD-->>Orch: NO_ANOMALIES
+        Orch-->>User: "Prior added successfully"
+    end
 ```
+
+### Article Ingestion Flow
+
+```mermaid
+sequenceDiagram
+    participant Source as Article Source
+    participant FM as File Monitor Agent
+    participant LLM as LLM (Entity Extraction)
+    participant BTI as Base Target Info
+    participant LTD as Long-term Data
+    participant AD as Anomaly Detector
+    participant UI as Browser Alerts
+
+    alt File-based ingestion
+        Source->>Source: New file placed in /tmp/news_articles/
+        FM->>FM: Poll detects new file
+        FM->>FM: Read file content
+    else URL-based ingestion (via MCP)
+        FM->>Source: HTTP GET → fetch articles JSON
+        Source-->>FM: [{content: "..."}, ...]
+    end
+
+    FM->>LLM: "Extract entities from this article"
+    LLM-->>FM: [{name: "Viktor P.", type: "person", temporal: [...]}]
+
+    loop For each extracted entity
+        FM->>BTI: fuzzy_lookup("Viktor P.") — direct call
+        BTI->>BTI: LLM matches "Viktor P." → "Viktor Petrov"
+        BTI-->>FM: "Viktor Petrov"
+
+        FM->>BTI: update_target_field() — non-temporal updates
+        FM->>LTD: add_activity() / add_prior() — temporal updates
+    end
+
+    FM->>FM: Move file to processed/ subfolder
+
+    Note over AD,UI: Anomaly detection triggers on each update (same flow as above)
+```
+
+### Agent Communication Patterns
+
+This app demonstrates two agent communication patterns:
+
+```mermaid
+graph LR
+    subgraph Pattern1["Pattern 1: Orchestrator-Mediated (via handoffs)"]
+        User1["User"] --> O1["Orchestrator"]
+        O1 -->|"handoff"| A1["Sub-Agent"]
+        A1 -->|"return"| O1
+        O1 --> User1
+    end
+
+    subgraph Pattern2["Pattern 2: Direct Agent-to-Agent (via tool calls)"]
+        A2["Anomaly Detector"] -->|"on_invoke_tool()"| A3["Base Target Info"]
+        A2 -->|"on_invoke_tool()"| A4["Long-term Data"]
+        A5["File Monitor"] -->|"on_invoke_tool()"| A3
+        A5 -->|"on_invoke_tool()"| A4
+    end
+
+    style Pattern1 fill:#1a1a2e,stroke:#0f3460,color:#e0e0e0
+    style Pattern2 fill:#1a1a2e,stroke:#0f3460,color:#e0e0e0
+```
+
+**When to use which:**
+- **Orchestrator-mediated**: When the user initiates a request and the LLM needs to decide which agent to call. The SDK handles routing via handoffs.
+- **Direct agent-to-agent**: When one agent programmatically needs data from another (no LLM decision needed). Calls `tool.on_invoke_tool(None, json.dumps({...}))` directly.
 
 ## Configuration
 
