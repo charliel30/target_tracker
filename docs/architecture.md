@@ -153,11 +153,15 @@ All three stores are loaded from `data/targets.json` (temporal fields) at startu
 
 **Role:** Triggered on every target update. Looks for contradictions or surprises.
 
+**Trigger mechanism:** Anomaly detection fires automatically from two paths:
+- **Article ingestion** (file watcher or REST fetch): `_route_entity_updates()` in file_monitor.py calls `detect_anomalies()` directly after applying updates. This ensures anomalies are caught regardless of how articles enter the system.
+- **Orchestrator updates**: The orchestrator scans its response text for update indicators and triggers anomaly detection for mentioned targets.
+
 **Flow:**
 1. Receives the update that just occurred (target key + new data)
 2. Calls base-target-info-agent and long-term-data-agent directly to pull existing target data
 3. Sends existing + new data to the LLM asking: "Does this update conflict with or contradict existing information?"
-4. If anomaly detected, creates an alert object (timestamp, description, target key)
+4. If anomaly detected, creates an alert with a bold summary line followed by detailed explanation
 5. Alert is pushed to the UI via the Flask server's alert endpoint
 
 **Examples of anomalies:**
@@ -171,8 +175,19 @@ A small, self-contained MCP server that exposes one tool: `fetch_articles(url)`.
 
 - Takes a URL, performs an HTTP GET, expects a JSON response with a list of articles
 - Returns the article list to the calling agent
-- The file monitor agent uses this as an alternative to reading files from disk
-- Designed to connect to a dummy localhost server that serves test articles
+- The orchestrator exposes this as `fetch_articles_from_url` — users can say "fetch articles from http://article-server:6000/articles" in chat
+- Connects to the article server container (see below) or any REST endpoint returning `[{"content": "..."}]`
+
+## Article Server (`tests/article_server.py`)
+
+A simple REST server that serves articles from a host-mounted folder. Runs as a Docker Compose service alongside the main app.
+
+- **Host folder:** `/tmp/article_inbox` (configurable via `ARTICLE_DIR` env var)
+- **`GET /articles`** — returns all `.txt` files in the inbox as a JSON array `[{"title": "...", "content": "...", "date": "..."}]`, then moves them to a `processed/` subfolder
+- **`GET /`** — health check
+- **Port:** 6000 (host and container)
+
+**Usage:** Drop `.txt` files into `/tmp/article_inbox/` on the host, then tell the chatbot to fetch from the article server. The orchestrator fetches via HTTP, processes each article through the file monitor's entity extraction pipeline, and anomaly detection fires automatically.
 
 ## Data Flow Diagrams
 
@@ -299,9 +314,13 @@ sequenceDiagram
 
 ### Article Ingestion Flow
 
+Two ingestion paths feed into the same entity extraction and update pipeline:
+
 ```mermaid
 sequenceDiagram
-    participant Source as Article Source
+    participant User as User / Chat
+    participant Orch as Orchestrator
+    participant ArtSrv as Article Server<br/>(REST container)
     participant FM as File Monitor Agent
     participant LLM as LLM (Entity Extraction)
     participant BTI as Base Target Info
@@ -309,13 +328,16 @@ sequenceDiagram
     participant AD as Anomaly Detector
     participant UI as Browser Alerts
 
-    alt File-based ingestion
-        Source->>Source: New file placed in /tmp/news_articles/
-        FM->>FM: Poll detects new file
+    alt Path 1: File-based ingestion (automatic)
+        Note over FM: File placed in /tmp/news_articles/
+        FM->>FM: Poll detects new file (every 10s)
         FM->>FM: Read file content
-    else URL-based ingestion (via MCP)
-        FM->>Source: HTTP GET → fetch articles JSON
-        Source-->>FM: [{content: "..."}, ...]
+    else Path 2: REST fetch (user-initiated)
+        User->>Orch: "Fetch articles from http://article-server:6000/articles"
+        Orch->>ArtSrv: HTTP GET /articles
+        ArtSrv-->>Orch: [{title, content, date}, ...]
+        Note over ArtSrv: Served files moved to processed/
+        Orch->>FM: process_article_text(content)
     end
 
     FM->>LLM: "Extract entities from this article"
@@ -327,12 +349,17 @@ sequenceDiagram
         BTI-->>FM: "Viktor Petrov"
 
         FM->>BTI: update_target_field() — non-temporal updates
-        FM->>LTD: add_activity() / add_prior() — temporal updates
+        FM->>LTD: add_activity() / add_prior() / add_major_event() — temporal updates
+        FM->>AD: detect_anomalies("Viktor Petrov", update_summary)
+        AD->>AD: LLM checks for contradictions
+        alt Anomaly found
+            AD-->>UI: Alert pushed to /api/alerts
+        end
     end
 
-    FM->>FM: Move file to processed/ subfolder
-
-    Note over AD,UI: Anomaly detection triggers on each update (same flow as above)
+    alt File-based path
+        FM->>FM: Move file to processed/ subfolder
+    end
 ```
 
 ### Agent Communication Patterns
@@ -348,11 +375,12 @@ graph LR
         O1 --> User1
     end
 
-    subgraph Pattern2["Pattern 2: Direct Agent-to-Agent (via tool calls)"]
-        A2["Anomaly Detector"] -->|"on_invoke_tool()"| A3["Base Target Info"]
-        A2 -->|"on_invoke_tool()"| A4["Long-term Data"]
-        A5["File Monitor"] -->|"on_invoke_tool()"| A3
-        A5 -->|"on_invoke_tool()"| A4
+    subgraph Pattern2["Pattern 2: Direct Agent-to-Agent (via do_*() functions)"]
+        A2["Anomaly Detector"] -->|"do_lookup_target()"| A3["Base Target Info"]
+        A2 -->|"do_get_target_temporal_data()"| A4["Long-term Data"]
+        A5["File Monitor"] -->|"do_update_target_field()"| A3
+        A5 -->|"do_add_activity() / do_add_major_event()"| A4
+        A5 -->|"detect_anomalies()"| A2
     end
 
     style Pattern1 fill:#1a1a2e,stroke:#0f3460,color:#e0e0e0
@@ -361,7 +389,7 @@ graph LR
 
 **When to use which:**
 - **Orchestrator-mediated**: When the user initiates a request and the LLM needs to decide which agent to call. The SDK handles routing via handoffs.
-- **Direct agent-to-agent**: When one agent programmatically needs data from another (no LLM decision needed). Calls `tool.on_invoke_tool(None, json.dumps({...}))` directly.
+- **Direct agent-to-agent**: When one agent programmatically needs data from another (no LLM decision needed). Each agent exposes plain `do_*()` functions alongside its `@function_tool` wrappers — direct callers use the `do_*()` functions to bypass the SDK tool invocation layer.
 
 ## Configuration
 
@@ -438,7 +466,9 @@ target_tracker/
 └── tests/
     ├── test_functional.py       # Functional tests against running server
     ├── test_consistency.py      # Cross-query contradiction tests
-    └── test_file_watcher.py     # File watcher integration test (Docker)
+    ├── test_file_watcher.py     # File watcher integration test (Docker)
+    ├── test_end_to_end.py       # Full E2E: file watcher + article server + anomaly detection
+    └── article_server.py        # REST article server (runs as Docker service)
 ```
 
 ## Technology Choices
