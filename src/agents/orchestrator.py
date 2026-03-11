@@ -12,6 +12,7 @@ import urllib.error
 
 from agents import Agent, Runner, function_tool
 
+from src.config import config
 from src.logging_config import get_agent_logger
 from src.agents.base_target_info import base_target_info_agent, lookup_target
 from src.agents.calculator import calculator_agent, calculate_age, calculate_distance
@@ -156,6 +157,7 @@ async def fetch_articles_from_url(url: str) -> str:
 
 orchestrator_agent = Agent(
     name="Orchestrator",
+    model=config.llm.model,
     instructions="""You are the Orchestrator Agent for the Target Tracker spy network intelligence system. You route user requests to the appropriate specialized agents.
 
 Available agents (via handoff):

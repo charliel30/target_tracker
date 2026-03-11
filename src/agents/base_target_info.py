@@ -191,6 +191,7 @@ async def fuzzy_lookup(query: str) -> str | None:
 
 base_target_info_agent = Agent(
     name="BaseTargetInfo",
+    model=config.llm.model,
     instructions=(
         "You are the Base Target Info Agent for a spy network tracking system. "
         "You manage non-temporal information about targets: their type (person, "

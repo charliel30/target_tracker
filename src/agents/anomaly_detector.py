@@ -15,6 +15,7 @@ from datetime import datetime, timezone
 
 from agents import Agent, Runner, function_tool
 
+from src.config import config
 from src.agents.base_target_info import lookup_target
 from src.agents.longterm_data import get_target_temporal_data
 from src.logging_config import get_agent_logger
@@ -52,6 +53,7 @@ def check_anomaly(target_name: str, update_summary: str, existing_data: str) -> 
 
 anomaly_detection_agent = Agent(
     name="AnomalyDetector",
+    model=config.llm.model,
     instructions="""You are the Anomaly Detection Agent. You analyze target updates against existing data to find contradictions, surprises, or suspicious patterns.
 
 When given existing target data and a new update, check for:

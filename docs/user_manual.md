@@ -16,7 +16,7 @@ Edit `config.yaml` to set your LLM provider:
 ```yaml
 llm:
   provider: "openai"
-  model: "gpt-4o"
+  model: "gpt-5.2"
 ```
 Add your API key to `.env`:
 ```
@@ -198,3 +198,17 @@ Click `[x]` to dismiss an alert. Dismissed alerts are removed from the UI.
 - **Misspellings are okay.** The system uses AI to match target names, so close-enough works.
 - **Check the terminal.** Colored logs show which agents are working, what they're doing, and how they communicate. This is the best way to understand the multi-agent architecture.
 - **Data persists.** All changes are saved back to `data/targets.json`, so your updates survive restarts.
+
+## Running Tests
+
+Functional tests verify the API endpoints against a running server:
+
+```bash
+# With the server running (locally or via Docker)
+python -m tests.test_functional
+
+# Or point at a different host
+BASE_URL=http://host:port python -m tests.test_functional
+```
+
+Tests cover: UI loading, alerts API, target listing, target lookup, distance calculations, and conversation history.

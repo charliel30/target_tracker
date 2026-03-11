@@ -9,6 +9,7 @@ from datetime import date, datetime
 
 from agents import Agent, function_tool
 
+from src.config import config
 from src.logging_config import get_agent_logger
 
 log = get_agent_logger("Calculator")
@@ -45,6 +46,7 @@ def calculate_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> st
 
 calculator_agent = Agent(
     name="Calculator",
+    model=config.llm.model,
     instructions=(
         "You are the Calculator Agent. You perform mathematical calculations for the target tracking system. "
         "You can calculate a person's age from their birthdate, and calculate the distance between two geographic "

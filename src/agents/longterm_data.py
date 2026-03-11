@@ -294,6 +294,7 @@ async def add_prior(
 
 longterm_data_agent = Agent(
     name="LongtermData",
+    model=config.llm.model,
     instructions=(
         "You are the Long-term Data Agent for a spy target tracking system. "
         "Your responsibility is to store, retrieve, and update all temporal intelligence "

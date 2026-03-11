@@ -1,6 +1,6 @@
 llm:
   provider: "openai"          # "openai" or "ollama"
-  model: "gpt-4o"             # For Ollama, use e.g. "llama3"
+  model: "gpt-5.2"            # For Ollama, use e.g. "llama3"
   base_url: null              # For Ollama: "http://localhost:11434/v1"
 
 monitor:

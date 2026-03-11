@@ -71,6 +71,7 @@ def process_article(content: str) -> str:
 
 file_monitor_agent = Agent(
     name="FileMonitor",
+    model=config.llm.model,
     instructions="""You are the File Monitor Agent. When given article text, you extract mentions of people, buildings, and vehicles. For each entity found, provide:
 - The entity name as mentioned in the article
 - The entity type (person, building, or vehicle)

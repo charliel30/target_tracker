@@ -85,6 +85,8 @@ graph TB
 
 **Communication pattern:** Calls other agents as tools via the OpenAI Agents SDK tool/handoff mechanism.
 
+**Model configuration:** All agents use the model specified in `config.yaml` (`llm.model`), set explicitly via `model=config.llm.model` on each `Agent()` definition.
+
 ### 2. Base Target Info Agent (`src/agents/base_target_info.py`)
 
 **Role:** Manages all non-temporal target data in an in-memory Python dict.
@@ -345,7 +347,7 @@ graph LR
 ```yaml
 llm:
   provider: "openai"          # "openai" or "ollama"
-  model: "gpt-4o"             # Model name (for Ollama, e.g., "llama3")
+  model: "gpt-5.2"            # Model name (for Ollama, e.g., "llama3")
   base_url: null              # Override for Ollama: "http://localhost:11434/v1"
 
 monitor:
@@ -410,6 +412,7 @@ target_tracker/
 │   ├── architecture.md           # This file
 │   └── user_manual.md
 └── tests/
+    └── test_functional.py       # Functional tests against running server
 ```
 
 ## Technology Choices
