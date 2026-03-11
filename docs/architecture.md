@@ -96,8 +96,42 @@ graph TB
 - Target type: `person`, `building`, or `vehicle`
 - Current location (latitude, longitude)
 - Birthday / manufacture date
-- Current associations (references to other target keys)
+- Associations (list of objects with `target_name` and `description`)
 - Identifying characteristics (list of strings)
+
+**Example target entry in `data/targets.json`:**
+
+```json
+{
+  "Viktor Petrov": {
+    "type": "person",
+    "current_location": {"city": "Moscow", "lat": 55.7558, "lon": 37.6173},
+    "birthday": "1978-03-15",
+    "associations": [
+      {"target_name": "Nadia Volkov", "description": "Runs Volkov as his Paris-based operative; she reports to Moscow through him"},
+      {"target_name": "The Black Sedan", "description": "Primary transport vehicle for Moscow operations"}
+    ],
+    "identifying_characteristics": ["tall build", "silver hair", "walks with slight limp"],
+    "suspicious_activity": [
+      {"date": "2025-01-10", "description": "Met with unknown contact at train station"}
+    ],
+    "nonsuspicious_activity": [
+      {"date": "2025-02-14", "description": "Attended public lecture at Moscow State University"}
+    ],
+    "whereabouts": [
+      {"city": "Moscow", "start_date": "2024-06-01", "end_date": "2025-03-01"}
+    ],
+    "priors": [
+      {"date": "2019-08-20", "description": "Indicted in absentia for espionage by German federal court"}
+    ],
+    "major_events": []
+  }
+}
+```
+
+> **Non-temporal fields** (managed by Base Target Info Agent): `type`, `current_location`, `birthday`, `associations`, `identifying_characteristics`
+>
+> **Temporal fields** (managed by Long-term Data Agent): `suspicious_activity`, `nonsuspicious_activity`, `whereabouts`, `priors`, `major_events`
 
 **Key behaviors:**
 - Loads from `data/targets.json` at startup (non-temporal fields only)

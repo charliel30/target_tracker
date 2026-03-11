@@ -130,7 +130,14 @@ def do_update_target_field(target_name: str, field: str, value: str) -> str:
     existing = _target_data[target_name].get(field)
     if isinstance(existing, list) and isinstance(parsed_value, list):
         for item in parsed_value:
-            if item not in existing:
+            # For associations (list of objects with target_name), dedup by target_name
+            if field == "associations" and isinstance(item, dict) and "target_name" in item:
+                existing_names = {
+                    e.get("target_name") for e in existing if isinstance(e, dict)
+                }
+                if item["target_name"] not in existing_names:
+                    existing.append(item)
+            elif item not in existing:
                 existing.append(item)
         log.info(f"Appended to '{target_name}'.{field} ({len(parsed_value)} item(s))")
     else:
@@ -216,6 +223,10 @@ base_target_info_agent = Agent(
         "Use your tools to look up, list, and update target records. "
         "When asked to find a target by an approximate or partial name, use "
         "list_all_targets to retrieve the full list and pick the closest match. "
+        "ASSOCIATIONS: Each association is an object with 'target_name' and 'description'. "
+        "When asked about a target's associations, list the associated target names first. "
+        "Only provide association descriptions when the user specifically asks for details "
+        "about how targets are associated or connected. "
         "Always confirm updates to the user. Be concise and factual."
     ),
     tools=[

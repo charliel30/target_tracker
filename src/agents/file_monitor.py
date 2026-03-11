@@ -86,9 +86,10 @@ IMPORTANT: For temporal data, use the correct category:
 - "major_event" — deaths, destruction, disappearances, major arrests. Must include "event_type" (e.g. "death", "destruction", "arrest", "disappearance")
 
 For non_temporal fields: only include NEW characteristics or associations to ADD to existing records. Do not repeat or summarize existing data.
+Associations must be objects with "target_name" and "description" fields. The description should briefly explain the nature of the association as revealed by the article.
 
 Return your findings as a JSON array. Example:
-[{"name": "John Smith", "type": "person", "temporal": [{"category": "major_event", "event_type": "death", "description": "killed in car accident on Highway 101", "date": "2025-12-01"}], "non_temporal": {}}]""",
+[{"name": "John Smith", "type": "person", "temporal": [{"category": "major_event", "event_type": "death", "description": "killed in car accident on Highway 101", "date": "2025-12-01"}], "non_temporal": {"associations": [{"target_name": "Jane Doe", "description": "Passenger in Smith's vehicle during fatal crash"}]}}]""",
     tools=[process_article],
 )
 

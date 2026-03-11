@@ -7,9 +7,18 @@
     },
     "birthday": "1971-03-14",
     "associations": [
-      "Nadia Volkov",
-      "The Black Sedan",
-      "Kremlin Safe House"
+      {
+        "target_name": "Nadia Volkov",
+        "description": "Runs Volkov as his Paris-based operative; she reports to Moscow through him"
+      },
+      {
+        "target_name": "The Black Sedan",
+        "description": "Primary transport vehicle for Moscow operations"
+      },
+      {
+        "target_name": "Kremlin Safe House",
+        "description": "Uses as his Moscow operational base for meetings and dead drops"
+      }
     ],
     "identifying_characteristics": [
       "Deep scar running from left ear to jaw line",
@@ -73,9 +82,18 @@
     },
     "birthday": "1984-07-29",
     "associations": [
-      "Viktor Petrov",
-      "\u00c9mile Charpentier",
-      "Rue de Rivoli Safehouse"
+      {
+        "target_name": "Viktor Petrov",
+        "description": "Reports to Petrov as her handler; tasked for Paris-based intelligence operations"
+      },
+      {
+        "target_name": "Émile Charpentier",
+        "description": "Recruited Charpentier as an asset; handles him for financial intelligence"
+      },
+      {
+        "target_name": "Rue de Rivoli Safehouse",
+        "description": "Uses as her primary Paris base of operations"
+      }
     ],
     "identifying_characteristics": [
       "Platinum blonde hair, often worn in a low bun",
@@ -97,7 +115,7 @@
     "nonsuspicious_activities": [
       {
         "timestamp": "2024-09-01T10:00:00Z",
-        "description": "Enrolled in a French language evening class at the Alliance Fran\u00e7aise Paris."
+        "description": "Enrolled in a French language evening class at the Alliance Française Paris."
       },
       {
         "timestamp": "2025-05-20T13:00:00Z",
@@ -123,7 +141,7 @@
       }
     ]
   },
-  "\u00c9mile Charpentier": {
+  "Émile Charpentier": {
     "type": "person",
     "current_location": {
       "lat": 48.8566,
@@ -131,25 +149,34 @@
     },
     "birthday": "1965-01-22",
     "associations": [
-      "Nadia Volkov",
-      "Rue de Rivoli Safehouse",
-      "Chen Wei"
+      {
+        "target_name": "Nadia Volkov",
+        "description": "Handled by Volkov; provides financial intelligence and document services"
+      },
+      {
+        "target_name": "Rue de Rivoli Safehouse",
+        "description": "Meets Volkov here for operational briefings and document production"
+      },
+      {
+        "target_name": "Chen Wei",
+        "description": "European procurement contact for Chen Wei's cyber operations"
+      }
     ],
     "identifying_characteristics": [
       "Heavyset, approximately 190 cm tall",
       "Grey goatee, always neatly trimmed",
       "Wears a distinctive vintage Patek Philippe chronograph on his left wrist",
-      "Carries a black leather attach\u00e9 case at all times",
+      "Carries a black leather attaché case at all times",
       "Speaks in a low, measured baritone"
     ],
     "suspicious_activities": [
       {
         "timestamp": "2024-10-10T18:45:00Z",
-        "description": "Met with two individuals of Eastern European appearance at a private dining club near Place Vend\u00f4me; meeting lasted three hours."
+        "description": "Met with two individuals of Eastern European appearance at a private dining club near Place Vendôme; meeting lasted three hours."
       },
       {
         "timestamp": "2025-01-28T09:00:00Z",
-        "description": "Transferred \u20ac400,000 from an account in Luxembourg to an account in the Cayman Islands."
+        "description": "Transferred €400,000 from an account in Luxembourg to an account in the Cayman Islands."
       }
     ],
     "nonsuspicious_activities": [
@@ -193,9 +220,18 @@
     },
     "birthday": "1979-11-05",
     "associations": [
-      "\u00c9mile Charpentier",
-      "Shanghai Data Center",
-      "The White Van"
+      {
+        "target_name": "Émile Charpentier",
+        "description": "Uses Charpentier as European procurement broker for dual-use technology"
+      },
+      {
+        "target_name": "Shanghai Data Center",
+        "description": "Operates from this facility as his primary technical base"
+      },
+      {
+        "target_name": "The White Van",
+        "description": "Controls the van as a mobile signals surveillance platform"
+      }
     ],
     "identifying_characteristics": [
       "Slim build, approximately 175 cm tall",
@@ -207,7 +243,7 @@
     "suspicious_activities": [
       {
         "timestamp": "2024-05-20T02:30:00Z",
-        "description": "Remotely accessed servers belonging to a European defense contractor from a caf\u00e9 in the French Concession district."
+        "description": "Remotely accessed servers belonging to a European defense contractor from a café in the French Concession district."
       },
       {
         "timestamp": "2025-02-03T11:00:00Z",
@@ -251,8 +287,14 @@
     },
     "birthday": "1988-05-03",
     "associations": [
-      "\u00c9mile Charpentier",
-      "NATO Annex Building B"
+      {
+        "target_name": "Émile Charpentier",
+        "description": "Handled by Charpentier; provides classified NATO intelligence as an insider asset"
+      },
+      {
+        "target_name": "NATO Annex Building B",
+        "description": "Works here under official cover; exploits access to extract classified documents"
+      }
     ],
     "identifying_characteristics": [
       "Red hair, naturally curly, worn shoulder-length",
@@ -303,9 +345,18 @@
     },
     "birthday": "1968-09-30",
     "associations": [
-      "Viktor Petrov",
-      "Oleg Baranovsky",
-      "The Black Sedan"
+      {
+        "target_name": "Viktor Petrov",
+        "description": "Serves as Petrov's logistics and enforcement specialist in Saint Petersburg"
+      },
+      {
+        "target_name": "Oleg Baranovsky",
+        "description": "Coordinates weapons and materiel shipments with Baranovsky's financial network"
+      },
+      {
+        "target_name": "The Black Sedan",
+        "description": "Uses the sedan for operational transport alongside Petrov in Moscow"
+      }
     ],
     "identifying_characteristics": [
       "Broad-shouldered, former heavyweight wrestler's build",
@@ -369,15 +420,21 @@
     },
     "birthday": "1975-12-01",
     "associations": [
-      "Dmitri Alekseyev",
-      "Kremlin Safe House"
+      {
+        "target_name": "Dmitri Alekseyev",
+        "description": "Receives logistics coordination from Alekseyev for cross-border financial operations"
+      },
+      {
+        "target_name": "Kremlin Safe House",
+        "description": "Visits for coordination meetings with Petrov's Moscow-based network"
+      }
     ],
     "identifying_characteristics": [
       "Average height, lean build",
       "Wears a full beard, peppered with grey",
       "Known to use at least four different aliases",
       "Has a habit of tapping his left knee when nervous",
-      "Prefers outdoor caf\u00e9 seating and always sits facing the exit"
+      "Prefers outdoor café seating and always sits facing the exit"
     ],
     "suspicious_activities": [
       {
@@ -426,8 +483,14 @@
     },
     "birthday": "1991-02-17",
     "associations": [
-      "Tariq Al-Mansouri",
-      "Costa del Sol Storage Facility"
+      {
+        "target_name": "Tariq Al-Mansouri",
+        "description": "Operates as Al-Mansouri's Madrid-based logistics and smuggling coordinator"
+      },
+      {
+        "target_name": "Costa del Sol Storage Facility",
+        "description": "Manages day-to-day operations at the storage facility for smuggling logistics"
+      }
     ],
     "identifying_characteristics": [
       "Tall, approximately 178 cm, athletic build",
@@ -449,7 +512,7 @@
     "nonsuspicious_activities": [
       {
         "timestamp": "2024-07-20T11:00:00Z",
-        "description": "Attended a salsa dance class at a studio in Malasa\u00f1a neighborhood."
+        "description": "Attended a salsa dance class at a studio in Malasaña neighborhood."
       },
       {
         "timestamp": "2025-01-05T09:30:00Z",
@@ -483,9 +546,18 @@
     },
     "birthday": "1976-08-12",
     "associations": [
-      "Isabella Ortega",
-      "Costa del Sol Storage Facility",
-      "The Sand-Colored SUV"
+      {
+        "target_name": "Isabella Ortega",
+        "description": "Uses Ortega as his Spanish logistics and smuggling coordinator"
+      },
+      {
+        "target_name": "Costa del Sol Storage Facility",
+        "description": "Owns and finances the facility as a Mediterranean smuggling hub"
+      },
+      {
+        "target_name": "The Sand-Colored SUV",
+        "description": "Primary transport vehicle for Dubai and cross-border operations"
+      }
     ],
     "identifying_characteristics": [
       "Medium build, dark complexion with deep-set brown eyes",
@@ -545,8 +617,14 @@
     },
     "birthday": "1986-04-07",
     "associations": [
-      "Chen Wei",
-      "Mumbai Signals Post"
+      {
+        "target_name": "Chen Wei",
+        "description": "Provides signals intelligence and zero-day exploits to Chen Wei's cyber network"
+      },
+      {
+        "target_name": "Mumbai Signals Post",
+        "description": "Delivers intercepted intelligence to this facility for processing and transmission"
+      }
     ],
     "identifying_characteristics": [
       "Petite, approximately 158 cm, with long black hair",
@@ -602,8 +680,14 @@
     },
     "birthday": "1959-06-18",
     "associations": [
-      "\u00c9mile Charpentier",
-      "Berlin Logistics Hub"
+      {
+        "target_name": "Émile Charpentier",
+        "description": "Receives classified documents and dual-use technology through Charpentier's European network"
+      },
+      {
+        "target_name": "Berlin Logistics Hub",
+        "description": "Runs the hub as his primary warehouse for intelligence materiel and document transfers"
+      }
     ],
     "identifying_characteristics": [
       "Stocky, with a white crew cut",
@@ -615,7 +699,7 @@
     "suspicious_activities": [
       {
         "timestamp": "2024-04-19T08:00:00Z",
-        "description": "Was observed hand-delivering a folder of documents to the Turkish military attach\u00e9's residence in Grunewald."
+        "description": "Was observed hand-delivering a folder of documents to the Turkish military attaché's residence in Grunewald."
       },
       {
         "timestamp": "2025-03-01T17:30:00Z",
@@ -629,7 +713,7 @@
       },
       {
         "timestamp": "2025-01-18T12:00:00Z",
-        "description": "Lunched at Caf\u00e9 Einstein Stammhaus on Unter den Linden with a journalist from Die Zeit."
+        "description": "Lunched at Café Einstein Stammhaus on Unter den Linden with a journalist from Die Zeit."
       }
     ],
     "known_whereabouts": [
@@ -663,8 +747,14 @@
     },
     "birthday": "1993-08-24",
     "associations": [
-      "Tariq Al-Mansouri",
-      "Lagos Harbor Depot"
+      {
+        "target_name": "Tariq Al-Mansouri",
+        "description": "Receives financing from Al-Mansouri for West African arms and cargo operations"
+      },
+      {
+        "target_name": "Lagos Harbor Depot",
+        "description": "Controls the depot as her base for coordinating cargo shipments through Apapa Port"
+      }
     ],
     "identifying_characteristics": [
       "Tall and slender, with closely cropped natural hair",
@@ -720,13 +810,19 @@
     },
     "birthday": "1955-11-11",
     "associations": [
-      "Oleg Baranovsky",
-      "Geneva Finance Tower"
+      {
+        "target_name": "Oleg Baranovsky",
+        "description": "Launders funds routed through Baranovsky's diplomatic and financial channels"
+      },
+      {
+        "target_name": "Geneva Finance Tower",
+        "description": "Operates from the tower as his base for covert wealth management and money laundering"
+      }
     ],
     "identifying_characteristics": [
       "Tall, elegantly dressed, silver-haired",
       "Carries an ivory-handled walking cane he doesn't actually need",
-      "Graduate of \u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne",
+      "Graduate of École Polytechnique Fédérale de Lausanne",
       "Has a glass right eye from a hunting accident in 1989",
       "Known to use a personal encryption device disguised as a wristwatch"
     ],
@@ -777,8 +873,14 @@
     },
     "birthday": "1981-03-22",
     "associations": [
-      "Priya Anand",
-      "Chen Wei"
+      {
+        "target_name": "Priya Anand",
+        "description": "Coordinates SIGINT collection with Anand across the Asia-Pacific region"
+      },
+      {
+        "target_name": "Chen Wei",
+        "description": "Provides Northeast Asia signals intelligence to Chen Wei's cyber network from Seoul"
+      }
     ],
     "identifying_characteristics": [
       "Medium height, extremely fit, former ROK Army Ranger",
@@ -834,14 +936,20 @@
     },
     "birthday": "1990-12-09",
     "associations": [
-      "Isabella Ortega",
-      "Tariq Al-Mansouri"
+      {
+        "target_name": "Isabella Ortega",
+        "description": "Works with Ortega as a South American logistics and document forgery specialist"
+      },
+      {
+        "target_name": "Tariq Al-Mansouri",
+        "description": "Serves as Al-Mansouri's Buenos Aires-based courier and document handler"
+      }
     ],
     "identifying_characteristics": [
       "Short, approximately 160 cm, with dark olive skin",
       "Bright green eyes that are likely contact lenses",
       "Has a rose tattoo on the inside of her right forearm",
-      "Known to use the alias 'Mar\u00eda del Sol'",
+      "Known to use the alias 'María del Sol'",
       "Carries a custom-built radio frequency jammer in a modified crossbody bag"
     ],
     "suspicious_activities": [
@@ -857,7 +965,7 @@
     "nonsuspicious_activities": [
       {
         "timestamp": "2024-06-25T21:00:00Z",
-        "description": "Attended a tango show at El Viejo Almac\u00e9n in San Telmo."
+        "description": "Attended a tango show at El Viejo Almacén in San Telmo."
       },
       {
         "timestamp": "2025-01-20T11:00:00Z",
@@ -871,7 +979,7 @@
         "end_date": "2026-03-09"
       },
       {
-        "city": "S\u00e3o Paulo, Brazil",
+        "city": "São Paulo, Brazil",
         "start_date": "2024-08-01",
         "end_date": "2024-08-05"
       }
@@ -891,8 +999,14 @@
     },
     "birthday": "1943-04-01",
     "associations": [
-      "Viktor Petrov",
-      "Oleg Baranovsky"
+      {
+        "target_name": "Viktor Petrov",
+        "description": "Former senior SVR mentor who established Petrov's network before his death in 2022"
+      },
+      {
+        "target_name": "Oleg Baranovsky",
+        "description": "Recruited and trained Baranovsky as a financial coordinator for the network"
+      }
     ],
     "identifying_characteristics": [
       "Frail, elderly man with a deeply lined face",
@@ -904,18 +1018,18 @@
     "suspicious_activities": [
       {
         "timestamp": "2021-10-15T14:00:00Z",
-        "description": "Passed a handwritten codebook to an intermediary at a Chi\u0219in\u0103u market, later linked to an active Russian intelligence cell."
+        "description": "Passed a handwritten codebook to an intermediary at a Chișinău market, later linked to an active Russian intelligence cell."
       }
     ],
     "nonsuspicious_activities": [
       {
         "timestamp": "2021-09-01T10:00:00Z",
-        "description": "Attended Sunday mass at the Nativity Cathedral in Chi\u0219in\u0103u as he has done every week for 30 years."
+        "description": "Attended Sunday mass at the Nativity Cathedral in Chișinău as he has done every week for 30 years."
       }
     ],
     "known_whereabouts": [
       {
-        "city": "Chi\u0219in\u0103u, Moldova",
+        "city": "Chișinău, Moldova",
         "start_date": "2010-01-01",
         "end_date": "2022-03-14"
       }
@@ -939,8 +1053,14 @@
     },
     "birthday": "1972-06-14",
     "associations": [
-      "Oleg Baranovsky",
-      "Tariq Al-Mansouri"
+      {
+        "target_name": "Oleg Baranovsky",
+        "description": "Coordinates Iranian procurement needs through Baranovsky's European financial channels"
+      },
+      {
+        "target_name": "Tariq Al-Mansouri",
+        "description": "Partners with Al-Mansouri to finance and facilitate arms and technology acquisition"
+      }
     ],
     "identifying_characteristics": [
       "Medium height with a dense black beard going grey at the chin",
@@ -1000,8 +1120,14 @@
     },
     "birthday": "1983-02-28",
     "associations": [
-      "Klaus Brenner",
-      "Sung-Jin Park"
+      {
+        "target_name": "Klaus Brenner",
+        "description": "Shares Nordic intelligence product with Brenner's Berlin logistics network"
+      },
+      {
+        "target_name": "Sung-Jin Park",
+        "description": "Brokers intelligence exchanges between Nordic and East Asian SIGINT networks"
+      }
     ],
     "identifying_characteristics": [
       "Slim, with close-cropped silver hair despite being in her early forties",
@@ -1052,9 +1178,18 @@
     },
     "birthday": "1969-09-15",
     "associations": [
-      "Jean-Luc Moreau",
-      "\u00c9mile Charpentier",
-      "Geneva Finance Tower"
+      {
+        "target_name": "Jean-Luc Moreau",
+        "description": "Routes Vatican-sourced funds through Moreau's Geneva laundering infrastructure"
+      },
+      {
+        "target_name": "Émile Charpentier",
+        "description": "Coordinates financial transfers with Charpentier for sanctioned entity funding"
+      },
+      {
+        "target_name": "Geneva Finance Tower",
+        "description": "Uses the tower's secure floors for Vatican-routed financial transactions"
+      }
     ],
     "identifying_characteristics": [
       "Portly, with a large silver mustache",
@@ -1106,7 +1241,7 @@
       }
     ]
   },
-  "Hana Kov\u00e1\u0159": {
+  "Hana Kovář": {
     "type": "person",
     "current_location": {
       "lat": 50.0755,
@@ -1114,8 +1249,14 @@
     },
     "birthday": "1996-01-13",
     "associations": [
-      "Chen Wei",
-      "Agnes Lindqvist"
+      {
+        "target_name": "Chen Wei",
+        "description": "Provides SIGINT and electronic warfare capabilities to Chen Wei's network from Prague"
+      },
+      {
+        "target_name": "Agnes Lindqvist",
+        "description": "Shares intercepted signals intelligence with Lindqvist's Nordic broker network"
+      }
     ],
     "identifying_characteristics": [
       "Young-looking, often underestimated as a university student",
@@ -1131,7 +1272,7 @@
       },
       {
         "timestamp": "2025-02-20T22:00:00Z",
-        "description": "Uploaded a 4GB encrypted archive to a server registered in the Seychelles from a caf\u00e9 near Wenceslas Square."
+        "description": "Uploaded a 4GB encrypted archive to a server registered in the Seychelles from a café near Wenceslas Square."
       }
     ],
     "nonsuspicious_activities": [
@@ -1161,14 +1302,23 @@
     },
     "birthday": "1987-10-31",
     "associations": [
-      "Viktor Petrov",
-      "Dmitri Alekseyev",
-      "Vienna Station Apartment"
+      {
+        "target_name": "Viktor Petrov",
+        "description": "Reports to Petrov as his Vienna-based SVR station operative"
+      },
+      {
+        "target_name": "Dmitri Alekseyev",
+        "description": "Receives logistical support from Alekseyev for Vienna operations"
+      },
+      {
+        "target_name": "Vienna Station Apartment",
+        "description": "Uses as her primary Vienna operational base and secure communications hub"
+      }
     ],
     "identifying_characteristics": [
       "Petite, with dark auburn hair and high cheekbones",
       "Fluent in eight languages including Hungarian and Turkish",
-      "Has a deep respect for classical music \u2014 always attends opera when in Vienna",
+      "Has a deep respect for classical music — always attends opera when in Vienna",
       "Uses a specialized contact lens system to read microdots",
       "Has a faint scar on her right temple from a previous exfiltration operation gone wrong"
     ],
@@ -1219,8 +1369,14 @@
     },
     "birthday": "1980-07-07",
     "associations": [
-      "Dmitri Alekseyev",
-      "Anya Lebedeva"
+      {
+        "target_name": "Dmitri Alekseyev",
+        "description": "Handled by Alekseyev after defecting from Ukraine's SBU to the Russian network"
+      },
+      {
+        "target_name": "Anya Lebedeva",
+        "description": "Coordinates with Lebedeva for Eastern European intelligence sharing"
+      }
     ],
     "identifying_characteristics": [
       "Stocky build with a shaved head and a dense black beard",
@@ -1280,14 +1436,20 @@
     },
     "birthday": "1977-03-19",
     "associations": [
-      "Mireille Fontaine",
-      "Jean-Luc Moreau"
+      {
+        "target_name": "Mireille Fontaine",
+        "description": "Supports Fontaine's NATO intelligence extraction through her Canadian diplomatic channels"
+      },
+      {
+        "target_name": "Jean-Luc Moreau",
+        "description": "Funnels intercepted diplomatic intelligence to Moreau for financial exploitation"
+      }
     ],
     "identifying_characteristics": [
       "Medium build, with shoulder-length chestnut hair",
       "Carries a diplomatic passport issued by Canada's Foreign Affairs Ministry",
       "Has a habit of sketching maps and diagrams compulsively when listening",
-      "Speaks Qu\u00e9b\u00e9cois French and English with no discernible accent in either",
+      "Speaks Québécois French and English with no discernible accent in either",
       "Has a distinctive mole above her upper lip on the left side"
     ],
     "suspicious_activities": [
@@ -1332,8 +1494,14 @@
     },
     "birthday": "1974-05-17",
     "associations": [
-      "Agnes Lindqvist",
-      "Klaus Brenner"
+      {
+        "target_name": "Agnes Lindqvist",
+        "description": "Partners with Lindqvist as a Nordic intelligence broker using maritime and cipher tradecraft"
+      },
+      {
+        "target_name": "Klaus Brenner",
+        "description": "Supplies Nordic and maritime intelligence to Brenner's Berlin distribution network"
+      }
     ],
     "identifying_characteristics": [
       "Tall, approximately 195 cm, with a Viking-like blond beard now streaked with grey",
@@ -1349,7 +1517,7 @@
       },
       {
         "timestamp": "2025-01-22T11:00:00Z",
-        "description": "Met with a Russian maritime attach\u00e9 at the Grand Hotel Oslo under the guise of a private business consultation."
+        "description": "Met with a Russian maritime attaché at the Grand Hotel Oslo under the guise of a private business consultation."
       }
     ],
     "nonsuspicious_activities": [
@@ -1359,7 +1527,7 @@
       },
       {
         "timestamp": "2024-11-30T16:00:00Z",
-        "description": "Attended a maritime security conference at the Oslo Milit\u00e6re Samfund."
+        "description": "Attended a maritime security conference at the Oslo Militære Samfund."
       }
     ],
     "known_whereabouts": [
@@ -1389,8 +1557,14 @@
     },
     "birthday": "1985-02-02",
     "associations": [
-      "Fatima Okafor",
-      "Tariq Al-Mansouri"
+      {
+        "target_name": "Fatima Okafor",
+        "description": "Runs cross-border Sahel ground transport for Okafor's West African cargo operations"
+      },
+      {
+        "target_name": "Tariq Al-Mansouri",
+        "description": "Receives operational funding from Al-Mansouri for Sahel logistics and transport"
+      }
     ],
     "identifying_characteristics": [
       "Tall and wiry, approximately 188 cm",
@@ -1446,8 +1620,14 @@
     },
     "birthday": "1989-07-04",
     "associations": [
-      "Reza Shirazi",
-      "Oleg Baranovsky"
+      {
+        "target_name": "Reza Shirazi",
+        "description": "Provides Greek maritime shipping cover for Shirazi's Iranian procurement operations"
+      },
+      {
+        "target_name": "Oleg Baranovsky",
+        "description": "Coordinates shipping routes with Baranovsky for covert cargo movement through Greek waters"
+      }
     ],
     "identifying_characteristics": [
       "Dark-haired, with almond-shaped dark brown eyes",
@@ -1503,8 +1683,14 @@
     },
     "birthday": "1982-11-30",
     "associations": [
-      "Fatima Okafor",
-      "Amara Diallo"
+      {
+        "target_name": "Fatima Okafor",
+        "description": "Serves as Okafor's East African logistics node, moving cargo through Nairobi"
+      },
+      {
+        "target_name": "Amara Diallo",
+        "description": "Coordinates East-West African transit routes with Diallo's Sahel ground network"
+      }
     ],
     "identifying_characteristics": [
       "Well-built, with close-cropped hair and a trimmed goatee",
@@ -1564,9 +1750,18 @@
     },
     "birthday": "2018-09-15",
     "associations": [
-      "Viktor Petrov",
-      "Dmitri Alekseyev",
-      "Kremlin Safe House"
+      {
+        "target_name": "Viktor Petrov",
+        "description": "Serves as Petrov's armored transport for Moscow-area operations"
+      },
+      {
+        "target_name": "Dmitri Alekseyev",
+        "description": "Also used by Alekseyev for logistics runs and cross-border transport"
+      },
+      {
+        "target_name": "Kremlin Safe House",
+        "description": "Stationed at the safe house when not in operational use"
+      }
     ],
     "identifying_characteristics": [
       "2018 Mercedes-Benz S-Class S560 4Matic, matte black wrap",
@@ -1618,8 +1813,14 @@
     },
     "birthday": "2020-03-08",
     "associations": [
-      "Chen Wei",
-      "Shanghai Data Center"
+      {
+        "target_name": "Chen Wei",
+        "description": "Operated by Chen Wei as a mobile cyber surveillance and signals collection platform"
+      },
+      {
+        "target_name": "Shanghai Data Center",
+        "description": "Based at the data center; returns here for equipment servicing and data offload"
+      }
     ],
     "identifying_characteristics": [
       "2020 Ford Transit Custom, white with a partial magnetic decal for 'Jiangsu IT Solutions'",
@@ -1666,8 +1867,14 @@
     },
     "birthday": "2021-11-20",
     "associations": [
-      "Tariq Al-Mansouri",
-      "Costa del Sol Storage Facility"
+      {
+        "target_name": "Tariq Al-Mansouri",
+        "description": "Serves as Al-Mansouri's primary vehicle for Dubai and cross-border operations"
+      },
+      {
+        "target_name": "Costa del Sol Storage Facility",
+        "description": "Operates between Dubai and the storage facility for cargo transport"
+      }
     ],
     "identifying_characteristics": [
       "2021 Toyota Land Cruiser 300-series, sand beige, with light tinting on all windows",
@@ -1714,8 +1921,14 @@
     },
     "birthday": "2009-05-01",
     "associations": [
-      "Amara Diallo",
-      "Fatima Okafor"
+      {
+        "target_name": "Amara Diallo",
+        "description": "Used by Diallo as his primary cross-border Sahel transport vehicle"
+      },
+      {
+        "target_name": "Fatima Okafor",
+        "description": "Also used by Okafor's network for moving cargo from Lagos to Sahel staging areas"
+      }
     ],
     "identifying_characteristics": [
       "2009 Toyota Hilux double-cab, faded red paint with significant rust along the door sills",
@@ -1767,9 +1980,18 @@
     },
     "birthday": "2016-07-14",
     "associations": [
-      "Isabella Ortega",
-      "Tariq Al-Mansouri",
-      "Costa del Sol Storage Facility"
+      {
+        "target_name": "Isabella Ortega",
+        "description": "Operated by Ortega for high-speed maritime smuggling runs across the Strait of Gibraltar"
+      },
+      {
+        "target_name": "Tariq Al-Mansouri",
+        "description": "Financed by Al-Mansouri for Mediterranean smuggling operations"
+      },
+      {
+        "target_name": "Costa del Sol Storage Facility",
+        "description": "Berthed near and serviced through the storage facility"
+      }
     ],
     "identifying_characteristics": [
       "2016 Fountain Powerboats 38 Lightning, cobalt blue hull with silver racing stripes",
@@ -1816,8 +2038,14 @@
     },
     "birthday": "2022-04-10",
     "associations": [
-      "Nadia Volkov",
-      "Hana Kov\u00e1\u0159"
+      {
+        "target_name": "Nadia Volkov",
+        "description": "Used by Volkov for rapid courier runs across Paris"
+      },
+      {
+        "target_name": "Hana Kovář",
+        "description": "Also used by Kovář for covert document transport on Prague-Paris courier routes"
+      }
     ],
     "identifying_characteristics": [
       "2022 BMW R1250 GS Adventure, silver with black panniers",
@@ -1833,7 +2061,7 @@
       },
       {
         "timestamp": "2025-01-05T03:00:00Z",
-        "description": "Spotted on CCTV near the Elys\u00e9e Palace perimeter at 3 AM; rider wore a fully concealing helmet with no markings."
+        "description": "Spotted on CCTV near the Elysée Palace perimeter at 3 AM; rider wore a fully concealing helmet with no markings."
       }
     ],
     "nonsuspicious_activities": [
@@ -1859,10 +2087,22 @@
     },
     "birthday": "1963-01-01",
     "associations": [
-      "Viktor Petrov",
-      "Dmitri Alekseyev",
-      "Oleg Baranovsky",
-      "The Black Sedan"
+      {
+        "target_name": "Viktor Petrov",
+        "description": "Serves as Petrov's primary Moscow operational base for meetings and dead drops"
+      },
+      {
+        "target_name": "Dmitri Alekseyev",
+        "description": "Used by Alekseyev for logistics coordination when visiting Moscow"
+      },
+      {
+        "target_name": "Oleg Baranovsky",
+        "description": "Used by Baranovsky for network coordination meetings when visiting from Bern"
+      },
+      {
+        "target_name": "The Black Sedan",
+        "description": "The Black Sedan is stationed here when not in operational use"
+      }
     ],
     "identifying_characteristics": [
       "Five-story pre-war Soviet-era apartment block near Zamoskvorechye district",
@@ -1874,7 +2114,7 @@
     "suspicious_activities": [
       {
         "timestamp": "2024-11-04T00:00:00Z",
-        "description": "Thermal imaging showed unusual heat signatures consistent with multiple occupants on the third floor at 1 AM \u2014 no residents known to be registered."
+        "description": "Thermal imaging showed unusual heat signatures consistent with multiple occupants on the third floor at 1 AM — no residents known to be registered."
       },
       {
         "timestamp": "2025-02-19T04:30:00Z",
@@ -1909,14 +2149,20 @@
     },
     "birthday": "1882-01-01",
     "associations": [
-      "Nadia Volkov",
-      "\u00c9mile Charpentier"
+      {
+        "target_name": "Nadia Volkov",
+        "description": "Serves as Volkov's primary Paris operational base"
+      },
+      {
+        "target_name": "Émile Charpentier",
+        "description": "Used by Charpentier for meetings and document production with Volkov"
+      }
     ],
     "identifying_characteristics": [
       "Third floor of a Haussmann-era building on the northern side of Rue de Rivoli",
       "Apartment 7, accessed via a coded intercom system with a rotating cipher",
       "Blackout curtains always drawn regardless of time of day",
-      "A faint chemical smell \u2014 likely from a photo development lab used for document copying \u2014 detected by a DST sweep",
+      "A faint chemical smell — likely from a photo development lab used for document copying — detected by a DST sweep",
       "CCTV cameras in both stairwells have been modified to loop footage"
     ],
     "suspicious_activities": [
@@ -1957,8 +2203,14 @@
     },
     "birthday": "2017-04-22",
     "associations": [
-      "Chen Wei",
-      "The White Van"
+      {
+        "target_name": "Chen Wei",
+        "description": "Serves as Chen Wei's primary technical facility for cyber operations"
+      },
+      {
+        "target_name": "The White Van",
+        "description": "The White Van is based here for equipment servicing and data offload"
+      }
     ],
     "identifying_characteristics": [
       "Unremarkable five-story building in the Pudong New Area, externally marked as 'Horizon Cloud Technology'",
@@ -2005,7 +2257,10 @@
     },
     "birthday": "1994-11-11",
     "associations": [
-      "Mireille Fontaine"
+      {
+        "target_name": "Mireille Fontaine",
+        "description": "Fontaine works here under official cover and exploits access to classified archives"
+      }
     ],
     "identifying_characteristics": [
       "Annex building on the NATO headquarters compound, Brussels, Belgium",
@@ -2052,9 +2307,18 @@
     },
     "birthday": "1930-06-15",
     "associations": [
-      "Anya Lebedeva",
-      "Oleg Baranovsky",
-      "Reza Shirazi"
+      {
+        "target_name": "Anya Lebedeva",
+        "description": "Serves as Lebedeva's Vienna operational base and secure communications hub"
+      },
+      {
+        "target_name": "Oleg Baranovsky",
+        "description": "Used by Baranovsky for coordination meetings when transiting through Vienna"
+      },
+      {
+        "target_name": "Reza Shirazi",
+        "description": "Used by Shirazi for clandestine meetings during Vienna visits for Iranian procurement"
+      }
     ],
     "identifying_characteristics": [
       "Early 20th century Viennese apartment block in the 3rd Bezirk, near the Belvedere palace",
@@ -2066,7 +2330,7 @@
     "suspicious_activities": [
       {
         "timestamp": "2024-12-08T20:30:00Z",
-        "description": "Austrian DSN observed three known intelligence operatives entering the building on the evening of a Vienna Philharmonic performance \u2014 likely using the concert as cover for a meeting."
+        "description": "Austrian DSN observed three known intelligence operatives entering the building on the evening of a Vienna Philharmonic performance — likely using the concert as cover for a meeting."
       },
       {
         "timestamp": "2025-03-06T02:00:00Z",
@@ -2101,10 +2365,22 @@
     },
     "birthday": "2001-08-30",
     "associations": [
-      "Isabella Ortega",
-      "Tariq Al-Mansouri",
-      "The Blue Cigarette Boat",
-      "The Sand-Colored SUV"
+      {
+        "target_name": "Isabella Ortega",
+        "description": "Managed by Ortega for day-to-day smuggling logistics"
+      },
+      {
+        "target_name": "Tariq Al-Mansouri",
+        "description": "Owned and financed by Al-Mansouri as a Mediterranean smuggling hub"
+      },
+      {
+        "target_name": "The Blue Cigarette Boat",
+        "description": "The Blue Cigarette Boat is berthed nearby and serviced through this facility"
+      },
+      {
+        "target_name": "The Sand-Colored SUV",
+        "description": "The Sand-Colored SUV operates from here for cargo transport runs"
+      }
     ],
     "identifying_characteristics": [
       "Industrial storage unit complex in a business park outside Marbella, Spain",
@@ -2151,11 +2427,14 @@
     },
     "birthday": "2005-03-17",
     "associations": [
-      "Klaus Brenner"
+      {
+        "target_name": "Klaus Brenner",
+        "description": "Run by Brenner as his primary warehouse for intelligence materiel and document transfers"
+      }
     ],
     "identifying_characteristics": [
       "Mid-sized warehouse in the Tempelhof district of Berlin, near the former airport",
-      "Exterior marked as a freight forwarding company \u2014 'BerlinTransit GmbH'",
+      "Exterior marked as a freight forwarding company — 'BerlinTransit GmbH'",
       "Loading dock operates outside normal business hours, typically 10 PM to 3 AM",
       "Internal CCTV system appears to overwrite recordings every 12 hours rather than the legally required 72 hours",
       "Two large shipping containers are permanently stationed in the rear yard and have never been moved"
@@ -2173,7 +2452,7 @@
     "nonsuspicious_activities": [
       {
         "timestamp": "2024-10-10T09:00:00Z",
-        "description": "Filed routine VAT returns showing \u20ac1.2 million in legitimate freight forwarding revenue for the fiscal year."
+        "description": "Filed routine VAT returns showing €1.2 million in legitimate freight forwarding revenue for the fiscal year."
       }
     ],
     "known_whereabouts": [
@@ -2198,16 +2477,25 @@
     },
     "birthday": "1998-05-20",
     "associations": [
-      "Jean-Luc Moreau",
-      "Marco Benedetti",
-      "Oleg Baranovsky"
+      {
+        "target_name": "Jean-Luc Moreau",
+        "description": "Moreau operates from the secure floors as his base for covert wealth management"
+      },
+      {
+        "target_name": "Marco Benedetti",
+        "description": "Used by Benedetti for Vatican-routed financial transactions on the secure floors"
+      },
+      {
+        "target_name": "Oleg Baranovsky",
+        "description": "Used by Baranovsky for accessing laundered funds and financial coordination"
+      }
     ],
     "identifying_characteristics": [
       "Modern 18-story glass tower in Geneva's Rive Gauche financial district",
       "Floors 14-16 are entirely leased to a private wealth management firm with no public-facing presence",
       "Elevator access to floors 14-16 requires a biometric keycard not issued by the building management",
       "Registered power consumption is 40% higher than comparable floors suggest, implying extensive server infrastructure",
-      "Underground parking garage connects via a tunnel to an adjacent building \u2014 an undisclosed exit route"
+      "Underground parking garage connects via a tunnel to an adjacent building — an undisclosed exit route"
     ],
     "suspicious_activities": [
       {
@@ -2247,8 +2535,14 @@
     },
     "birthday": "2011-09-01",
     "associations": [
-      "Priya Anand",
-      "Sung-Jin Park"
+      {
+        "target_name": "Priya Anand",
+        "description": "Anand delivers intercepted intelligence here for processing and onward transmission"
+      },
+      {
+        "target_name": "Sung-Jin Park",
+        "description": "Park's SIGINT product is routed through this facility via Anand's network"
+      }
     ],
     "identifying_characteristics": [
       "Innocuous-looking three-story building in the Colaba district of Mumbai, behind a screen of palm trees",
@@ -2295,8 +2589,14 @@
     },
     "birthday": "1987-02-14",
     "associations": [
-      "Fatima Okafor",
-      "Daniel Mwangi"
+      {
+        "target_name": "Fatima Okafor",
+        "description": "Controlled by Okafor as her base for cargo operations through Apapa Port"
+      },
+      {
+        "target_name": "Daniel Mwangi",
+        "description": "Used by Mwangi as an East African transit point for cargo moving through Lagos"
+      }
     ],
     "identifying_characteristics": [
       "Large corrugated steel warehouse directly adjacent to Apapa Port's secondary cargo terminal, Lagos",
@@ -2343,14 +2643,20 @@
     },
     "birthday": "1983-04-05",
     "associations": [
-      "Sung-Jin Park",
-      "Chen Wei"
+      {
+        "target_name": "Sung-Jin Park",
+        "description": "Brokers intelligence exchanges with Park across the Northeast Asian network"
+      },
+      {
+        "target_name": "Chen Wei",
+        "description": "Serves as Tokyo-based intelligence broker feeding Japanese signals data to Chen Wei's network"
+      }
     ],
     "identifying_characteristics": [
       "Slender build, approximately 165 cm, with short black hair worn asymmetrically",
       "Former PSIA (Public Security Intelligence Agency) analyst turned freelance intelligence broker",
       "Has a stylized koi fish tattoo behind her right ear, typically hidden by hair",
-      "Always carries two identical-looking phones \u2014 one is a decoy with fabricated contacts",
+      "Always carries two identical-looking phones — one is a decoy with fabricated contacts",
       "Speaks Japanese, Mandarin, Korean, and English with equal fluency"
     ],
     "suspicious_activities": [
@@ -2400,16 +2706,25 @@
     },
     "birthday": "1970-02-14",
     "associations": [
-      "Oleg Baranovsky",
-      "Reza Shirazi",
-      "Anya Lebedeva"
+      {
+        "target_name": "Oleg Baranovsky",
+        "description": "Bridges Baranovsky's European financial network to the Istanbul-Black Sea corridor"
+      },
+      {
+        "target_name": "Reza Shirazi",
+        "description": "Facilitates Iranian-Russian coordination through his Istanbul and Caspian contacts"
+      },
+      {
+        "target_name": "Anya Lebedeva",
+        "description": "Coordinates with Lebedeva's Vienna station for cross-border intelligence routing"
+      }
     ],
     "identifying_characteristics": [
       "Broad-faced with heavy eyebrows and deep-set grey eyes",
       "Carries a diplomatic passport from a former Soviet republic that is a known forgery",
       "Has a prosthetic left hand from a field operation that went wrong in 1999",
       "Wears a thick fur-collared coat in all seasons above 10 degrees Celsius",
-      "Fluent in Turkish and Farsi \u2014 operates primarily in the Black Sea and Caspian regions"
+      "Fluent in Turkish and Farsi — operates primarily in the Black Sea and Caspian regions"
     ],
     "suspicious_activities": [
       {
@@ -2446,7 +2761,7 @@
     "priors": [
       {
         "date": "2003-12-10",
-        "description": "Arrested by Georgian authorities on the Georgian Military Highway with falsified transit documents; released after two days \u2014 circumstances never clarified."
+        "description": "Arrested by Georgian authorities on the Georgian Military Highway with falsified transit documents; released after two days — circumstances never clarified."
       },
       {
         "date": "2011-07-07",
@@ -2462,12 +2777,18 @@
     },
     "birthday": "1992-09-19",
     "associations": [
-      "Tariq Al-Mansouri",
-      "Reza Shirazi"
+      {
+        "target_name": "Tariq Al-Mansouri",
+        "description": "Acts as Al-Mansouri's Egyptian MENA conduit, leveraging her diplomatic cover in Cairo"
+      },
+      {
+        "target_name": "Reza Shirazi",
+        "description": "Facilitates Iranian intelligence coordination across North Africa and the Middle East"
+      }
     ],
     "identifying_characteristics": [
       "Tall and striking with amber eyes unusual for the region",
-      "Egyptian national operating under cover as a cultural attach\u00e9",
+      "Egyptian national operating under cover as a cultural attaché",
       "Wears a distinctive Nefertiti cartouche pendant in gold",
       "Known to be left-handed and uses a fountain pen at all times",
       "Has a small burn scar on the right side of her neck from a childhood accident"
@@ -2519,16 +2840,25 @@
     },
     "birthday": "1966-11-28",
     "associations": [
-      "Bogdan Marchuk",
-      "Klaus Brenner",
-      "Berlin Logistics Hub"
+      {
+        "target_name": "Bogdan Marchuk",
+        "description": "Shares classified Polish intelligence with Marchuk's Eastern European network"
+      },
+      {
+        "target_name": "Klaus Brenner",
+        "description": "Supplies stolen ABW classified documents to Brenner for distribution through Berlin"
+      },
+      {
+        "target_name": "Berlin Logistics Hub",
+        "description": "Delivers classified document packages to the hub for onward distribution"
+      }
     ],
     "identifying_characteristics": [
       "Short and wiry with closely cropped grey hair and a military bearing",
       "Former ABW (Polish Internal Security Agency) colonel, retired under murky circumstances",
       "Has a distinctive cross-shaped scar on his left cheekbone from a knife fight",
       "Smokes unfiltered Marlboro Reds and can be identified by the smell",
-      "Collects Eastern Bloc military memorabilia \u2014 uses these circles as cover for intelligence contacts"
+      "Collects Eastern Bloc military memorabilia — uses these circles as cover for intelligence contacts"
     ],
     "suspicious_activities": [
       {
@@ -2577,9 +2907,18 @@
     },
     "birthday": "1978-06-30",
     "associations": [
-      "Amara Diallo",
-      "Daniel Mwangi",
-      "Fatima Okafor"
+      {
+        "target_name": "Amara Diallo",
+        "description": "Coordinates Central African operations with Diallo's Sahel transport network"
+      },
+      {
+        "target_name": "Daniel Mwangi",
+        "description": "Partners with Mwangi to link Central and East African logistics corridors"
+      },
+      {
+        "target_name": "Fatima Okafor",
+        "description": "Connects Okafor's Lagos port operations to Central African distribution routes"
+      }
     ],
     "identifying_characteristics": [
       "Heavy-set with a shaved head and a thick neck scar from a past strangling attempt",
@@ -2639,13 +2978,22 @@
     },
     "birthday": "1995-01-17",
     "associations": [
-      "Viktor Petrov",
-      "Anya Lebedeva",
-      "Nadia Volkov"
+      {
+        "target_name": "Viktor Petrov",
+        "description": "Reports to Petrov; deployed for honeytrap and social engineering operations"
+      },
+      {
+        "target_name": "Anya Lebedeva",
+        "description": "Coordinates operational tasking with Lebedeva for European-targeted influence operations"
+      },
+      {
+        "target_name": "Nadia Volkov",
+        "description": "Works alongside Volkov as a peer SVR operative; shares Paris and European targets"
+      }
     ],
     "identifying_characteristics": [
       "Young, striking appearance used as operational cover for honeytrap operations",
-      "Long dark hair, photogenic with a media presence as a travel blogger \u2014 cover identity",
+      "Long dark hair, photogenic with a media presence as a travel blogger — cover identity",
       "Has a tiny red star tattoo on the inside of her lower lip",
       "Expert in social engineering and impersonation",
       "Speaks Russian, English, and Italian; her Italian is near-native from an SVR language school"
@@ -2692,9 +3040,18 @@
     },
     "birthday": "1967-03-03",
     "associations": [
-      "Reza Shirazi",
-      "Oleg Baranovsky",
-      "Jean-Luc Moreau"
+      {
+        "target_name": "Reza Shirazi",
+        "description": "Acts as Shirazi's Munich-based technology procurement buyer for the Iranian program"
+      },
+      {
+        "target_name": "Oleg Baranovsky",
+        "description": "Coordinates procurement financing through Baranovsky's Swiss financial channels"
+      },
+      {
+        "target_name": "Jean-Luc Moreau",
+        "description": "Routes procurement payments through Moreau's Geneva laundering infrastructure"
+      }
     ],
     "identifying_characteristics": [
       "Medium build with a salt-and-pepper beard kept short and neat",
@@ -2750,13 +3107,22 @@
     },
     "birthday": "1980-08-08",
     "associations": [
-      "Anya Lebedeva",
-      "Nikolai Vasenko",
-      "Vienna Station Apartment"
+      {
+        "target_name": "Anya Lebedeva",
+        "description": "Coordinates GRU operations with Lebedeva's SVR Vienna station"
+      },
+      {
+        "target_name": "Nikolai Vasenko",
+        "description": "Liaises with Vasenko for intelligence routing between Budapest and Istanbul"
+      },
+      {
+        "target_name": "Vienna Station Apartment",
+        "description": "Uses as a meeting point when coordinating with Vienna-based operatives"
+      }
     ],
     "identifying_characteristics": [
       "Elegant, medium height with silver-streaked dark hair worn in a chignon",
-      "Claims to be a concert pianist \u2014 cover has held for over a decade due to genuine talent",
+      "Claims to be a concert pianist — cover has held for over a decade due to genuine talent",
       "Wears only bespoke Hungarian-made clothing, purchased from the same Budapest tailor for 15 years",
       "Has a small Soviet-era red enamel pin (Order of Lenin miniature) worn inside her jacket lapel",
       "Expert in reading micro-expressions; trained in psychological profiling at a GRU school"
@@ -2764,7 +3130,7 @@
     "suspicious_activities": [
       {
         "timestamp": "2024-11-30T20:00:00Z",
-        "description": "Gave a private recital in Budapest at which two of the eight guests were subsequently identified as intelligence officers from different services \u2014 the event likely served as a covert broker meeting."
+        "description": "Gave a private recital in Budapest at which two of the eight guests were subsequently identified as intelligence officers from different services — the event likely served as a covert broker meeting."
       },
       {
         "timestamp": "2025-02-26T10:00:00Z",
@@ -2796,7 +3162,7 @@
     "priors": [
       {
         "date": "2013-05-18",
-        "description": "Hungarian AH (Alkotm\u00e1nyv\u00e9delmi Hivatal) internal note identifies her as a GRU illegal operating in Budapest under a long-term cover identity established in 2005."
+        "description": "Hungarian AH (Alkotmányvédelmi Hivatal) internal note identifies her as a GRU illegal operating in Budapest under a long-term cover identity established in 2005."
       }
     ]
   },
@@ -2808,12 +3174,18 @@
     },
     "birthday": "2019-06-03",
     "associations": [
-      "Nikolai Vasenko",
-      "Reza Shirazi"
+      {
+        "target_name": "Nikolai Vasenko",
+        "description": "Serves as Vasenko's primary Istanbul transport under expired diplomatic plates"
+      },
+      {
+        "target_name": "Reza Shirazi",
+        "description": "Also used by Shirazi during Istanbul meetings with Iranian and Russian contacts"
+      }
     ],
     "identifying_characteristics": [
       "2019 BMW 7-Series 745Le xDrive, long wheelbase, midnight blue with panoramic roof",
-      "Carries CD (Corps Diplomatique) plates registered to a mission that was closed in 2021 \u2014 plates should have been surrendered",
+      "Carries CD (Corps Diplomatique) plates registered to a mission that was closed in 2021 — plates should have been surrendered",
       "Rear cabin has a removable partition creating a hidden storage space of approximately 0.3 cubic meters",
       "Tinted windows certified to Bspec armoring; vehicle weighs nearly 3 tonnes",
       "Tracking device found glued under the chassis, registered to an unknown third party"

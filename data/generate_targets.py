@@ -555,14 +555,35 @@ def pick_city() -> dict:
     return {"lat": round(lat + lat_offset, 4), "lon": round(lon + lon_offset, 4)}
 
 
+ASSOCIATION_DESCRIPTIONS = [
+    "Observed meeting at undisclosed location",
+    "Linked through shared communications channel",
+    "Co-located during surveillance window",
+    "Connected via financial transaction records",
+    "Identified as operational contact",
+    "Spotted together at border crossing",
+    "Named in intercepted correspondence",
+    "Shared safe house access confirmed",
+    "Appeared in same travel manifest",
+    "Connected through intermediary network",
+]
+
+
 def pick_associations(existing_keys: list, count_range=(0, 4)) -> list:
-    """Pick a random subset of existing target keys as associations."""
+    """Pick a random subset of existing target keys as association objects."""
     n = random.randint(*count_range)
     if not existing_keys or n == 0:
         return []
     # Don't associate with more targets than exist
     n = min(n, len(existing_keys))
-    return random.sample(existing_keys, n)
+    selected = random.sample(existing_keys, n)
+    return [
+        {
+            "target_name": key,
+            "description": random.choice(ASSOCIATION_DESCRIPTIONS),
+        }
+        for key in selected
+    ]
 
 
 def make_suspicious_activities(n: int) -> list:
