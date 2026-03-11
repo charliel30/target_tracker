@@ -3,5 +3,6 @@ __pycache__/
 *.pyc
 data/target_tracker.db
 data/vector_store.json
+data/vector_store.json.hash
 data/document_store.json
 .DS_Store

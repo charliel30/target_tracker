@@ -34,6 +34,7 @@ class LLMConfig:
     def __init__(self, data: dict):
         self.provider: str = data.get("provider", "openai")   # "openai" | "ollama"
         self.model: str = data.get("model", "gpt-4o")
+        self.embedding_model: str = data.get("embedding_model", "text-embedding-3-small")
         self.base_url: str | None = data.get("base_url")       # None → use OpenAI default
 
 

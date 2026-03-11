@@ -19,7 +19,7 @@ import urllib.request
 import urllib.error
 
 BASE_URL = os.environ.get("BASE_URL", "http://localhost:5050")
-CONTAINER = os.environ.get("CONTAINER", "target_tracker-target-tracker-1")
+CONTAINER = os.environ.get("CONTAINER", "target_tracker-target-tracker-ephemeral-1")
 
 ARTICLE_TEXT = """\
 PARIS — French authorities confirmed Wednesday that 18 people were killed \
@@ -125,9 +125,26 @@ def test_article_ingestion_nadia_deceased():
         time.sleep(5)
 
     assert processed, "File was not moved to processed/ within 90 seconds"
-    print("    Article processed.", flush=True)
+    print("    Article processed. Waiting for stores to finish writing...", flush=True)
 
-    # Step 4: Ask the system if Nadia Volkov is alive
+    # Step 4: Wait for data to land in targets.json (embeddings + save are async)
+    # Poll instead of sleeping a fixed amount
+    events = []
+    store_start = time.time()
+    while time.time() - store_start < 30:
+        rc, stdout, _ = _docker_exec([
+            "python", "-c",
+            "import json; f=open('data/targets.json'); d=json.load(f); "
+            "events=d.get('Nadia Volkov',{}).get('major_events',[]); "
+            "print(json.dumps(events))",
+        ])
+        if rc == 0:
+            events = json.loads(stdout.strip())
+            if any(e.get("event_type") == "death" for e in events):
+                break
+        time.sleep(3)
+
+    # Step 5: Ask the system if Nadia Volkov is alive
     print("    Querying system about Nadia Volkov...", flush=True)
     resp = _chat("Is Nadia Volkov alive? Check major events.")
     resp_lower = resp.lower()
@@ -137,7 +154,7 @@ def test_article_ingestion_nadia_deceased():
         f"  Response: {resp[:400]}"
     )
 
-    # Step 5: Verify the major event is in the data stores
+    # Step 6: Verify the major event is in the data stores
     print("    Verifying data stores...", flush=True)
     rc, stdout, _ = _docker_exec([
         "python", "-c",

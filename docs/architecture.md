@@ -131,7 +131,7 @@ graph TB
 | Store | Technology | Purpose |
 |-------|-----------|---------|
 | `sqlite_store.py` | SQLite (stdlib) | Structured queries: date ranges, location filters, priors, major events |
-| `vector_store.py` | In-memory embeddings | Semantic search: "targets caught stealing electronics" |
+| `vector_store.py` | In-memory embeddings (cached) | Semantic search: "targets caught stealing electronics" |
 | `document_store.py` | JSON file-based | Raw document storage, full-text retrieval |
 
 All three stores are loaded from `data/targets.json` (temporal fields) at startup. The agent decides which store to query based on the request type. Updates go to all three stores and back to the JSON file.
@@ -200,6 +200,27 @@ sequenceDiagram
     Main->>Main: Start file monitor thread
     Main->>Main: Start Flask server on :5000
 ```
+
+### Embedding Cache
+
+The vector store generates an embedding for every temporal data entry across all targets at startup. With 50+ targets this means hundreds of OpenAI API calls, which is slow and expensive.
+
+To avoid regenerating embeddings unnecessarily, the vector store uses a **hash-based cache**:
+
+1. Before generating embeddings, it computes a SHA-256 hash of the serialised `targets.json` data
+2. It compares this hash to a saved hash file (`data/vector_store.json.hash`)
+3. If the hashes match and a cached `data/vector_store.json` exists, it skips embedding generation entirely and loads from cache
+4. If the data has changed, it regenerates all embeddings and updates both the cache file and the hash
+
+**Cache files:**
+- `data/vector_store.json` — cached embeddings (~10 MB for 52 targets)
+- `data/vector_store.json.hash` — SHA-256 hash of the targets data that produced the cache
+
+**Docker implications:**
+- **Persistent mode** (`--profile persistent`): cache files live on the host via the `./data` volume mount. Survives container restarts and rebuilds.
+- **Ephemeral mode** (`--profile ephemeral`): no volume mount, but cache files are baked into the image at build time via `COPY . .`. To take advantage of this, run in persistent mode at least once first to generate the cache on the host, then `--build` the ephemeral image — it will start instantly.
+
+Incremental updates (e.g., a new activity added by the file monitor) embed only the new entry and append it to the in-memory store. The bulk cache is only used for the initial startup load.
 
 ### User Query Flow
 
@@ -349,6 +370,7 @@ graph LR
 llm:
   provider: "openai"          # "openai" or "ollama"
   model: "gpt-5.2"            # Model name (for Ollama, e.g., "llama3")
+  embedding_model: "text-embedding-3-small"  # Model for vector store embeddings
   base_url: null              # Override for Ollama: "http://localhost:11434/v1"
 
 monitor:

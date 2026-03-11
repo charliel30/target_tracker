@@ -1,6 +1,7 @@
 llm:
   provider: "openai"          # "openai" or "ollama"
   model: "gpt-5.2"            # For Ollama, use e.g. "llama3"
+  embedding_model: "text-embedding-3-small"  # Model for vector store embeddings
   base_url: null              # For Ollama: "http://localhost:11434/v1"
 
 monitor:

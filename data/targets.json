@@ -63,8 +63,7 @@
         "date": "2011-04-02",
         "description": "Implicated in the poisoning of a Ukrainian journalist in Kyiv; never formally charged."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Nadia Volkov": {
     "type": "person",
@@ -76,17 +75,14 @@
     "associations": [
       "Viktor Petrov",
       "\u00c9mile Charpentier",
-      "Rue de Rivoli Safehouse",
-      "No known next of kin in France"
+      "Rue de Rivoli Safehouse"
     ],
     "identifying_characteristics": [
       "Platinum blonde hair, often worn in a low bun",
       "Speaks French with almost no accent",
       "Small anchor tattoo on inner right wrist",
       "Favors oversized sunglasses year-round",
-      "Right eye is blue, left eye is green (heterochromia)",
-      "36 years old",
-      "Russian national"
+      "Right eye is blue, left eye is green (heterochromia)"
     ],
     "suspicious_activities": [
       {
@@ -118,34 +114,12 @@
         "city": "Vienna, Austria",
         "start_date": "2023-09-05",
         "end_date": "2023-09-12"
-      },
-      {
-        "city": "Paris",
-        "start_date": "",
-        "end_date": "2025-11-12"
-      },
-      {
-        "city": "Residing",
-        "start_date": "",
-        "end_date": ""
       }
     ],
     "priors": [
       {
         "date": "2019-11-30",
         "description": "Detained by French DGSI for 18 hours on suspicion of industrial espionage targeting an aerospace firm; released without charge."
-      }
-    ],
-    "major_events": [
-      {
-        "date": "2025-11-12",
-        "event_type": "death",
-        "description": "Killed in a charter bus crash on the A6 motorway south of Paris; body identified through dental records after recovery from the wreckage"
-      },
-      {
-        "date": "2025-11-12",
-        "event_type": "death",
-        "description": "Killed in a bus crash on the A6 motorway south of Paris; body identified through dental records after recovery from wreckage"
       }
     ]
   },
@@ -209,8 +183,7 @@
         "date": "2015-06-20",
         "description": "Investigated by Interpol for alleged facilitation of dual-use technology transfers to sanctioned entities."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Chen Wei": {
     "type": "person",
@@ -268,8 +241,7 @@
         "date": "2021-09-14",
         "description": "Indicted by a US federal grand jury on 12 counts of computer fraud and economic espionage; remains at large."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Mireille Fontaine": {
     "type": "person",
@@ -321,8 +293,7 @@
         "end_date": "2021-08-20"
       }
     ],
-    "priors": [],
-    "major_events": []
+    "priors": []
   },
   "Dmitri Alekseyev": {
     "type": "person",
@@ -388,8 +359,7 @@
         "date": "2016-05-05",
         "description": "Placed on an EU sanctions list for alleged involvement in destabilization operations in Ukraine."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Oleg Baranovsky": {
     "type": "person",
@@ -446,8 +416,7 @@
         "date": "2013-11-19",
         "description": "Identified by Swiss federal intelligence as an unregistered foreign agent operating in the country."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Isabella Ortega": {
     "type": "person",
@@ -504,8 +473,7 @@
         "date": "2020-04-14",
         "description": "Arrested by Spanish CNI for suspected document forgery; charges dropped after a witness recanted."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Tariq Al-Mansouri": {
     "type": "person",
@@ -567,8 +535,7 @@
         "date": "2022-10-10",
         "description": "Investigated by UAE financial authorities for alleged money laundering; investigation closed without charges after political intervention."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Priya Anand": {
     "type": "person",
@@ -625,8 +592,7 @@
         "date": "2023-07-07",
         "description": "Named in a classified RAW internal report as a suspected double agent passing signals intelligence to a foreign service."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Klaus Brenner": {
     "type": "person",
@@ -687,8 +653,7 @@
         "date": "2010-11-02",
         "description": "Suspected of selling German company acquisition plans to a state-backed competitor; investigation dropped for lack of admissible evidence."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Fatima Okafor": {
     "type": "person",
@@ -745,8 +710,7 @@
         "date": "2021-03-18",
         "description": "Flagged by Nigerian Economic and Financial Crimes Commission (EFCC) for suspicious cross-border transactions totaling $2.3 million; file later sealed."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Jean-Luc Moreau": {
     "type": "person",
@@ -803,8 +767,7 @@
         "date": "2012-09-25",
         "description": "Fined by Swiss FINMA for facilitating transactions that circumvented international sanctions targeting an Iranian entity."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Sung-Jin Park": {
     "type": "person",
@@ -861,8 +824,7 @@
         "date": "2019-06-30",
         "description": "Dishonorably discharged from Korean Army Intelligence after classified mission files were found in his personal possession."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Valentina Cruz": {
     "type": "person",
@@ -919,8 +881,7 @@
         "date": "2022-05-11",
         "description": "Suspected of forging maritime shipping manifests for cargo moving through the Port of Buenos Aires; case closed without prosecution."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Alexei Drozdov": {
     "type": "person",
@@ -967,13 +928,6 @@
       {
         "date": "1987-07-19",
         "description": "Arrested by West German BfV on espionage charges; exchanged in a prisoner swap at Glienicke Bridge in 1988."
-      }
-    ],
-    "major_events": [
-      {
-        "date": "2022-03-14",
-        "event_type": "death",
-        "description": "Confirmed deceased by Moldovan authorities; cause of death listed as cardiac arrest, though circumstances remain suspicious given timing of active investigations."
       }
     ]
   },
@@ -1036,8 +990,7 @@
         "date": "2020-11-30",
         "description": "Survived an assassination attempt by motorcycle gunmen in Tehran; one bodyguard was killed."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Agnes Lindqvist": {
     "type": "person",
@@ -1089,8 +1042,7 @@
         "end_date": "2024-04-08"
       }
     ],
-    "priors": [],
-    "major_events": []
+    "priors": []
   },
   "Marco Benedetti": {
     "type": "person",
@@ -1152,8 +1104,7 @@
         "date": "2018-08-14",
         "description": "Named in a Vatican financial scandal report as a conduit for laundering proceeds from organized crime through charitable organizations."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Hana Kov\u00e1\u0159": {
     "type": "person",
@@ -1200,8 +1151,7 @@
         "end_date": "2026-03-09"
       }
     ],
-    "priors": [],
-    "major_events": []
+    "priors": []
   },
   "Anya Lebedeva": {
     "type": "person",
@@ -1259,8 +1209,7 @@
         "date": "2016-09-03",
         "description": "Expelled from Turkey under a diplomatic cover identity after BKA established her links to an SVR network operating in Istanbul."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Bogdan Marchuk": {
     "type": "person",
@@ -1321,8 +1270,7 @@
         "date": "2020-02-15",
         "description": "Suspected of providing targeting data to a non-state actor during a Donbas ceasefire period."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Gabrielle Desjardins": {
     "type": "person",
@@ -1374,8 +1322,7 @@
         "end_date": "2023-10-08"
       }
     ],
-    "priors": [],
-    "major_events": []
+    "priors": []
   },
   "Sven Haakonsen": {
     "type": "person",
@@ -1432,8 +1379,7 @@
         "date": "2019-04-04",
         "description": "Investigated by Norwegian PST for unauthorized contact with a foreign intelligence service; investigation resulted in his resignation from the PST."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Amara Diallo": {
     "type": "person",
@@ -1490,8 +1436,7 @@
         "date": "2023-02-08",
         "description": "Arrested by Burkinabe security forces for suspected links to a regional arms trafficking network; released after 72 hours without charge."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Sofia Papadimitriou": {
     "type": "person",
@@ -1548,8 +1493,7 @@
         "date": "2021-05-20",
         "description": "EYP (Greek intelligence) noted her as a person of interest after her yacht was found to have transported an unregistered individual across Greek maritime territory."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Daniel Mwangi": {
     "type": "person",
@@ -1610,8 +1554,7 @@
         "date": "2023-04-18",
         "description": "Named in a UN Monitoring Group report on arms embargo violations in the Horn of Africa."
       }
-    ],
-    "major_events": []
+    ]
   },
   "The Black Sedan": {
     "type": "vehicle",
@@ -1665,8 +1608,7 @@
         "date": "2022-07-04",
         "description": "Flagged by Finnish Supo after satellite imagery placed the vehicle at a known FSB front company's premises in Lappeenranta."
       }
-    ],
-    "major_events": []
+    ]
   },
   "The White Van": {
     "type": "vehicle",
@@ -1714,8 +1656,7 @@
         "date": "2023-01-17",
         "description": "Vehicle flagged by Shanghai Public Security Bureau for operating without a valid commercial transport license; owner listed is a defunct shell company."
       }
-    ],
-    "major_events": []
+    ]
   },
   "The Sand-Colored SUV": {
     "type": "vehicle",
@@ -1763,8 +1704,7 @@
         "end_date": "2024-06-12"
       }
     ],
-    "priors": [],
-    "major_events": []
+    "priors": []
   },
   "The Rust-Red Pickup": {
     "type": "vehicle",
@@ -1817,8 +1757,7 @@
         "date": "2022-04-20",
         "description": "Stopped at a ECOWAS checkpoint near the Mali border; driver produced false manifests. Vehicle impounded briefly, then released after a bribe was paid."
       }
-    ],
-    "major_events": []
+    ]
   },
   "The Blue Cigarette Boat": {
     "type": "vehicle",
@@ -1867,8 +1806,7 @@
         "date": "2023-09-14",
         "description": "Spanish maritime police linked this vessel to a suspected drug and document smuggling operation between Spain and Morocco."
       }
-    ],
-    "major_events": []
+    ]
   },
   "The Silver Motorcycle": {
     "type": "vehicle",
@@ -1911,8 +1849,7 @@
         "end_date": "2026-03-09"
       }
     ],
-    "priors": [],
-    "major_events": []
+    "priors": []
   },
   "Kremlin Safe House": {
     "type": "building",
@@ -1962,8 +1899,7 @@
         "date": "2019-03-11",
         "description": "CIA technical team detected the building as a signals relay node for a Moscow-based intelligence cell; surveillance established but source burned before action taken."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Rue de Rivoli Safehouse": {
     "type": "building",
@@ -2011,8 +1947,7 @@
         "date": "2017-06-28",
         "description": "Property previously linked to a DGSE-flagged Iranian intelligence network; ownership transferred to a shell company in 2018 before investigation concluded."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Shanghai Data Center": {
     "type": "building",
@@ -2060,8 +1995,7 @@
         "date": "2021-12-01",
         "description": "Listed in a classified NSA internal report as one of twelve buildings in Shanghai suspected of hosting PLA Unit 61398-linked cyber operations."
       }
-    ],
-    "major_events": []
+    ]
   },
   "NATO Annex Building B": {
     "type": "building",
@@ -2108,8 +2042,7 @@
         "date": "2020-02-14",
         "description": "A prior security breach in this building led to the compromise of an allied HUMINT network in Eastern Europe; perpetrator never identified."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Vienna Station Apartment": {
     "type": "building",
@@ -2158,8 +2091,7 @@
         "date": "2008-11-22",
         "description": "Austrian federal police flagged this address as a previous residence of a known SVR rezident during the Cold War era; records suggest it remained in the same intelligence network's possession."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Costa del Sol Storage Facility": {
     "type": "building",
@@ -2209,8 +2141,7 @@
         "date": "2019-07-18",
         "description": "Spanish Guardia Civil searched the premises on an anonymous tip but found only legally registered marine equipment; tip now believed to have been a deliberate misdirection."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Berlin Logistics Hub": {
     "type": "building",
@@ -2257,8 +2188,7 @@
         "date": "2016-09-30",
         "description": "BfV investigation linked the facility to a network that diverted dual-use electronics to a sanctioned state via a Turkish intermediary; case remains open."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Geneva Finance Tower": {
     "type": "building",
@@ -2307,8 +2237,7 @@
         "date": "2014-04-08",
         "description": "FINMA fined the wealth management firm on floor 14 for violations of anti-money laundering regulations; the firm paid and restructured without dissolution."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Mumbai Signals Post": {
     "type": "building",
@@ -2356,8 +2285,7 @@
         "date": "2020-08-12",
         "description": "RAW internal file links this building to a previous signals collection operation run by a foreign service that was discovered and quietly dismantled; the building then changed hands via a shell company."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Lagos Harbor Depot": {
     "type": "building",
@@ -2405,8 +2333,7 @@
         "date": "2018-06-25",
         "description": "INTERPOL Operation Wallfish linked this facility to the transshipment of illicit small arms originating from Eastern Europe to buyers in the Sahel region."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Yuki Tanaka": {
     "type": "person",
@@ -2463,8 +2390,7 @@
         "date": "2021-08-31",
         "description": "Dismissed from PSIA after an internal investigation found she had made unauthorized contact with a foreign intelligence officer; investigation classified."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Nikolai Vasenko": {
     "type": "person",
@@ -2526,8 +2452,7 @@
         "date": "2011-07-07",
         "description": "Listed in an Interpol red notice as a suspect in the assassination of a Chechen dissident in Vienna; notice later withdrawn under diplomatic pressure."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Layla Hassan": {
     "type": "person",
@@ -2584,8 +2509,7 @@
         "date": "2022-03-27",
         "description": "Egyptian General Intelligence Directorate noted her for unauthorized contact with an Iranian intelligence officer at a diplomatic reception; file flagged but no action taken."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Piotr Zalewski": {
     "type": "person",
@@ -2643,8 +2567,7 @@
         "date": "2009-05-16",
         "description": "Placed under internal ABW investigation for alleged unauthorized transfer of agent identities to a foreign service; retired before charges could be formalized."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Celestine Mbeki": {
     "type": "person",
@@ -2706,8 +2629,7 @@
         "date": "2020-08-30",
         "description": "Added to the EU Magnitsky sanctions list for human rights abuses and war crimes financing; assets nominally frozen."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Irina Morozova": {
     "type": "person",
@@ -2760,8 +2682,7 @@
         "end_date": "2024-09-27"
       }
     ],
-    "priors": [],
-    "major_events": []
+    "priors": []
   },
   "Hamid Karimi": {
     "type": "person",
@@ -2819,8 +2740,7 @@
         "date": "2017-11-22",
         "description": "BfV opened a case on Karimi for suspected industrial espionage on behalf of a state-linked entity; the case was administratively suspended in 2019 when a key informant was compromised."
       }
-    ],
-    "major_events": []
+    ]
   },
   "Tatiana Belova": {
     "type": "person",
@@ -2878,8 +2798,7 @@
         "date": "2013-05-18",
         "description": "Hungarian AH (Alkotm\u00e1nyv\u00e9delmi Hivatal) internal note identifies her as a GRU illegal operating in Budapest under a long-term cover identity established in 2005."
       }
-    ],
-    "major_events": []
+    ]
   },
   "The Armored Diplomatic Limousine": {
     "type": "vehicle",
@@ -2932,7 +2851,6 @@
         "date": "2023-03-15",
         "description": "Turkish MIT flagged the vehicle's CD plates as invalid and issued a notice to the foreign missions registry; no response received and no further action taken."
       }
-    ],
-    "major_events": []
+    ]
   }
 }

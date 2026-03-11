@@ -12,16 +12,16 @@ be supported by the local model. The store will raise an error in that case.
 For full semantic search, switch the provider to "openai" in config.yaml.
 """
 
+import hashlib
 import json
 import math
 import os
 from typing import Optional
 
 from src.config import config, get_openai_client
+from src.logging_config import get_agent_logger
 
-# The model used to generate embeddings. text-embedding-3-small is fast,
-# cheap, and good enough for this use-case.
-EMBEDDING_MODEL = "text-embedding-3-small"
+log = get_agent_logger("VectorStore")
 
 
 class VectorStore:
@@ -31,11 +31,18 @@ class VectorStore:
     Each entry in the store is a small piece of text derived from a target's
     temporal data (an activity description, a whereabouts note, a prior).
     Querying embeds the query string and ranks all entries by similarity.
+
+    Embeddings are cached: on startup, we hash the source targets data and
+    compare it to the hash stored alongside the vector store file. If they
+    match, we skip the expensive embedding generation and load from cache.
     """
 
     def __init__(self, store_path: str):
         # Where we persist the store on disk (relative to project root)
         self.store_path = store_path
+
+        # Path for the hash file that tracks whether embeddings are stale
+        self._hash_path = store_path + ".hash"
 
         # In-memory list of entries. Each entry is a dict:
         #   { "target_name": str, "category": str, "text": str, "embedding": list[float] }
@@ -51,10 +58,23 @@ class VectorStore:
     async def load_targets(self, targets: dict) -> None:
         """
         Ingest the full targets dict and generate an embedding for each
-        piece of temporal data (activities, whereabouts, priors).
+        piece of temporal data (activities, whereabouts, priors, major events).
 
-        Replaces any existing entries in the store.
+        Skips regeneration if the targets data hasn't changed since the last
+        run (compares a SHA-256 hash of the serialised targets dict).
         """
+        # Check if we can skip — hash the targets data deterministically
+        current_hash = self._hash_targets(targets)
+        saved_hash = self._load_hash()
+
+        if current_hash == saved_hash and self.entries:
+            log.info(
+                f"Targets data unchanged (hash {current_hash[:12]}…) — "
+                f"reusing {len(self.entries)} cached embeddings."
+            )
+            return
+
+        log.info("Targets data changed or no cache — generating embeddings...")
         self.entries = []
 
         for target_name, data in targets.items():
@@ -133,6 +153,8 @@ class VectorStore:
                 })
 
         self._save()
+        self._save_hash(current_hash)
+        log.info(f"Cached {len(self.entries)} embeddings (hash {current_hash[:12]}…).")
 
     async def add_entry(self, target_name: str, category: str, text: str) -> None:
         """
@@ -202,11 +224,7 @@ class VectorStore:
 
         # Use a fixed embedding model for OpenAI; for Ollama we fall back to
         # whatever model is configured (though results may vary).
-        model = (
-            config.llm.model
-            if config.llm.provider == "ollama"
-            else EMBEDDING_MODEL
-        )
+        model = config.llm.embedding_model
 
         response = await client.embeddings.create(input=text, model=model)
         return response.data[0].embedding
@@ -224,3 +242,28 @@ class VectorStore:
         if os.path.exists(self.store_path):
             with open(self.store_path, "r") as f:
                 self.entries = json.load(f)
+
+    # ------------------------------------------------------------------
+    # Hash-based cache invalidation
+    # ------------------------------------------------------------------
+
+    @staticmethod
+    def _hash_targets(targets: dict) -> str:
+        """SHA-256 hash of the targets dict (deterministic via sort_keys)."""
+        raw = json.dumps(targets, sort_keys=True).encode()
+        return hashlib.sha256(raw).hexdigest()
+
+    def _load_hash(self) -> str | None:
+        """Read the previously saved hash, or None if no cache exists."""
+        if os.path.exists(self._hash_path):
+            with open(self._hash_path, "r") as f:
+                return f.read().strip()
+        return None
+
+    def _save_hash(self, hash_value: str) -> None:
+        """Write the hash alongside the vector store file."""
+        parent = os.path.dirname(self._hash_path)
+        if parent:
+            os.makedirs(parent, exist_ok=True)
+        with open(self._hash_path, "w") as f:
+            f.write(hash_value)

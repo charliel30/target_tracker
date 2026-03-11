@@ -5,7 +5,19 @@ services:
       - "5050:5000"
     env_file:
       - .env
+    profiles: ["persistent"]
     volumes:
       - ./data:/app/data
+      - ./config.yaml:/app/config.yaml
+      - /tmp/news_articles:/tmp/news_articles
+
+  target-tracker-ephemeral:
+    build: .
+    ports:
+      - "5050:5000"
+    env_file:
+      - .env
+    profiles: ["ephemeral"]
+    volumes:
       - ./config.yaml:/app/config.yaml
       - /tmp/news_articles:/tmp/news_articles
