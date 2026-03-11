@@ -5,6 +5,35 @@
 
 let conversationHistory = []; // Array of {role: "user"|"assistant", content: string}
 
+// ---- Markdown rendering ---------------------------------------------------
+
+// Lightweight markdown-to-HTML for chat messages and alerts.
+// Supports: **bold**, *italic*, numbered lists, bullet lists, `code`, newlines.
+function renderMarkdown(text) {
+  let html = text
+    // Escape HTML entities first
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    // Bold: **text**
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    // Italic: *text* (but not inside bold)
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    // Inline code: `code`
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    // Numbered lists: lines starting with 1. 2. etc.
+    .replace(/^(\d+)\.\s+(.+)$/gm, '<li>$2</li>')
+    // Bullet lists: lines starting with - or *
+    .replace(/^[-*]\s+(.+)$/gm, '<li>$1</li>')
+    // Wrap consecutive <li> elements in <ul>
+    .replace(/((?:<li>.*<\/li>\n?)+)/g, '<ul>$1</ul>')
+    // Line breaks (double newline = paragraph, single = <br>)
+    .replace(/\n\n/g, '</p><p>')
+    .replace(/\n/g, '<br>');
+
+  return '<p>' + html + '</p>';
+}
+
 // ---- DOM refs -------------------------------------------------------------
 
 const chatMessages = document.getElementById('chatMessages');
@@ -24,7 +53,7 @@ function addMessageToChat(role, content) {
   label.textContent = role === 'user' ? 'You' : 'Agent';
 
   const body = document.createElement('div');
-  body.textContent = content;
+  body.innerHTML = renderMarkdown(content);
 
   wrapper.appendChild(label);
   wrapper.appendChild(body);
@@ -145,7 +174,7 @@ function renderAlert(alert) {
 
   const desc = document.createElement('div');
   desc.classList.add('alert-description');
-  desc.textContent = alert.description || alert.message || '';
+  desc.innerHTML = renderMarkdown(alert.description || alert.message || '');
 
   const dismiss = document.createElement('button');
   dismiss.classList.add('alert-dismiss');

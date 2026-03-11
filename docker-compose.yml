@@ -21,3 +21,17 @@ services:
     volumes:
       - ./config.yaml:/app/config.yaml
       - /tmp/news_articles:/tmp/news_articles
+
+  article-server:
+    image: python:3.12-slim
+    ports:
+      - "6000:6000"
+    profiles: ["persistent", "ephemeral"]
+    environment:
+      - ARTICLE_DIR=/data/inbox
+      - PORT=6000
+    volumes:
+      - /tmp/article_inbox:/data/inbox
+      - ./tests/article_server.py:/app/article_server.py
+    working_dir: /app
+    command: python article_server.py

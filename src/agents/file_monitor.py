@@ -128,13 +128,15 @@ def _parse_entities(llm_output: str) -> list:
 async def _route_entity_updates(entity: dict, matched_target: str) -> list[dict]:
     """
     Given an extracted entity dict and the fuzzy-matched canonical target name,
-    call the appropriate update functions and return a list of update records.
+    call the appropriate update functions, trigger anomaly detection, and return
+    a list of update records.
     """
     # Import here to avoid circular imports at module load time
     from src.agents.base_target_info import do_update_target_field, NON_TEMPORAL_FIELDS
     from src.agents.longterm_data import (
         do_add_activity, do_add_whereabouts, do_add_prior, do_add_major_event,
     )
+    from src.agents.anomaly_detector import detect_anomalies
 
     updates = []
 
@@ -209,6 +211,19 @@ async def _route_entity_updates(entity: dict, matched_target: str) -> list[dict]
 
         else:
             log.debug(f"Unknown temporal category '{category}' for '{matched_target}' — skipped")
+
+    # --- Anomaly detection ---
+    if updates:
+        update_summary = "; ".join(
+            f"{u['update_type']}: {u.get('description', u.get('field', ''))}"
+            for u in updates
+        )
+        try:
+            alerts = await detect_anomalies(matched_target, update_summary)
+            if alerts:
+                log.warning(f"Anomaly detected for '{matched_target}': {len(alerts)} alert(s)")
+        except Exception as exc:
+            log.error(f"Anomaly detection failed for '{matched_target}': {exc}")
 
     return updates
 

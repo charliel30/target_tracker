@@ -6,7 +6,7 @@ llm:
 
 monitor:
   watch_folder: "/tmp/news_articles"
-  poll_interval_seconds: 30
+  poll_interval_seconds: 10
 
 db:
   sqlite_path: "data/target_tracker.db"

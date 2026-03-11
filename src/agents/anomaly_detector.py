@@ -67,7 +67,7 @@ When given existing target data and a new update, check for:
 
 IMPORTANT: Always check the major_events field in temporal data — these record critical status changes.
 
-If you find anomalies, describe each one clearly in a numbered list.
+If you find anomalies, start with a single bold summary line (e.g. "**Sighting of Nadia Volkov on 2026-03-09 conflicts with recorded death on 2025-11-12**"). Then describe each anomaly in a numbered list below.
 If no anomalies are found, respond with exactly: NO_ANOMALIES""",
     tools=[check_anomaly],
 )
