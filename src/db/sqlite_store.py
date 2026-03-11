@@ -70,6 +70,15 @@ class SQLiteStore:
             )
         """)
 
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS major_events (
+                target_name TEXT,
+                date        TEXT,
+                event_type  TEXT,
+                description TEXT
+            )
+        """)
+
         self.conn.commit()
 
     # ------------------------------------------------------------------
@@ -97,7 +106,7 @@ class SQLiteStore:
 
         # Wipe existing data so we start fresh
         for table in ("suspicious_activities", "nonsuspicious_activities",
-                      "known_whereabouts", "priors"):
+                      "known_whereabouts", "priors", "major_events"):
             cursor.execute(f"DELETE FROM {table}")
 
         for target_name, data in targets.items():
@@ -127,6 +136,13 @@ class SQLiteStore:
                 cursor.execute(
                     "INSERT INTO priors VALUES (?, ?, ?)",
                     (target_name, item["date"], item["description"]),
+                )
+
+            # Major events (deaths, arrests, destruction, etc.)
+            for item in data.get("major_events", []):
+                cursor.execute(
+                    "INSERT INTO major_events VALUES (?, ?, ?, ?)",
+                    (target_name, item["date"], item["event_type"], item["description"]),
                 )
 
         self.conn.commit()
@@ -177,6 +193,18 @@ class SQLiteStore:
         )
         self.conn.commit()
 
+    def add_major_event(self, target_name: str, data: dict):
+        """
+        Add a major event for a target (death, arrest, destruction, etc.).
+
+        data: {"date": ..., "event_type": ..., "description": ...}
+        """
+        self.conn.execute(
+            "INSERT INTO major_events VALUES (?, ?, ?, ?)",
+            (target_name, data["date"], data["event_type"], data["description"]),
+        )
+        self.conn.commit()
+
     # ------------------------------------------------------------------
     # Queries
     # ------------------------------------------------------------------
@@ -221,6 +249,26 @@ class SQLiteStore:
         else:
             rows = self.conn.execute("SELECT * FROM priors").fetchall()
 
+        return [dict(row) for row in rows]
+
+    def query_major_events(self, target_name: str = None, event_type: str = None) -> list:
+        """
+        Query major events, optionally filtered by target name and/or event type.
+
+        event_type examples: "death", "arrest", "destruction", "disappearance"
+        Returns a list of dicts with keys: target_name, date, event_type, description.
+        """
+        query = "SELECT * FROM major_events WHERE 1=1"
+        params = []
+
+        if target_name:
+            query += " AND target_name = ?"
+            params.append(target_name)
+        if event_type:
+            query += " AND event_type = ?"
+            params.append(event_type)
+
+        rows = self.conn.execute(query, params).fetchall()
         return [dict(row) for row in rows]
 
     def query_activities(self, target_name: str, suspicious_only: bool = False) -> list:
@@ -280,4 +328,5 @@ class SQLiteStore:
             "nonsuspicious_activities": fetch("nonsuspicious_activities"),
             "known_whereabouts":        fetch("known_whereabouts"),
             "priors":                   fetch("priors"),
+            "major_events":             fetch("major_events"),
         }

@@ -124,12 +124,13 @@ graph TB
 - Non-suspicious activities (timestamp + description)
 - Known whereabouts (city, start date, end date)
 - Priors (date + description of illegal activity)
+- Major events (date + event_type + description) — deaths, arrests, destruction, disappearances
 
 **Backed by 3 storage types** (defined in `src/db/`):
 
 | Store | Technology | Purpose |
 |-------|-----------|---------|
-| `sqlite_store.py` | SQLite (stdlib) | Structured queries: date ranges, location filters, counting priors |
+| `sqlite_store.py` | SQLite (stdlib) | Structured queries: date ranges, location filters, priors, major events |
 | `vector_store.py` | In-memory embeddings | Semantic search: "targets caught stealing electronics" |
 | `document_store.py` | JSON file-based | Raw document storage, full-text retrieval |
 
@@ -160,9 +161,9 @@ All three stores are loaded from `data/targets.json` (temporal fields) at startu
 5. Alert is pushed to the UI via the Flask server's alert endpoint
 
 **Examples of anomalies:**
-- Person with a "deceased" prior is spotted alive
+- Person with a major_event of type "death" is spotted alive or has new activity after their death date
 - Vehicle reported in two distant cities on the same day
-- Building listed as demolished has new activity
+- Building with a major_event of type "destruction" has new activity after destruction date
 
 ## MCP Server (`src/mcp/article_fetcher.py`)
 
@@ -410,9 +411,12 @@ target_tracker/
 │   └── app.js
 ├── docs/
 │   ├── architecture.md           # This file
+│   ├── how_to_test.md           # Step-by-step testing guide
 │   └── user_manual.md
 └── tests/
-    └── test_functional.py       # Functional tests against running server
+    ├── test_functional.py       # Functional tests against running server
+    ├── test_consistency.py      # Cross-query contradiction tests
+    └── test_file_watcher.py     # File watcher integration test (Docker)
 ```
 
 ## Technology Choices

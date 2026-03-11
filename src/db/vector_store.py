@@ -117,6 +117,21 @@ class VectorStore:
                     "embedding": embedding,
                 })
 
+            # --- Major events (deaths, arrests, destruction, etc.) ---
+            for event in data.get("major_events", []):
+                text = (
+                    f"{target_name} major event ({event.get('event_type', 'unknown')}) "
+                    f"on {event.get('date', 'unknown date')}: "
+                    f"{event.get('description', '')}"
+                )
+                embedding = await self._embed(text)
+                self.entries.append({
+                    "target_name": target_name,
+                    "category": "major_event",
+                    "text": text,
+                    "embedding": embedding,
+                })
+
         self._save()
 
     async def add_entry(self, target_name: str, category: str, text: str) -> None:

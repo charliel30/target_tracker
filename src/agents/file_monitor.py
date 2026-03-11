@@ -75,11 +75,20 @@ file_monitor_agent = Agent(
     instructions="""You are the File Monitor Agent. When given article text, you extract mentions of people, buildings, and vehicles. For each entity found, provide:
 - The entity name as mentioned in the article
 - The entity type (person, building, or vehicle)
-- Any temporal information (activities, whereabouts, incidents)
-- Any non-temporal information (physical descriptions, associations)
+- Any temporal information (activities, whereabouts, incidents, major events)
+- Any non-temporal information (physical descriptions, NEW associations to ADD)
+
+IMPORTANT: For temporal data, use the correct category:
+- "suspicious_activity" — covert meetings, unauthorized access, espionage
+- "nonsuspicious_activity" — normal daily activities
+- "whereabouts" — must include a real city name, start_date, and end_date
+- "prior" — criminal charges, arrests, law enforcement encounters
+- "major_event" — deaths, destruction, disappearances, major arrests. Must include "event_type" (e.g. "death", "destruction", "arrest", "disappearance")
+
+For non_temporal fields: only include NEW characteristics or associations to ADD to existing records. Do not repeat or summarize existing data.
 
 Return your findings as a JSON array. Example:
-[{"name": "John Smith", "type": "person", "temporal": [{"category": "suspicious_activity", "description": "spotted meeting unknown contacts", "date": "2025-12-01"}], "non_temporal": {"identifying_characteristics": ["now wearing glasses"]}}]""",
+[{"name": "John Smith", "type": "person", "temporal": [{"category": "major_event", "event_type": "death", "description": "killed in car accident on Highway 101", "date": "2025-12-01"}], "non_temporal": {}}]""",
     tools=[process_article],
 )
 
@@ -122,25 +131,19 @@ async def _route_entity_updates(entity: dict, matched_target: str) -> list[dict]
     call the appropriate update functions and return a list of update records.
     """
     # Import here to avoid circular imports at module load time
-    from src.agents import base_target_info as bti
-    from src.agents import longterm_data as ltd
+    from src.agents.base_target_info import do_update_target_field, NON_TEMPORAL_FIELDS
+    from src.agents.longterm_data import (
+        do_add_activity, do_add_whereabouts, do_add_prior, do_add_major_event,
+    )
 
     updates = []
 
     # --- Non-temporal updates ---
     non_temporal = entity.get("non_temporal", {})
     for field, value in non_temporal.items():
-        if field not in bti.NON_TEMPORAL_FIELDS:
+        if field not in NON_TEMPORAL_FIELDS:
             continue
-        # update_target_field expects a JSON-encoded value string
-        await bti.update_target_field.on_invoke_tool(
-            None,
-            json.dumps({
-                "target_name": matched_target,
-                "field": field,
-                "value": json.dumps(value),
-            }),
-        )
+        do_update_target_field(matched_target, field, json.dumps(value))
         log.info(f"Non-temporal update for '{matched_target}': {field} = {value!r}")
         updates.append({
             "target": matched_target,
@@ -160,15 +163,7 @@ async def _route_entity_updates(entity: dict, matched_target: str) -> list[dict]
 
         if category in ("suspicious_activity", "nonsuspicious_activity"):
             activity_type = "suspicious" if category == "suspicious_activity" else "nonsuspicious"
-            await ltd.add_activity.on_invoke_tool(
-                None,
-                json.dumps({
-                    "target_name": matched_target,
-                    "activity_type": activity_type,
-                    "timestamp": date,
-                    "description": description,
-                }),
-            )
+            await do_add_activity(matched_target, activity_type, date, description)
             log.info(f"Activity added for '{matched_target}' ({activity_type}) on {date!r}")
             updates.append({
                 "target": matched_target,
@@ -179,18 +174,9 @@ async def _route_entity_updates(entity: dict, matched_target: str) -> list[dict]
             })
 
         elif category == "whereabouts":
-            # Whereabouts needs city; try to pull it from the description
             city = temporal_item.get("city", description.split()[0] if description else "unknown")
             end_date = temporal_item.get("end_date", date)
-            await ltd.add_whereabouts.on_invoke_tool(
-                None,
-                json.dumps({
-                    "target_name": matched_target,
-                    "city": city,
-                    "start_date": date,
-                    "end_date": end_date,
-                }),
-            )
+            await do_add_whereabouts(matched_target, city, date, end_date)
             log.info(f"Whereabouts added for '{matched_target}': {city} on {date!r}")
             updates.append({
                 "target": matched_target,
@@ -200,18 +186,23 @@ async def _route_entity_updates(entity: dict, matched_target: str) -> list[dict]
             })
 
         elif category == "prior":
-            await ltd.add_prior.on_invoke_tool(
-                None,
-                json.dumps({
-                    "target_name": matched_target,
-                    "date": date,
-                    "description": description,
-                }),
-            )
+            await do_add_prior(matched_target, date, description)
             log.info(f"Prior added for '{matched_target}' on {date!r}")
             updates.append({
                 "target": matched_target,
                 "update_type": "prior",
+                "date": date,
+                "description": description,
+            })
+
+        elif category == "major_event":
+            event_type = temporal_item.get("event_type", "unknown")
+            await do_add_major_event(matched_target, date, event_type, description)
+            log.info(f"Major event ({event_type}) added for '{matched_target}' on {date!r}")
+            updates.append({
+                "target": matched_target,
+                "update_type": "major_event",
+                "event_type": event_type,
                 "date": date,
                 "description": description,
             })

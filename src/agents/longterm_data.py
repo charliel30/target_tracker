@@ -72,7 +72,7 @@ def save_temporal_to_json(targets_json_path: str) -> None:
     back.
 
     Temporal fields updated: suspicious_activities, nonsuspicious_activities,
-    known_whereabouts, priors.
+    known_whereabouts, priors, major_events.
     """
     with open(targets_json_path, "r") as f:
         targets = json.load(f)
@@ -87,6 +87,7 @@ def save_temporal_to_json(targets_json_path: str) -> None:
         targets[target_name]["nonsuspicious_activities"] = doc_data.get("nonsuspicious_activity", [])
         targets[target_name]["known_whereabouts"]        = doc_data.get("whereabouts", [])
         targets[target_name]["priors"]                   = doc_data.get("prior", [])
+        targets[target_name]["major_events"]             = doc_data.get("major_event", [])
 
     with open(targets_json_path, "w") as f:
         json.dump(targets, f, indent=2)
@@ -159,6 +160,13 @@ async def semantic_search(query: str) -> str:
     return json.dumps(results)
 
 
+def do_get_target_temporal_data(target_name: str) -> str:
+    """Return all temporal data for a target. Plain function — safe for direct calls."""
+    log.info(f"get_target_temporal_data: target={target_name!r}")
+    data = document_store.get_entries(target_name)
+    return json.dumps(data)
+
+
 @function_tool
 def get_target_temporal_data(target_name: str) -> str:
     """
@@ -166,16 +174,38 @@ def get_target_temporal_data(target_name: str) -> str:
     is the canonical raw-data source).
 
     Returns JSON with keys: suspicious_activity, nonsuspicious_activity,
-    whereabouts, prior.
+    whereabouts, prior, major_event.
     """
-    log.info(f"get_target_temporal_data: target={target_name!r}")
-    data = document_store.get_entries(target_name)
-    return json.dumps(data)
+    return do_get_target_temporal_data(target_name)
 
 
 # ---------------------------------------------------------------------------
 # Write tools
 # ---------------------------------------------------------------------------
+
+async def do_add_activity(target_name: str, activity_type: str, timestamp: str, description: str) -> str:
+    """Add an activity. Plain async function — safe for direct calls."""
+    log.info(f"add_activity: target={target_name!r} type={activity_type!r} ts={timestamp!r}")
+
+    record = {"timestamp": timestamp, "description": description}
+    sqlite_store.add_activity(target_name, activity_type, record)
+
+    doc_category = (
+        "suspicious_activity" if activity_type == "suspicious" else "nonsuspicious_activity"
+    )
+    document_store.add_entry(target_name, doc_category, record)
+
+    text = (
+        f"{target_name} {'suspicious activity' if activity_type == 'suspicious' else 'activity'}"
+        f" on {timestamp}: {description}"
+    )
+    await vector_store.add_entry(target_name, doc_category, text)
+
+    from src.config import _PROJECT_ROOT
+    save_temporal_to_json(str(_PROJECT_ROOT / "data" / "targets.json"))
+
+    return f"Activity added for {target_name} ({activity_type}) on {timestamp}."
+
 
 @function_tool
 async def add_activity(
@@ -192,31 +222,24 @@ async def add_activity(
     Also updates targets.json on disk via save_temporal_to_json.
     Returns a confirmation string.
     """
-    log.info(f"add_activity: target={target_name!r} type={activity_type!r} ts={timestamp!r}")
+    return await do_add_activity(target_name, activity_type, timestamp, description)
 
-    record = {"timestamp": timestamp, "description": description}
 
-    # SQLite
-    sqlite_store.add_activity(target_name, activity_type, record)
+async def do_add_whereabouts(target_name: str, city: str, start_date: str, end_date: str) -> str:
+    """Add whereabouts. Plain async function — safe for direct calls."""
+    log.info(f"add_whereabouts: target={target_name!r} city={city!r} {start_date}–{end_date}")
 
-    # Document store — maps to singular category key
-    doc_category = (
-        "suspicious_activity" if activity_type == "suspicious" else "nonsuspicious_activity"
-    )
-    document_store.add_entry(target_name, doc_category, record)
+    record = {"city": city, "start_date": start_date, "end_date": end_date}
+    sqlite_store.add_whereabouts(target_name, record)
+    document_store.add_entry(target_name, "whereabouts", record)
 
-    # Vector store — generate embedding for the new text
-    text = (
-        f"{target_name} {'suspicious activity' if activity_type == 'suspicious' else 'activity'}"
-        f" on {timestamp}: {description}"
-    )
-    await vector_store.add_entry(target_name, doc_category, text)
+    text = f"{target_name} was in {city} from {start_date} to {end_date}."
+    await vector_store.add_entry(target_name, "whereabouts", text)
 
-    # Persist to targets.json
     from src.config import _PROJECT_ROOT
     save_temporal_to_json(str(_PROJECT_ROOT / "data" / "targets.json"))
 
-    return f"Activity added for {target_name} ({activity_type}) on {timestamp}."
+    return f"Whereabouts added for {target_name}: {city} ({start_date} to {end_date})."
 
 
 @function_tool
@@ -233,25 +256,24 @@ async def add_whereabouts(
     Dates should be ISO-8601 (YYYY-MM-DD).
     Returns a confirmation string.
     """
-    log.info(f"add_whereabouts: target={target_name!r} city={city!r} {start_date}–{end_date}")
+    return await do_add_whereabouts(target_name, city, start_date, end_date)
 
-    record = {"city": city, "start_date": start_date, "end_date": end_date}
 
-    # SQLite
-    sqlite_store.add_whereabouts(target_name, record)
+async def do_add_prior(target_name: str, date: str, description: str) -> str:
+    """Add a criminal prior. Plain async function — safe for direct calls."""
+    log.info(f"add_prior: target={target_name!r} date={date!r}")
 
-    # Document store
-    document_store.add_entry(target_name, "whereabouts", record)
+    record = {"date": date, "description": description}
+    sqlite_store.add_prior(target_name, record)
+    document_store.add_entry(target_name, "prior", record)
 
-    # Vector store
-    text = f"{target_name} was in {city} from {start_date} to {end_date}."
-    await vector_store.add_entry(target_name, "whereabouts", text)
+    text = f"{target_name} prior on {date}: {description}"
+    await vector_store.add_entry(target_name, "prior", text)
 
-    # Persist to targets.json
     from src.config import _PROJECT_ROOT
     save_temporal_to_json(str(_PROJECT_ROOT / "data" / "targets.json"))
 
-    return f"Whereabouts added for {target_name}: {city} ({start_date} to {end_date})."
+    return f"Prior added for {target_name} on {date}."
 
 
 @function_tool
@@ -267,25 +289,59 @@ async def add_prior(
     date should be ISO-8601 (YYYY-MM-DD).
     Returns a confirmation string.
     """
-    log.info(f"add_prior: target={target_name!r} date={date!r}")
+    return await do_add_prior(target_name, date, description)
 
-    record = {"date": date, "description": description}
 
-    # SQLite
-    sqlite_store.add_prior(target_name, record)
+async def do_add_major_event(target_name: str, date: str, event_type: str, description: str) -> str:
+    """Record a major event. Plain async function — safe for direct calls."""
+    log.info(f"add_major_event: target={target_name!r} type={event_type!r} date={date!r}")
 
-    # Document store
-    document_store.add_entry(target_name, "prior", record)
+    record = {"date": date, "event_type": event_type, "description": description}
+    sqlite_store.add_major_event(target_name, record)
+    document_store.add_entry(target_name, "major_event", record)
 
-    # Vector store
-    text = f"{target_name} prior on {date}: {description}"
-    await vector_store.add_entry(target_name, "prior", text)
+    text = f"{target_name} major event ({event_type}) on {date}: {description}"
+    await vector_store.add_entry(target_name, "major_event", text)
 
-    # Persist to targets.json
     from src.config import _PROJECT_ROOT
     save_temporal_to_json(str(_PROJECT_ROOT / "data" / "targets.json"))
 
-    return f"Prior added for {target_name} on {date}."
+    return f"Major event ({event_type}) recorded for {target_name} on {date}."
+
+
+@function_tool
+async def add_major_event(
+    target_name: str,
+    date: str,
+    event_type: str,
+    description: str,
+) -> str:
+    """
+    Record a major event for a target and persist to all three stores and
+    targets.json.
+
+    event_type should be one of: "death", "arrest", "destruction",
+    "disappearance", or another short label describing the event category.
+    date should be ISO-8601 (YYYY-MM-DD).
+    Returns a confirmation string.
+    """
+    return await do_add_major_event(target_name, date, event_type, description)
+
+
+@function_tool
+def query_major_events(target_name: str = "", event_type: str = "") -> str:
+    """
+    Query major events (deaths, arrests, destruction, disappearances, etc.).
+
+    Both parameters are optional filters. Omit both to get all major events.
+    Returns a JSON list with keys: target_name, date, event_type, description.
+    """
+    log.info(f"query_major_events: target={target_name!r} event_type={event_type!r}")
+    results = sqlite_store.query_major_events(
+        target_name=target_name or None,
+        event_type=event_type or None,
+    )
+    return json.dumps(results)
 
 
 # ---------------------------------------------------------------------------
@@ -307,17 +363,23 @@ longterm_data_agent = Agent(
         "When asked to search or filter intelligence data, choose the most appropriate tool: "
         "use query_whereabouts for location-based queries, query_priors for criminal history, "
         "query_activities for a specific target's activity log, "
+        "query_major_events for deaths/arrests/destruction/disappearances, "
         "and semantic_search for broad natural-language queries. "
-        "When adding new intelligence, always use the add_* tools so all stores stay in sync."
+        "When adding new intelligence, always use the add_* tools so all stores stay in sync. "
+        "IMPORTANT: When asked about a target's status (alive, dead, missing, etc.) or for ALL "
+        "data on a target, always check major_events — these record critical status changes "
+        "like deaths, arrests, and disappearances."
     ),
     tools=[
         query_whereabouts,
         query_priors,
         query_activities,
+        query_major_events,
         semantic_search,
         get_target_temporal_data,
         add_activity,
         add_whereabouts,
         add_prior,
+        add_major_event,
     ],
 )

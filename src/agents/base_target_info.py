@@ -80,14 +80,20 @@ def save_targets(targets_json_path: str = DATA_PATH) -> None:
 # Agent tools
 # ---------------------------------------------------------------------------
 
-@function_tool
-def lookup_target(name: str) -> str:
-    """Return JSON of a target's non-temporal data, or 'not found'."""
+def do_lookup_target(name: str) -> str:
+    """Return JSON of a target's non-temporal data, or 'not found'.
+    Plain function — safe to call directly from other agents."""
     if name not in _target_data:
         log.debug(f"lookup_target: '{name}' not found")
         return "not found"
     log.debug(f"lookup_target: returning data for '{name}'")
     return json.dumps(_target_data[name])
+
+
+@function_tool
+def lookup_target(name: str) -> str:
+    """Return JSON of a target's non-temporal data, or 'not found'."""
+    return do_lookup_target(name)
 
 
 @function_tool
@@ -109,13 +115,8 @@ def list_targets_by_type(target_type: str) -> str:
     return json.dumps(matches)
 
 
-@function_tool
-def update_target_field(target_name: str, field: str, value: str) -> str:
-    """
-    Update a single non-temporal field for a target and persist to disk.
-    value must be a JSON-encoded string (e.g. '"London"' or '[1,2,3]').
-    Returns a confirmation message.
-    """
+def do_update_target_field(target_name: str, field: str, value: str) -> str:
+    """Update a non-temporal field. Plain function — safe for direct calls."""
     if target_name not in _target_data:
         log.warning(f"update_target_field: target '{target_name}' not found")
         return f"Target '{target_name}' not found."
@@ -123,16 +124,31 @@ def update_target_field(target_name: str, field: str, value: str) -> str:
     try:
         parsed_value = json.loads(value)
     except json.JSONDecodeError:
-        # Treat bare strings without quotes as plain strings
         parsed_value = value
 
-    _target_data[target_name][field] = parsed_value
-    log.info(f"Updated '{target_name}'.{field}")
+    # For list fields, append new items rather than replacing the entire list.
+    existing = _target_data[target_name].get(field)
+    if isinstance(existing, list) and isinstance(parsed_value, list):
+        for item in parsed_value:
+            if item not in existing:
+                existing.append(item)
+        log.info(f"Appended to '{target_name}'.{field} ({len(parsed_value)} item(s))")
+    else:
+        _target_data[target_name][field] = parsed_value
+        log.info(f"Updated '{target_name}'.{field}")
 
-    # Persist immediately so other agents always see fresh data on disk
     save_targets()
-
     return f"Updated '{target_name}'.{field} successfully."
+
+
+@function_tool
+def update_target_field(target_name: str, field: str, value: str) -> str:
+    """
+    Update a single non-temporal field for a target and persist to disk.
+    value must be a JSON-encoded string (e.g. '"London"' or '[1,2,3]').
+    Returns a confirmation message.
+    """
+    return do_update_target_field(target_name, field, value)
 
 
 @function_tool

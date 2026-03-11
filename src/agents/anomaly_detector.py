@@ -16,8 +16,8 @@ from datetime import datetime, timezone
 from agents import Agent, Runner, function_tool
 
 from src.config import config
-from src.agents.base_target_info import lookup_target
-from src.agents.longterm_data import get_target_temporal_data
+from src.agents.base_target_info import do_lookup_target
+from src.agents.longterm_data import do_get_target_temporal_data
 from src.logging_config import get_agent_logger
 
 log = get_agent_logger("AnomalyDetector")
@@ -57,12 +57,15 @@ anomaly_detection_agent = Agent(
     instructions="""You are the Anomaly Detection Agent. You analyze target updates against existing data to find contradictions, surprises, or suspicious patterns.
 
 When given existing target data and a new update, check for:
-- A person reported deceased who is spotted alive
+- A person with a major_event of type "death" who is spotted alive or has new activity after their death date
 - A target appearing in two distant locations on the same day
-- A building listed as demolished or closed that has new activity
-- A vehicle reported destroyed that appears in new sightings
+- A building with a major_event of type "destruction" that has new activity after the destruction date
+- A vehicle with a major_event of type "destruction" that appears in new sightings after destruction
 - Sudden dramatic changes in behavior (clean target with major criminal activity)
 - Contradictions between new and existing information
+- Any new data that conflicts with recorded major_events (deaths, arrests, disappearances)
+
+IMPORTANT: Always check the major_events field in temporal data — these record critical status changes.
 
 If you find anomalies, describe each one clearly in a numbered list.
 If no anomalies are found, respond with exactly: NO_ANOMALIES""",
@@ -90,16 +93,11 @@ async def detect_anomalies(target_name: str, update_description: str) -> list:
     log.info(f"detect_anomalies: checking update for '{target_name}'")
 
     # --- 1. Fetch existing non-temporal data ---
-    # on_invoke_tool is always async in the OpenAI Agents SDK, even for sync tools
-    non_temporal_raw = await lookup_target.on_invoke_tool(
-        None, json.dumps({"name": target_name})
-    )
+    non_temporal_raw = do_lookup_target(target_name)
     log.debug(f"Non-temporal data for '{target_name}': {non_temporal_raw}")
 
     # --- 2. Fetch existing temporal data ---
-    temporal_raw = await get_target_temporal_data.on_invoke_tool(
-        None, json.dumps({"target_name": target_name})
-    )
+    temporal_raw = do_get_target_temporal_data(target_name)
     log.debug(f"Temporal data for '{target_name}': {temporal_raw}")
 
     # --- 3. Build prompt ---

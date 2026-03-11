@@ -56,6 +56,7 @@ class DocumentStore:
                 "nonsuspicious_activity": info.get("nonsuspicious_activities", []),
                 "whereabouts":            info.get("known_whereabouts", []),
                 "prior":                  info.get("priors", []),
+                "major_event":            info.get("major_events", []),
             }
 
         self._save()

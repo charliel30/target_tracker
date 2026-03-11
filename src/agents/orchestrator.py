@@ -14,8 +14,8 @@ from agents import Agent, Runner, function_tool
 
 from src.config import config
 from src.logging_config import get_agent_logger
-from src.agents.base_target_info import base_target_info_agent, lookup_target
-from src.agents.calculator import calculator_agent, calculate_age, calculate_distance
+from src.agents.base_target_info import base_target_info_agent, lookup_target, do_lookup_target
+from src.agents.calculator import calculator_agent, calculate_age, calculate_distance, do_calculate_age, do_calculate_distance
 from src.agents.longterm_data import longterm_data_agent
 from src.agents.file_monitor import file_monitor_agent, process_article_text
 
@@ -37,8 +37,8 @@ async def calculate_distance_between_targets(target_name_1: str, target_name_2: 
     log.info(f"calculate_distance_between_targets: '{target_name_1}' <-> '{target_name_2}'")
 
     # Fetch non-temporal data for both targets
-    raw1 = await lookup_target.on_invoke_tool(None, json.dumps({"name": target_name_1}))
-    raw2 = await lookup_target.on_invoke_tool(None, json.dumps({"name": target_name_2}))
+    raw1 = do_lookup_target(target_name_1)
+    raw2 = do_lookup_target(target_name_2)
 
     if raw1 == "not found":
         return f"Target '{target_name_1}' not found."
@@ -60,13 +60,7 @@ async def calculate_distance_between_targets(target_name_1: str, target_name_2: 
         return f"No location data available for '{target_name_2}'."
 
     # current_location is a dict {"lat": ..., "lon": ...}
-    result = await calculate_distance.on_invoke_tool(
-        None,
-        json.dumps({
-            "lat1": loc1["lat"], "lon1": loc1["lon"],
-            "lat2": loc2["lat"], "lon2": loc2["lon"],
-        }),
-    )
+    result = do_calculate_distance(loc1["lat"], loc1["lon"], loc2["lat"], loc2["lon"])
 
     log.info(f"Distance between '{target_name_1}' and '{target_name_2}': {result}")
     return f"Distance between {target_name_1} and {target_name_2}: {result}"
@@ -82,7 +76,7 @@ async def calculate_target_age(target_name: str) -> str:
     """
     log.info(f"calculate_target_age: '{target_name}'")
 
-    raw = await lookup_target.on_invoke_tool(None, json.dumps({"name": target_name}))
+    raw = do_lookup_target(target_name)
 
     if raw == "not found":
         return f"Target '{target_name}' not found."
@@ -96,7 +90,7 @@ async def calculate_target_age(target_name: str) -> str:
     if not birthday:
         return f"No birthday on record for '{target_name}'."
 
-    result = await calculate_age.on_invoke_tool(None, json.dumps({"birthdate": birthday}))
+    result = do_calculate_age(birthday)
     log.info(f"Age of '{target_name}': {result}")
     return f"{target_name} is {result}."
 
@@ -163,7 +157,7 @@ orchestrator_agent = Agent(
 Available agents (via handoff):
 - BaseTargetInfo: Knows non-temporal target data (names, types, locations, associations, characteristics). Hand off to this agent for target lookups, listing targets, and updating non-temporal information.
 - Calculator: Performs math operations. For age calculations and distance calculations, use the calculate_target_age and calculate_distance_between_targets tools instead of handing off directly.
-- LongtermData: Knows temporal target data (activities, whereabouts, priors). Hand off for queries about when/where targets were seen, criminal history, suspicious activities.
+- LongtermData: Knows temporal target data (activities, whereabouts, priors, major events). Hand off for queries about when/where targets were seen, criminal history, suspicious activities, and major events (deaths, arrests, destruction, disappearances). IMPORTANT: When asked about a target's status (alive/dead/missing), always check with LongtermData for major events.
 - FileMonitor: Processes articles to extract target information. Use fetch_articles_from_url tool for URL-based fetching.
 
 For UPDATE requests:
